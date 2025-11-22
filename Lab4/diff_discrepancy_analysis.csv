@@ -1,0 +1,4060 @@
+Repository,File_Path,File_Type,Commit_SHA,Parent_SHA,Message,Diff_Myers,Diff_Hist,Discrepancy
+repositories/httpie,README.md,README,e7dc59e0dbcee5ebb584cfa053a89404b2b9778f,b966efa17d837dc62c23d5f8064e184e22b14c2e,Updated README.,"diff --git a/README.md b/README.md
+index b7c06cc..ff1eaf8 100644
+--- a/README.md
++++ b/README.md
+@@ -8,8 +8,31 @@ HTTPie is a CLI frontend for [python-requests](python-requests.org).
+     pip install httpie
+ 
+ 
+-### Screenshot
++### Usage
+ 
+-![httpie](https://github.com/jkbr/httpie/raw/master/httpie.png)
++    httpie [flags] METHOD [header:value data-field-name=value]* URL
++
++The default request `Content-Type` in `application/json` and data fields are automatically serialized as a JSON `Object`:
++","diff --git a/README.md b/README.md
+index b7c06cc..ff1eaf8 100644
+--- a/README.md
++++ b/README.md
+@@ -8,8 +8,31 @@ HTTPie is a CLI frontend for [python-requests](python-requests.org).
+     pip install httpie
+ 
+ 
++### Usage
++
++    httpie [flags] METHOD [header:value data-field-name=value]* URL
++
++The default request `Content-Type` in `application/json` and data fields are automatically serialized as a JSON `Object`:
++
++    httpie PATCH  name=John api.example.com/person/1
++
++That will issue the fol",Yes
+repositories/httpie,README.md,README,4c522bf93290bdae433668b807448e3840251804,e7dc59e0dbcee5ebb584cfa053a89404b2b9778f,Update README.md,"diff --git a/README.md b/README.md
+index ff1eaf8..2eb30c9 100644
+--- a/README.md
++++ b/README.md
+@@ -12,11 +12,11 @@ HTTPie is a CLI frontend for [python-requests](python-requests.org).
+ 
+     httpie [flags] METHOD [header:value data-field-name=value]* URL
+ 
+-The default request `Content-Type` in `application/json` and data fields are automatically serialized as a JSON `Object`:
++The default request `Content-Type` in `application/json` and data fields are automatically serialized as a JSON `Obje","diff --git a/README.md b/README.md
+index ff1eaf8..2eb30c9 100644
+--- a/README.md
++++ b/README.md
+@@ -12,11 +12,11 @@ HTTPie is a CLI frontend for [python-requests](python-requests.org).
+ 
+     httpie [flags] METHOD [header:value data-field-name=value]* URL
+ 
+-The default request `Content-Type` in `application/json` and data fields are automatically serialized as a JSON `Object`:
++The default request `Content-Type` in `application/json` and data fields are automatically serialized as a JSON `Obje",No
+repositories/httpie,README.md,README,0373a49d749beac20ad49d05b05391ba1460b4de,4c522bf93290bdae433668b807448e3840251804,Update README.md,"diff --git a/README.md b/README.md
+index 2eb30c9..bc96484 100644
+--- a/README.md
++++ b/README.md
+@@ -1,6 +1,6 @@
+ ## HTTPie: cURL for humans
+ 
+-HTTPie is a CLI frontend for [python-requests](python-requests.org).
++HTTPie is a CLI frontend for [python-requests](http://python-requests.org).
+ 
+ 
+ ### Installation
+","diff --git a/README.md b/README.md
+index 2eb30c9..bc96484 100644
+--- a/README.md
++++ b/README.md
+@@ -1,6 +1,6 @@
+ ## HTTPie: cURL for humans
+ 
+-HTTPie is a CLI frontend for [python-requests](python-requests.org).
++HTTPie is a CLI frontend for [python-requests](http://python-requests.org).
+ 
+ 
+ ### Installation
+",No
+repositories/httpie,httpie/httpie.py,Source Code,0577d0731634de3ef23d43e9573792e3845e93e8,e7dc59e0dbcee5ebb584cfa053a89404b2b9778f,Fixed a typo.,,,No
+repositories/httpie,httpie/httpie.py,Source Code,3f0d621c5a366eb555f1ef5b23de1b7aa1881815,1a205e4cb30b5018ecee4e68a932ae498ac47e06,Fixed a typo.,,,No
+repositories/httpie,setup.py,Source Code,3f0d621c5a366eb555f1ef5b23de1b7aa1881815,1a205e4cb30b5018ecee4e68a932ae498ac47e06,Fixed a typo.,"diff --git a/setup.py b/setup.py
+index db60cbe..debf950 100644
+--- a/setup.py
++++ b/setup.py
+@@ -1,7 +1,7 @@
+ from setuptools import setup
+ 
+ 
+-setup(name='httpie',version='0.1',
++setup(name='httpie',version='0.1.1',
+     description='cURL for humans',
+     url='https://github.com/jkbr/httpie',
+     author='Jakub Roztocil',
+","diff --git a/setup.py b/setup.py
+index db60cbe..debf950 100644
+--- a/setup.py
++++ b/setup.py
+@@ -1,7 +1,7 @@
+ from setuptools import setup
+ 
+ 
+-setup(name='httpie',version='0.1',
++setup(name='httpie',version='0.1.1',
+     description='cURL for humans',
+     url='https://github.com/jkbr/httpie',
+     author='Jakub Roztocil',
+",No
+repositories/httpie,README.md,README,b80d27a4ca7241c7ca5f5dd7ca06fc25e8a38e8b,3f0d621c5a366eb555f1ef5b23de1b7aa1881815,Update README.md,"diff --git a/README.md b/README.md
+index bc96484..2a25aeb 100644
+--- a/README.md
++++ b/README.md
+@@ -2,6 +2,8 @@
+ 
+ HTTPie is a CLI frontend for [python-requests](http://python-requests.org).
+ 
++![httpie](https://github.com/jkbr/httpie/raw/master/httpie.png)
++
+ 
+ ### Installation
+ 
+@@ -33,7 +35,3 @@ The data to be sent can also be passed via `stdin`:
+ 
+ Most of the flags mirror the arguments you would use with `requests.request`. See `httpie -h` for more details.
+ 
+-
+-### Screenshot
+-
+-![httpie]","diff --git a/README.md b/README.md
+index bc96484..2a25aeb 100644
+--- a/README.md
++++ b/README.md
+@@ -2,6 +2,8 @@
+ 
+ HTTPie is a CLI frontend for [python-requests](http://python-requests.org).
+ 
++![httpie](https://github.com/jkbr/httpie/raw/master/httpie.png)
++
+ 
+ ### Installation
+ 
+@@ -33,7 +35,3 @@ The data to be sent can also be passed via `stdin`:
+ 
+ Most of the flags mirror the arguments you would use with `requests.request`. See `httpie -h` for more details.
+ 
+-
+-### Screenshot
+-
+-![httpie]",No
+repositories/httpie,README.md,README,3c50d590e76a63553162048bce3f0e0eef2abdf1,b80d27a4ca7241c7ca5f5dd7ca06fc25e8a38e8b,Fixed README,"diff --git a/README.md b/README.md
+index 2a25aeb..0b0860d 100644
+--- a/README.md
++++ b/README.md
+@@ -12,11 +12,11 @@ HTTPie is a CLI frontend for [python-requests](http://python-requests.org).
+ 
+ ### Usage
+ 
+-    httpie [flags] METHOD [header:value data-field-name=value]* URL
++    httpie [flags] METHOD URL [header:value | data-field-name=value]*
+ 
+ The default request `Content-Type` in `application/json` and data fields are automatically serialized as a JSON `Object`, so this:
+ 
+-    httpie PATC","diff --git a/README.md b/README.md
+index 2a25aeb..0b0860d 100644
+--- a/README.md
++++ b/README.md
+@@ -12,11 +12,11 @@ HTTPie is a CLI frontend for [python-requests](http://python-requests.org).
+ 
+ ### Usage
+ 
+-    httpie [flags] METHOD [header:value data-field-name=value]* URL
++    httpie [flags] METHOD URL [header:value | data-field-name=value]*
+ 
+ The default request `Content-Type` in `application/json` and data fields are automatically serialized as a JSON `Object`, so this:
+ 
+-    httpie PATC",No
+repositories/httpie,README.md,README,75e09a4ac14b074bdf95b64229bbd9de81d33faf,3c50d590e76a63553162048bce3f0e0eef2abdf1,Fixed README.,"diff --git a/README.md b/README.md
+index 0b0860d..3f9e8b6 100644
+--- a/README.md
++++ b/README.md
+@@ -16,7 +16,7 @@ HTTPie is a CLI frontend for [python-requests](http://python-requests.org).
+ 
+ The default request `Content-Type` in `application/json` and data fields are automatically serialized as a JSON `Object`, so this:
+ 
+-    httpie PATCH name=John api.example.com/person/1 X-API-Token:123
++    httpie PATCH api.example.com/person/1 X-API-Token:123 name=John
+ 
+ Will issue the following request","diff --git a/README.md b/README.md
+index 0b0860d..3f9e8b6 100644
+--- a/README.md
++++ b/README.md
+@@ -16,7 +16,7 @@ HTTPie is a CLI frontend for [python-requests](http://python-requests.org).
+ 
+ The default request `Content-Type` in `application/json` and data fields are automatically serialized as a JSON `Object`, so this:
+ 
+-    httpie PATCH name=John api.example.com/person/1 X-API-Token:123
++    httpie PATCH api.example.com/person/1 X-API-Token:123 name=John
+ 
+ Will issue the following request",No
+repositories/httpie,README.md,README,65a2fc70426aec7c99eb3b67bb20effd9df3150f,75e09a4ac14b074bdf95b64229bbd9de81d33faf,Update README.md,"diff --git a/README.md b/README.md
+index 3f9e8b6..164ff7d 100644
+--- a/README.md
++++ b/README.md
+@@ -14,7 +14,7 @@ HTTPie is a CLI frontend for [python-requests](http://python-requests.org).
+ 
+     httpie [flags] METHOD URL [header:value | data-field-name=value]*
+ 
+-The default request `Content-Type` in `application/json` and data fields are automatically serialized as a JSON `Object`, so this:
++The default request `Content-Type` is `application/json` and data fields are automatically serialized","diff --git a/README.md b/README.md
+index 3f9e8b6..164ff7d 100644
+--- a/README.md
++++ b/README.md
+@@ -14,7 +14,7 @@ HTTPie is a CLI frontend for [python-requests](http://python-requests.org).
+ 
+     httpie [flags] METHOD URL [header:value | data-field-name=value]*
+ 
+-The default request `Content-Type` in `application/json` and data fields are automatically serialized as a JSON `Object`, so this:
++The default request `Content-Type` is `application/json` and data fields are automatically serialized",No
+repositories/httpie,httpie/httpie.py,Source Code,5653b9c6a010c7e64d778c350644fa722a289139,65a2fc70426aec7c99eb3b67bb20effd9df3150f,Added --headers and --body to limit the output.,,,No
+repositories/httpie,httpie/pretty.py,Source Code,5653b9c6a010c7e64d778c350644fa722a289139,65a2fc70426aec7c99eb3b67bb20effd9df3150f,Added --headers and --body to limit the output.,,,No
+repositories/httpie,httpie/httpie.py,Source Code,4059dbc27a3d6fc8ef269b43223c602963458861,5653b9c6a010c7e64d778c350644fa722a289139,Fixed header formatting.,,,No
+repositories/httpie,httpie/pretty.py,Source Code,4059dbc27a3d6fc8ef269b43223c602963458861,5653b9c6a010c7e64d778c350644fa722a289139,Fixed header formatting.,,,No
+repositories/httpie,httpie/httpie.py,Source Code,98e320a1a34c0c6d552a98cff83b466c3f498630,4059dbc27a3d6fc8ef269b43223c602963458861,Added error handling.,,,No
+repositories/httpie,httpie/pretty.py,Source Code,98e320a1a34c0c6d552a98cff83b466c3f498630,4059dbc27a3d6fc8ef269b43223c602963458861,Added error handling.,,,No
+repositories/httpie,httpie/httpie.py,Source Code,459c9f1a337ccc7a7aa865b0a80314ce9a7a743e,98e320a1a34c0c6d552a98cff83b466c3f498630,Added Solarized color scheme for Pygments by @gthank.,,,No
+repositories/httpie,setup.py,Source Code,459c9f1a337ccc7a7aa865b0a80314ce9a7a743e,98e320a1a34c0c6d552a98cff83b466c3f498630,Added Solarized color scheme for Pygments by @gthank.,"diff --git a/setup.py b/setup.py
+index debf950..43826cd 100644
+--- a/setup.py
++++ b/setup.py
+@@ -1,11 +1,12 @@
+ from setuptools import setup
++from httpie import httpie
+ 
+ 
+-setup(name='httpie',version='0.1.1',
+-    description='cURL for humans',
++setup(name='httpie',version=httpie.__version__,
++    description=httpie.__doc__.strip(),
+     url='https://github.com/jkbr/httpie',
+-    author='Jakub Roztocil',
+-    license='BSD',
++    author=httpie.__author__,
++    license=httpie.__licence__,
+     pa","diff --git a/setup.py b/setup.py
+index debf950..43826cd 100644
+--- a/setup.py
++++ b/setup.py
+@@ -1,11 +1,12 @@
+ from setuptools import setup
++from httpie import httpie
+ 
+ 
+-setup(name='httpie',version='0.1.1',
+-    description='cURL for humans',
++setup(name='httpie',version=httpie.__version__,
++    description=httpie.__doc__.strip(),
+     url='https://github.com/jkbr/httpie',
+-    author='Jakub Roztocil',
+-    license='BSD',
++    author=httpie.__author__,
++    license=httpie.__licence__,
+     pa",No
+repositories/httpie,README.md,README,258fc0cd5fca5701cc9f98879b108a9abbd055fe,459c9f1a337ccc7a7aa865b0a80314ce9a7a743e,Renamed the CLI tool `http`.,"diff --git a/README.md b/README.md
+index 164ff7d..27c10bb 100644
+--- a/README.md
++++ b/README.md
+@@ -1,6 +1,6 @@
+ ## HTTPie: cURL for humans
+ 
+-HTTPie is a CLI frontend for [python-requests](http://python-requests.org).
++HTTPie is a CLI frontend for [python-requests](http://python-requests.org) build out of frustration from using `curl`. It provides an `http` command that can be used to easily issue HTTP requests. It is meant to be used by humans to interact with HTTP-based APIs and web servers.","diff --git a/README.md b/README.md
+index 164ff7d..27c10bb 100644
+--- a/README.md
++++ b/README.md
+@@ -1,6 +1,6 @@
+ ## HTTPie: cURL for humans
+ 
+-HTTPie is a CLI frontend for [python-requests](http://python-requests.org).
++HTTPie is a CLI frontend for [python-requests](http://python-requests.org) build out of frustration from using `curl`. It provides an `http` command that can be used to easily issue HTTP requests. It is meant to be used by humans to interact with HTTP-based APIs and web servers.",Yes
+repositories/httpie,httpie.png,Other,258fc0cd5fca5701cc9f98879b108a9abbd055fe,459c9f1a337ccc7a7aa865b0a80314ce9a7a743e,Renamed the CLI tool `http`.,"diff --git a/httpie.png b/httpie.png
+index 5bda104..a931af7 100644
+Binary files a/httpie.png and b/httpie.png differ
+","diff --git a/httpie.png b/httpie.png
+index 5bda104..a931af7 100644
+Binary files a/httpie.png and b/httpie.png differ
+",No
+repositories/httpie,httpie/httpie.py,Source Code,258fc0cd5fca5701cc9f98879b108a9abbd055fe,459c9f1a337ccc7a7aa865b0a80314ce9a7a743e,Renamed the CLI tool `http`.,,,No
+repositories/httpie,setup.py,Source Code,258fc0cd5fca5701cc9f98879b108a9abbd055fe,459c9f1a337ccc7a7aa865b0a80314ce9a7a743e,Renamed the CLI tool `http`.,"diff --git a/setup.py b/setup.py
+index 43826cd..81e2ec8 100644
+--- a/setup.py
++++ b/setup.py
+@@ -8,5 +8,5 @@ setup(name='httpie',version=httpie.__version__,
+     author=httpie.__author__,
+     license=httpie.__licence__,
+     packages=['httpie'],
+-    entry_points={'console_scripts': ['httpie = httpie.httpie:main']},
++    entry_points={'console_scripts': ['http = httpie.httpie:main']},
+     install_requires=['requests>=0.10.4', 'Pygments>=1.4'])
+","diff --git a/setup.py b/setup.py
+index 43826cd..81e2ec8 100644
+--- a/setup.py
++++ b/setup.py
+@@ -8,5 +8,5 @@ setup(name='httpie',version=httpie.__version__,
+     author=httpie.__author__,
+     license=httpie.__licence__,
+     packages=['httpie'],
+-    entry_points={'console_scripts': ['httpie = httpie.httpie:main']},
++    entry_points={'console_scripts': ['http = httpie.httpie:main']},
+     install_requires=['requests>=0.10.4', 'Pygments>=1.4'])
+",No
+repositories/httpie,README.md,README,899513858a317208ed4022a7937b1e842856cb48,258fc0cd5fca5701cc9f98879b108a9abbd055fe,typo,"diff --git a/README.md b/README.md
+index 27c10bb..6c04437 100644
+--- a/README.md
++++ b/README.md
+@@ -1,6 +1,6 @@
+ ## HTTPie: cURL for humans
+ 
+-HTTPie is a CLI frontend for [python-requests](http://python-requests.org) build out of frustration from using `curl`. It provides an `http` command that can be used to easily issue HTTP requests. It is meant to be used by humans to interact with HTTP-based APIs and web servers. The response headers are colorized and the body is syntax-highlighed if its ","diff --git a/README.md b/README.md
+index 27c10bb..6c04437 100644
+--- a/README.md
++++ b/README.md
+@@ -1,6 +1,6 @@
+ ## HTTPie: cURL for humans
+ 
+-HTTPie is a CLI frontend for [python-requests](http://python-requests.org) build out of frustration from using `curl`. It provides an `http` command that can be used to easily issue HTTP requests. It is meant to be used by humans to interact with HTTP-based APIs and web servers. The response headers are colorized and the body is syntax-highlighed if its ",No
+repositories/httpie,httpie/httpie.py,Source Code,f73aaa844f760e171a68e21d7796a62e7ae51c20,899513858a317208ed4022a7937b1e842856cb48,Syntax error fix,,,No
+repositories/httpie,httpie/__init__.py,Source Code,71b6b126c05b9a7cdec750c9d923d4f03855b577,258fc0cd5fca5701cc9f98879b108a9abbd055fe,Fixed setup.py to work without having pygments already installed. Closes #1.,,,No
+repositories/httpie,httpie/httpie.py,Source Code,71b6b126c05b9a7cdec750c9d923d4f03855b577,258fc0cd5fca5701cc9f98879b108a9abbd055fe,Fixed setup.py to work without having pygments already installed. Closes #1.,,,No
+repositories/httpie,setup.py,Source Code,71b6b126c05b9a7cdec750c9d923d4f03855b577,258fc0cd5fca5701cc9f98879b108a9abbd055fe,Fixed setup.py to work without having pygments already installed. Closes #1.,"diff --git a/setup.py b/setup.py
+index 81e2ec8..afeae2d 100644
+--- a/setup.py
++++ b/setup.py
+@@ -1,5 +1,5 @@
+ from setuptools import setup
+-from httpie import httpie
++import httpie
+ 
+ 
+ setup(name='httpie',version=httpie.__version__,
+","diff --git a/setup.py b/setup.py
+index 81e2ec8..afeae2d 100644
+--- a/setup.py
++++ b/setup.py
+@@ -1,5 +1,5 @@
+ from setuptools import setup
+-from httpie import httpie
++import httpie
+ 
+ 
+ setup(name='httpie',version=httpie.__version__,
+",No
+repositories/httpie,httpie/httpie.py,Source Code,b567104267c4de7b16af1498906cd7fe61d33579,f73aaa844f760e171a68e21d7796a62e7ae51c20,Removed the lists in favour of generators,,,No
+repositories/httpie,httpie/httpie.py,Source Code,2f569b901dcd5852d16a88084af19883ee847f3e,b567104267c4de7b16af1498906cd7fe61d33579,Not all web servers return UTF-8 and will crash httpie when decoding the response,,,No
+repositories/httpie,httpie/httpie.py,Source Code,ecf968388b56eccfda9ea5f5abb4f8299476a4aa,b0cebd68a106b6407cb9633358ff89e1ab65937e,"Fixed __version__ and __doc__ import. Thanks, @FND.",,,No
+repositories/httpie,httpie/httpie.py,Source Code,6f9ad9e4e10df653e5d8cd9f70626b809dec71eb,2f569b901dcd5852d16a88084af19883ee847f3e,"Revert ""Not all web servers return UTF-8 and will crash httpie when decoding the response""",,,No
+repositories/httpie,httpie/httpie.py,Source Code,0293ba179916b784b86c05bbb41ba24487058091,f90ae113e4e9f7413215465dfa993eaadd64938b,Do not assume UTF-8.,,,No
+repositories/httpie,httpie/__init__.py,Source Code,1a88ae647ef806cfbdbaf2cd069854139ca73a72,0293ba179916b784b86c05bbb41ba24487058091,0.1.4,,,No
+repositories/httpie,httpie/httpie.py,Source Code,553941c98d16ce5655876a00505d1ff47a2e4a7e,1a88ae647ef806cfbdbaf2cd069854139ca73a72,"added support to use other pygments styles, falback to solarized",,,No
+repositories/httpie,httpie/pretty.py,Source Code,553941c98d16ce5655876a00505d1ff47a2e4a7e,1a88ae647ef806cfbdbaf2cd069854139ca73a72,"added support to use other pygments styles, falback to solarized",,,No
+repositories/httpie,httpie/pretty.py,Source Code,b752b59d92ed035eac4c258a335378dd52a1c9ab,553941c98d16ce5655876a00505d1ff47a2e4a7e,remove unnecessary partial call,,,No
+repositories/httpie,httpie/pretty.py,Source Code,f934f4345eaccd3fcf97b0ca59f7227ac2d568c2,1a88ae647ef806cfbdbaf2cd069854139ca73a72,Support for terminals not using 256 color,,,No
+repositories/httpie,setup.py,Source Code,d768959084b6ec19f3888753bb6cec297b6a6d9f,1a88ae647ef806cfbdbaf2cd069854139ca73a72,* Added argparse to install_requires.,"diff --git a/setup.py b/setup.py
+index afeae2d..8796bb9 100644
+--- a/setup.py
++++ b/setup.py
+@@ -9,4 +9,4 @@ setup(name='httpie',version=httpie.__version__,
+     license=httpie.__licence__,
+     packages=['httpie'],
+     entry_points={'console_scripts': ['http = httpie.httpie:main']},
+-    install_requires=['requests>=0.10.4', 'Pygments>=1.4'])
++    install_requires=['requests>=0.10.4', 'Pygments>=1.4', 'argparse>=1.2.1'])
+","diff --git a/setup.py b/setup.py
+index afeae2d..8796bb9 100644
+--- a/setup.py
++++ b/setup.py
+@@ -9,4 +9,4 @@ setup(name='httpie',version=httpie.__version__,
+     license=httpie.__licence__,
+     packages=['httpie'],
+     entry_points={'console_scripts': ['http = httpie.httpie:main']},
+-    install_requires=['requests>=0.10.4', 'Pygments>=1.4'])
++    install_requires=['requests>=0.10.4', 'Pygments>=1.4', 'argparse>=1.2.1'])
+",No
+repositories/httpie,setup.py,Source Code,3442a5d037f0bddb1cf4bad55a56dac41b330515,5cd40916fe622ae02a5df46423e14062444118b4,Made argparse required only for Python < 2.7.,"diff --git a/setup.py b/setup.py
+index 8796bb9..e6cd692 100644
+--- a/setup.py
++++ b/setup.py
+@@ -1,7 +1,14 @@
++import sys
+ from setuptools import setup
+ import httpie
+ 
+ 
++requirements = ['requests>=0.10.4', 'Pygments>=1.4']
++
++if sys.version_info < (2 , 7):
++    requirements.append('argparse>=1.2.1')
++
++
+ setup(name='httpie',version=httpie.__version__,
+     description=httpie.__doc__.strip(),
+     url='https://github.com/jkbr/httpie',
+@@ -9,4 +16,4 @@ setup(name='httpie',version=httpie.__versio","diff --git a/setup.py b/setup.py
+index 8796bb9..e6cd692 100644
+--- a/setup.py
++++ b/setup.py
+@@ -1,7 +1,14 @@
++import sys
+ from setuptools import setup
+ import httpie
+ 
+ 
++requirements = ['requests>=0.10.4', 'Pygments>=1.4']
++
++if sys.version_info < (2 , 7):
++    requirements.append('argparse>=1.2.1')
++
++
+ setup(name='httpie',version=httpie.__version__,
+     description=httpie.__doc__.strip(),
+     url='https://github.com/jkbr/httpie',
+@@ -9,4 +16,4 @@ setup(name='httpie',version=httpie.__versio",No
+repositories/httpie,README.md,README,bb653bf1a957de2859ab3ad98e6cd61f1137e71b,94c605fac15b35aa61854546716f7b7f16f82fb6,Added first tests.,"diff --git a/README.md b/README.md
+index 6c04437..d9d92ed 100644
+--- a/README.md
++++ b/README.md
+@@ -35,11 +35,11 @@ The data to be sent can also be passed via `stdin`:
+ 
+ Most of the flags mirror the arguments you would use with `requests.request`. See `http -h`:
+ 
+-    $ http -h
+-    usage: http [-h] [--json | --form] [--traceback] [--ugly] [--headers | --body]
+-                [--auth AUTH] [--verify VERIFY] [--proxy PROXY]
+-                [--allow-redirects] [--file PATH] [--timeout TIMEOUT","diff --git a/README.md b/README.md
+index 6c04437..d9d92ed 100644
+--- a/README.md
++++ b/README.md
+@@ -35,11 +35,11 @@ The data to be sent can also be passed via `stdin`:
+ 
+ Most of the flags mirror the arguments you would use with `requests.request`. See `http -h`:
+ 
+-    $ http -h
+-    usage: http [-h] [--json | --form] [--traceback] [--ugly] [--headers | --body]
+-                [--auth AUTH] [--verify VERIFY] [--proxy PROXY]
+-                [--allow-redirects] [--file PATH] [--timeout TIMEOUT",No
+repositories/httpie,httpie/httpie.py,Source Code,bb653bf1a957de2859ab3ad98e6cd61f1137e71b,94c605fac15b35aa61854546716f7b7f16f82fb6,Added first tests.,,,No
+repositories/httpie,tests.py,Test Code,bb653bf1a957de2859ab3ad98e6cd61f1137e71b,94c605fac15b35aa61854546716f7b7f16f82fb6,Added first tests.,"diff --git a/tests.py b/tests.py
+index 7ab258c..6e5aec6 100644
+--- a/tests.py
++++ b/tests.py
+@@ -1,3 +1,36 @@
+ import unittest
++from StringIO import StringIO
++from httpie import httpie
+ 
+ 
++def http(*args, **kwargs):
++    stdout = StringIO()
++    httpie.main(args=args, stdout=stdout,
++                stdin_isatty=True,
++                stdout_isatty=False)
++    return stdout.getvalue()
++
++
++# TODO: moar!
++
++class TestHTTPie(unittest.TestCase):
++
++    def test_get(self):
++        http('GET', 'htt","diff --git a/tests.py b/tests.py
+index 7ab258c..6e5aec6 100644
+--- a/tests.py
++++ b/tests.py
+@@ -1,3 +1,36 @@
+ import unittest
++from StringIO import StringIO
++from httpie import httpie
+ 
+ 
++def http(*args, **kwargs):
++    stdout = StringIO()
++    httpie.main(args=args, stdout=stdout,
++                stdin_isatty=True,
++                stdout_isatty=False)
++    return stdout.getvalue()
++
++
++# TODO: moar!
++
++class TestHTTPie(unittest.TestCase):
++
++    def test_get(self):
++        http('GET', 'htt",No
+repositories/httpie,httpie/httpie.py,Source Code,9634dca7d84e5e013c8a0a54b2f6960a0aa74fdd,bb653bf1a957de2859ab3ad98e6cd61f1137e71b,Fixed a `UnicodeError` in Python 2.6.,,,No
+repositories/httpie,httpie/httpie.py,Source Code,860a851a4b0ba7f6dfd3287c19d7d2ece5ec7946,9634dca7d84e5e013c8a0a54b2f6960a0aa74fdd,Fixed a missing line between headers and body.,,,No
+repositories/httpie,setup.py,Source Code,d670513c9fe4f84bfc0eae6cf5e4a585aea61dc8,860a851a4b0ba7f6dfd3287c19d7d2ece5ec7946,use the __main__ submodule convention to make it possible to use `python -m httpie`,"diff --git a/setup.py b/setup.py
+index e6cd692..2b36c24 100644
+--- a/setup.py
++++ b/setup.py
+@@ -15,5 +15,5 @@ setup(name='httpie',version=httpie.__version__,
+     author=httpie.__author__,
+     license=httpie.__licence__,
+     packages=['httpie'],
+-    entry_points={'console_scripts': ['http = httpie.httpie:main']},
++    entry_points={'console_scripts': ['http = httpie.__main__:main']},
+     install_requires=requirements)
+","diff --git a/setup.py b/setup.py
+index e6cd692..2b36c24 100644
+--- a/setup.py
++++ b/setup.py
+@@ -15,5 +15,5 @@ setup(name='httpie',version=httpie.__version__,
+     author=httpie.__author__,
+     license=httpie.__licence__,
+     packages=['httpie'],
+-    entry_points={'console_scripts': ['http = httpie.httpie:main']},
++    entry_points={'console_scripts': ['http = httpie.__main__:main']},
+     install_requires=requirements)
+",No
+repositories/httpie,tests.py,Test Code,d670513c9fe4f84bfc0eae6cf5e4a585aea61dc8,860a851a4b0ba7f6dfd3287c19d7d2ece5ec7946,use the __main__ submodule convention to make it possible to use `python -m httpie`,"diff --git a/tests.py b/tests.py
+index 6e5aec6..5d2d9b1 100644
+--- a/tests.py
++++ b/tests.py
+@@ -1,13 +1,12 @@
+ import unittest
+ from StringIO import StringIO
+-from httpie import httpie
++from httpie import __main__
+ 
+ 
+ def http(*args, **kwargs):
+     stdout = StringIO()
+-    httpie.main(args=args, stdout=stdout,
+-                stdin_isatty=True,
+-                stdout_isatty=False)
++    __main__.main(args=args, stdout=stdout, stdin_isatty=True,
++                  stdout_isatty=False)
+     re","diff --git a/tests.py b/tests.py
+index 6e5aec6..5d2d9b1 100644
+--- a/tests.py
++++ b/tests.py
+@@ -1,13 +1,12 @@
+ import unittest
+ from StringIO import StringIO
+-from httpie import httpie
++from httpie import __main__
+ 
+ 
+ def http(*args, **kwargs):
+     stdout = StringIO()
+-    httpie.main(args=args, stdout=stdout,
+-                stdin_isatty=True,
+-                stdout_isatty=False)
++    __main__.main(args=args, stdout=stdout, stdin_isatty=True,
++                  stdout_isatty=False)
+     re",No
+repositories/httpie,httpie/httpie.py,Source Code,84a0d4a35ddc050b36cc7e5ed084f1948583227e,860a851a4b0ba7f6dfd3287c19d7d2ece5ec7946,Added forcing pretty printing for piping purposes.,,,No
+repositories/httpie,httpie/httpie.py,Source Code,58f74fe14a141db3b12704c2999abe31c36a28e2,84a0d4a35ddc050b36cc7e5ed084f1948583227e,Force pretty printing (ignore last commit; stupid undo mistake),,,No
+repositories/httpie,httpie/httpie.py,Source Code,dd8faecbf7fd82a8e8612f67e3b2a545d790d910,860a851a4b0ba7f6dfd3287c19d7d2ece5ec7946,Pass allow_redirects to request so --allow-redirects works.,,,No
+repositories/httpie,README.md,README,81798ad537be2e2f2b0133e5c46e47ac85739555,860a851a4b0ba7f6dfd3287c19d7d2ece5ec7946,Typo.,"diff --git a/README.md b/README.md
+index d9d92ed..d3d1840 100644
+--- a/README.md
++++ b/README.md
+@@ -1,6 +1,6 @@
+ ## HTTPie: cURL for humans
+ 
+-HTTPie is a CLI frontend for [python-requests](http://python-requests.org) built out of frustration. It provides an `http` command that can be used to easily issue HTTP requests. It is meant to be used by humans to interact with HTTP-based APIs and web servers. The response headers are colorized and the body is syntax-highlighed if its `Content-Type` is ","diff --git a/README.md b/README.md
+index d9d92ed..d3d1840 100644
+--- a/README.md
++++ b/README.md
+@@ -1,6 +1,6 @@
+ ## HTTPie: cURL for humans
+ 
+-HTTPie is a CLI frontend for [python-requests](http://python-requests.org) built out of frustration. It provides an `http` command that can be used to easily issue HTTP requests. It is meant to be used by humans to interact with HTTP-based APIs and web servers. The response headers are colorized and the body is syntax-highlighed if its `Content-Type` is ",No
+repositories/httpie,README.md,README,5d3176115a0d8792620730c2ab67066b99d46109,81798ad537be2e2f2b0133e5c46e47ac85739555,Correct usage string in README.,"diff --git a/README.md b/README.md
+index d3d1840..55ba5c1 100644
+--- a/README.md
++++ b/README.md
+@@ -35,11 +35,10 @@ The data to be sent can also be passed via `stdin`:
+ 
+ Most of the flags mirror the arguments you would use with `requests.request`. See `http -h`:
+ 
+-    usage: httpie.py [-h] [--json | --form] [--traceback] [--ugly]
+-                     [--headers | --body] [--style STYLE] [--auth AUTH]
+-                     [--verify VERIFY] [--proxy PROXY] [--allow-redirects]
+-               ","diff --git a/README.md b/README.md
+index d3d1840..55ba5c1 100644
+--- a/README.md
++++ b/README.md
+@@ -35,11 +35,10 @@ The data to be sent can also be passed via `stdin`:
+ 
+ Most of the flags mirror the arguments you would use with `requests.request`. See `http -h`:
+ 
+-    usage: httpie.py [-h] [--json | --form] [--traceback] [--ugly]
+-                     [--headers | --body] [--style STYLE] [--auth AUTH]
+-                     [--verify VERIFY] [--proxy PROXY] [--allow-redirects]
+-               ",No
+repositories/httpie,httpie/httpie.py,Source Code,00312ead28b26493a99d280bd821a5e02b9169b7,d02ac54130c8dd2820bdb5ff17c5085bcc4672ec,Refactored --pretty and added tests.,,,No
+repositories/httpie,tests.py,Test Code,00312ead28b26493a99d280bd821a5e02b9169b7,d02ac54130c8dd2820bdb5ff17c5085bcc4672ec,Refactored --pretty and added tests.,"diff --git a/tests.py b/tests.py
+index 6e5aec6..e2bbb28 100644
+--- a/tests.py
++++ b/tests.py
+@@ -1,13 +1,20 @@
++from functools import partial
+ import unittest
+ from StringIO import StringIO
+ from httpie import httpie
+ 
+ 
++TERMINAL_COLOR_END = '\x1b[39m'
++
++
+ def http(*args, **kwargs):
+-    stdout = StringIO()
+-    httpie.main(args=args, stdout=stdout,
+-                stdin_isatty=True,
+-                stdout_isatty=False)
++    http_kwargs = {
++        'stdin_isatty': True,
++        'stdout_isa","diff --git a/tests.py b/tests.py
+index 6e5aec6..e2bbb28 100644
+--- a/tests.py
++++ b/tests.py
+@@ -1,13 +1,20 @@
++from functools import partial
+ import unittest
+ from StringIO import StringIO
+ from httpie import httpie
+ 
+ 
++TERMINAL_COLOR_END = '\x1b[39m'
++
++
+ def http(*args, **kwargs):
+-    stdout = StringIO()
+-    httpie.main(args=args, stdout=stdout,
+-                stdin_isatty=True,
+-                stdout_isatty=False)
++    http_kwargs = {
++        'stdin_isatty': True,
++        'stdout_isa",No
+repositories/httpie,README.md,README,73d0f9cd56c7f4a30a27e1b4529a4c80ff9f7579,00312ead28b26493a99d280bd821a5e02b9169b7,Updated readme (--flags).,"diff --git a/README.md b/README.md
+index 55ba5c1..74a3078 100644
+--- a/README.md
++++ b/README.md
+@@ -34,47 +34,47 @@ The data to be sent can also be passed via `stdin`:
+     http PUT api.example.com/person/1 X-API-Token:123 < person.json
+ 
+ Most of the flags mirror the arguments you would use with `requests.request`. See `http -h`:
+-
+-    usage: http [-h] [--json | --form] [--traceback] [--ugly] [--headers | --body]
+-                [--style STYLE] [--auth AUTH] [--verify VERIFY] [--proxy PROXY]","diff --git a/README.md b/README.md
+index 55ba5c1..74a3078 100644
+--- a/README.md
++++ b/README.md
+@@ -34,47 +34,47 @@ The data to be sent can also be passed via `stdin`:
+     http PUT api.example.com/person/1 X-API-Token:123 < person.json
+ 
+ Most of the flags mirror the arguments you would use with `requests.request`. See `http -h`:
++usage: http [-h] [--json | --form] [--traceback] [--ugly] [--headers | --body]
++            [--request] [--style STYLE] [--auth AUTH] [--verify VERIFY]
++            ",Yes
+repositories/httpie,README.md,README,b802f2b960ae5b460ab98d950aefea09baff7957,73d0f9cd56c7f4a30a27e1b4529a4c80ff9f7579,Added `field-name:=raw-json`,"diff --git a/README.md b/README.md
+index 74a3078..553ec33 100644
+--- a/README.md
++++ b/README.md
+@@ -7,7 +7,14 @@ HTTPie is a CLI frontend for [python-requests](http://python-requests.org) built
+ 
+ ### Installation
+ 
+-    pip install httpie
++Latest stable version using [pip](http://www.pip-installer.org/en/latest/index.html):
++
++    pip install -U httpie
++    # easy_install httpie
++
++Master:
++
++    pip install -U https://github.com/jkbr/httpie/tarball/master
+ 
+ 
+ ### Usage
+@@ -27,6 +34,14 @@ Wil","diff --git a/README.md b/README.md
+index 74a3078..553ec33 100644
+--- a/README.md
++++ b/README.md
+@@ -7,7 +7,14 @@ HTTPie is a CLI frontend for [python-requests](http://python-requests.org) built
+ 
+ ### Installation
+ 
+-    pip install httpie
++Latest stable version using [pip](http://www.pip-installer.org/en/latest/index.html):
++
++    pip install -U httpie
++    # easy_install httpie
++
++Master:
++
++    pip install -U https://github.com/jkbr/httpie/tarball/master
+ 
+ 
+ ### Usage
+@@ -27,6 +34,14 @@ Wil",No
+repositories/httpie,httpie/httpie.py,Source Code,b802f2b960ae5b460ab98d950aefea09baff7957,73d0f9cd56c7f4a30a27e1b4529a4c80ff9f7579,Added `field-name:=raw-json`,,,No
+repositories/httpie,setup.py,Source Code,b802f2b960ae5b460ab98d950aefea09baff7957,73d0f9cd56c7f4a30a27e1b4529a4c80ff9f7579,Added `field-name:=raw-json`,"diff --git a/setup.py b/setup.py
+index e6cd692..ee64f22 100644
+--- a/setup.py
++++ b/setup.py
+@@ -5,13 +5,13 @@ import httpie
+ 
+ requirements = ['requests>=0.10.4', 'Pygments>=1.4']
+ 
+-if sys.version_info < (2 , 7):
++if sys.version_info < (2, 7):
+     requirements.append('argparse>=1.2.1')
+ 
+ 
+ setup(name='httpie',version=httpie.__version__,
+     description=httpie.__doc__.strip(),
+-    url='https://github.com/jkbr/httpie',
++    url='http://httpie.org/',
+     author=httpie.__author__,
+     licens","diff --git a/setup.py b/setup.py
+index e6cd692..ee64f22 100644
+--- a/setup.py
++++ b/setup.py
+@@ -5,13 +5,13 @@ import httpie
+ 
+ requirements = ['requests>=0.10.4', 'Pygments>=1.4']
+ 
+-if sys.version_info < (2 , 7):
++if sys.version_info < (2, 7):
+     requirements.append('argparse>=1.2.1')
+ 
+ 
+ setup(name='httpie',version=httpie.__version__,
+     description=httpie.__doc__.strip(),
+-    url='https://github.com/jkbr/httpie',
++    url='http://httpie.org/',
+     author=httpie.__author__,
+     licens",No
+repositories/httpie,README.md,README,5ff43b659f3149255e77e65493b1944f23b83d41,b802f2b960ae5b460ab98d950aefea09baff7957,Fixed README.,"diff --git a/README.md b/README.md
+index 553ec33..145307e 100644
+--- a/README.md
++++ b/README.md
+@@ -40,7 +40,7 @@ You can pass other types then just strings using the `field:=value` notation. It
+ 
+ Produces the following JSON request:
+ 
+-{""bool"": true, ""list"": [1, 2, 3], ""object"": {""a"": ""b"", ""c"": ""d""}}
++    {""bool"": true, ""list"": [1, 2, 3], ""object"": {""a"": ""b"", ""c"": ""d""}}
+ 
+ You can use the `--form` flag to set `Content-Type` and serialize the data as `application/x-www-form-urlencoded`.
+ 
+@@ -","diff --git a/README.md b/README.md
+index 553ec33..145307e 100644
+--- a/README.md
++++ b/README.md
+@@ -40,7 +40,7 @@ You can pass other types then just strings using the `field:=value` notation. It
+ 
+ Produces the following JSON request:
+ 
+-{""bool"": true, ""list"": [1, 2, 3], ""object"": {""a"": ""b"", ""c"": ""d""}}
++    {""bool"": true, ""list"": [1, 2, 3], ""object"": {""a"": ""b"", ""c"": ""d""}}
+ 
+ You can use the `--form` flag to set `Content-Type` and serialize the data as `application/x-www-form-urlencoded`.
+ 
+@@ -",Yes
+repositories/httpie,setup.py,Source Code,715e1b10475e0748e6c95ef25176a12612256465,ca8779d87948ab4963e11f5d51be1e7c17f27d8b,Improved setup.py,"diff --git a/setup.py b/setup.py
+index 70184ea..80f0a57 100644
+--- a/setup.py
++++ b/setup.py
+@@ -1,19 +1,52 @@
++import os
+ import sys
+ from setuptools import setup
+ import httpie
+ 
+ 
+-requirements = ['requests>=0.10.4', 'Pygments>=1.4']
++if sys.argv[-1] == 'test':
++    os.system('python tests.py')
++    sys.exit()
++
+ 
++requirements = ['requests>=0.10.4', 'Pygments>=1.4']
+ if sys.version_info < (2, 7):
+     requirements.append('argparse>=1.2.1')
+ 
+ 
+-setup(name='httpie',version=httpie.__version__,","diff --git a/setup.py b/setup.py
+index 70184ea..80f0a57 100644
+--- a/setup.py
++++ b/setup.py
+@@ -1,19 +1,52 @@
++import os
+ import sys
+ from setuptools import setup
+ import httpie
+ 
+ 
+-requirements = ['requests>=0.10.4', 'Pygments>=1.4']
++if sys.argv[-1] == 'test':
++    os.system('python tests.py')
++    sys.exit()
+ 
++
++requirements = ['requests>=0.10.4', 'Pygments>=1.4']
+ if sys.version_info < (2, 7):
+     requirements.append('argparse>=1.2.1')
+ 
+ 
+-setup(name='httpie',version=httpie.__version__,",No
+repositories/httpie,httpie/__main__.py,Source Code,b7287107609c23bc884c6bbcc18de9b138cc98d9,715e1b10475e0748e6c95ef25176a12612256465,Factored out CLI parsing.,,,No
+repositories/httpie,httpie/pretty.py,Source Code,b7287107609c23bc884c6bbcc18de9b138cc98d9,715e1b10475e0748e6c95ef25176a12612256465,Factored out CLI parsing.,,,No
+repositories/httpie,httpie/cli.py,Source Code,f5d5ec22af09cee019939efcc65e24571c47761a,b7287107609c23bc884c6bbcc18de9b138cc98d9,Added --version.,,,No
+repositories/httpie,README.md,README,2195280a70747970b16d6de976695e519e164459,f5d5ec22af09cee019939efcc65e24571c47761a,Added argument parsing tests.,"diff --git a/README.md b/README.md
+index 145307e..7520615 100644
+--- a/README.md
++++ b/README.md
+@@ -34,7 +34,7 @@ Will issue the following request:
+ 
+     {""name"": ""John"", ""email"": ""john@example.org""}
+ 
+-You can pass other types then just strings using the `field:=value` notation. It allows you to set arbitrary JSON to the data fields:
++You can pass other types than just strings using the `field:=value` notation. It allows you to set arbitrary JSON to the data fields:
+ 
+     http PUT httpie.org","diff --git a/README.md b/README.md
+index 145307e..7520615 100644
+--- a/README.md
++++ b/README.md
+@@ -34,7 +34,7 @@ Will issue the following request:
+ 
+     {""name"": ""John"", ""email"": ""john@example.org""}
+ 
+-You can pass other types then just strings using the `field:=value` notation. It allows you to set arbitrary JSON to the data fields:
++You can pass other types than just strings using the `field:=value` notation. It allows you to set arbitrary JSON to the data fields:
+ 
+     http PUT httpie.org",No
+repositories/httpie,tests.py,Test Code,2195280a70747970b16d6de976695e519e164459,f5d5ec22af09cee019939efcc65e24571c47761a,Added argument parsing tests.,"diff --git a/tests.py b/tests.py
+index 8aecdfb..7e2f8c2 100644
+--- a/tests.py
++++ b/tests.py
+@@ -1,6 +1,8 @@
+ import unittest
++import argparse
+ from StringIO import StringIO
+ from httpie import __main__
++from httpie import cli
+ 
+ 
+ TERMINAL_COLOR_END = '\x1b[39m'
+@@ -17,7 +19,43 @@ def http(*args, **kwargs):
+     return stdout.getvalue()
+ 
+ 
+-# TODO: moar!
++class TestItemParsing(unittest.TestCase):
++
++    def setUp(self):
++        self.kv = cli.KeyValueType(
++            cli.SEP_HEADERS,
++      ","diff --git a/tests.py b/tests.py
+index 8aecdfb..7e2f8c2 100644
+--- a/tests.py
++++ b/tests.py
+@@ -1,6 +1,8 @@
+ import unittest
++import argparse
+ from StringIO import StringIO
+ from httpie import __main__
++from httpie import cli
+ 
+ 
+ TERMINAL_COLOR_END = '\x1b[39m'
+@@ -17,7 +19,43 @@ def http(*args, **kwargs):
+     return stdout.getvalue()
+ 
+ 
+-# TODO: moar!
++class TestItemParsing(unittest.TestCase):
++
++    def setUp(self):
++        self.kv = cli.KeyValueType(
++            cli.SEP_HEADERS,
++      ",No
+repositories/httpie,README.md,README,6774998012ac1e3eae6cfd54b93e76e9e9fa967e,2195280a70747970b16d6de976695e519e164459,Updated README.,"diff --git a/README.md b/README.md
+index 7520615..b59b47e 100644
+--- a/README.md
++++ b/README.md
+@@ -50,33 +50,38 @@ The data to be sent can also be passed via `stdin`:
+ 
+ Most of the flags mirror the arguments you would use with `requests.request`. See `http -h`:
+ 
+-    usage: http [-h] [--json | --form] [--traceback] [--ugly] [--headers | --body]
+-                [--request] [--style STYLE] [--auth AUTH] [--verify VERIFY]
+-                [--proxy PROXY] [--allow-redirects] [--file PATH]
+-    ","diff --git a/README.md b/README.md
+index 7520615..b59b47e 100644
+--- a/README.md
++++ b/README.md
+@@ -50,33 +50,38 @@ The data to be sent can also be passed via `stdin`:
+ 
+ Most of the flags mirror the arguments you would use with `requests.request`. See `http -h`:
+ 
+-    usage: http [-h] [--json | --form] [--traceback] [--ugly] [--headers | --body]
+-                [--request] [--style STYLE] [--auth AUTH] [--verify VERIFY]
+-                [--proxy PROXY] [--allow-redirects] [--file PATH]
+-    ",No
+repositories/httpie,tests.py,Test Code,8a4f50170696bbe2de8430bbfc90ba1e19b606fe,6774998012ac1e3eae6cfd54b93e76e9e9fa967e,Fixed tests for Python 2.6.,"diff --git a/tests.py b/tests.py
+index 7e2f8c2..e8a7112 100644
+--- a/tests.py
++++ b/tests.py
+@@ -19,7 +19,32 @@ def http(*args, **kwargs):
+     return stdout.getvalue()
+ 
+ 
+-class TestItemParsing(unittest.TestCase):
++class BaseTest(unittest.TestCase):
++
++    def assertIn(self, member, container, msg=None):
++        sup = super(BaseTest, self)
++        if hasattr('sup', 'assertIn'):
++            sup.assertIn(member, container, msg)
++        else:
++            self.assert_(member in container, msg","diff --git a/tests.py b/tests.py
+index 7e2f8c2..e8a7112 100644
+--- a/tests.py
++++ b/tests.py
+@@ -19,7 +19,32 @@ def http(*args, **kwargs):
+     return stdout.getvalue()
+ 
+ 
+-class TestItemParsing(unittest.TestCase):
++class BaseTest(unittest.TestCase):
++
++    def assertIn(self, member, container, msg=None):
++        sup = super(BaseTest, self)
++        if hasattr('sup', 'assertIn'):
++            sup.assertIn(member, container, msg)
++        else:
++            self.assert_(member in container, msg",No
+repositories/httpie,httpie/__main__.py,Source Code,6d140978447adb83df4c2e9fc30474e3b952558a,8a4f50170696bbe2de8430bbfc90ba1e19b606fe,Added travis-ci configuration.,,,No
+repositories/httpie,.travis.yml,Other,f4dde9d9b3f67824cb7cfe4b53826d2682051e1b,6d140978447adb83df4c2e9fc30474e3b952558a,Updated travis config.,"diff --git a/.travis.yml b/.travis.yml
+index 21be0db..10c2ebe 100644
+--- a/.travis.yml
++++ b/.travis.yml
+@@ -6,5 +6,6 @@ python:
+   #- 3.2
+ script: python setup.py test
+ install:
+-  - pip -q install requests pygments argparse
++  - pip install requests pygments
++  - ""if [[ $TRAVIS_PYTHON_VERSION == '2.6' ]]; then pip install argparse; fi""
+ 
+","diff --git a/.travis.yml b/.travis.yml
+index 21be0db..10c2ebe 100644
+--- a/.travis.yml
++++ b/.travis.yml
+@@ -6,5 +6,6 @@ python:
+   #- 3.2
+ script: python setup.py test
+ install:
+-  - pip -q install requests pygments argparse
++  - pip install requests pygments
++  - ""if [[ $TRAVIS_PYTHON_VERSION == '2.6' ]]; then pip install argparse; fi""
+ 
+",No
+repositories/httpie,README.md,README,f4dde9d9b3f67824cb7cfe4b53826d2682051e1b,6d140978447adb83df4c2e9fc30474e3b952558a,Updated travis config.,"diff --git a/README.md b/README.md
+index b59b47e..c215d59 100644
+--- a/README.md
++++ b/README.md
+@@ -1,10 +1,12 @@
+ ## HTTPie: cURL for humans
+ 
++[![Build Status](https://secure.travis-ci.org/jkbr/httpie.png)](http://travis-ci.org/jkbr/httpie)
++
++
+ HTTPie is a CLI frontend for [python-requests](http://python-requests.org) built out of frustration. It provides an `http` command that can be used to easily issue HTTP requests. It is meant to be used by humans to interact with HTTP-based APIs and we","diff --git a/README.md b/README.md
+index b59b47e..c215d59 100644
+--- a/README.md
++++ b/README.md
+@@ -1,10 +1,12 @@
+ ## HTTPie: cURL for humans
+ 
++[![Build Status](https://secure.travis-ci.org/jkbr/httpie.png)](http://travis-ci.org/jkbr/httpie)
++
++
+ HTTPie is a CLI frontend for [python-requests](http://python-requests.org) built out of frustration. It provides an `http` command that can be used to easily issue HTTP requests. It is meant to be used by humans to interact with HTTP-based APIs and we",No
+repositories/httpie,.travis.yml,Other,a44ef6c44351bcfb05ea55b4851eac74e7401a97,f4dde9d9b3f67824cb7cfe4b53826d2682051e1b,Fixed tests.,"diff --git a/.travis.yml b/.travis.yml
+index 10c2ebe..36b8a13 100644
+--- a/.travis.yml
++++ b/.travis.yml
+@@ -4,7 +4,7 @@ python:
+   - 2.7
+   # TODO: Python 3
+   #- 3.2
+-script: python setup.py test
++script: python tests.py
+ install:
+   - pip install requests pygments
+   - ""if [[ $TRAVIS_PYTHON_VERSION == '2.6' ]]; then pip install argparse; fi""
+","diff --git a/.travis.yml b/.travis.yml
+index 10c2ebe..36b8a13 100644
+--- a/.travis.yml
++++ b/.travis.yml
+@@ -4,7 +4,7 @@ python:
+   - 2.7
+   # TODO: Python 3
+   #- 3.2
+-script: python setup.py test
++script: python tests.py
+ install:
+   - pip install requests pygments
+   - ""if [[ $TRAVIS_PYTHON_VERSION == '2.6' ]]; then pip install argparse; fi""
+",No
+repositories/httpie,tests.py,Test Code,a44ef6c44351bcfb05ea55b4851eac74e7401a97,f4dde9d9b3f67824cb7cfe4b53826d2682051e1b,Fixed tests.,"diff --git a/tests.py b/tests.py
+index e8a7112..276784f 100644
+--- a/tests.py
++++ b/tests.py
+@@ -30,18 +30,18 @@ class BaseTest(unittest.TestCase):
+ 
+     def assertNotIn(self, member, container, msg=None):
+         sup = super(BaseTest, self)
+-        if hasattr('sup', 'assertNotIn'):
+-            sup.assertIn(member, container, msg)
++        if hasattr(sup, 'assertNotIn'):
++            sup.assertNotIn(member, container, msg)
+         else:
+             self.assert_(member not in container, msg","diff --git a/tests.py b/tests.py
+index e8a7112..276784f 100644
+--- a/tests.py
++++ b/tests.py
+@@ -30,18 +30,18 @@ class BaseTest(unittest.TestCase):
+ 
+     def assertNotIn(self, member, container, msg=None):
+         sup = super(BaseTest, self)
+-        if hasattr('sup', 'assertNotIn'):
+-            sup.assertIn(member, container, msg)
++        if hasattr(sup, 'assertNotIn'):
++            sup.assertNotIn(member, container, msg)
+         else:
+             self.assert_(member not in container, msg",No
+repositories/httpie,tests.py,Test Code,7d629b4d9480c73b50668e741fbb7ee110cf6a3e,a44ef6c44351bcfb05ea55b4851eac74e7401a97,Fixed tests II.,"diff --git a/tests.py b/tests.py
+index 276784f..93a6bca 100644
+--- a/tests.py
++++ b/tests.py
+@@ -1,3 +1,4 @@
++import sys
+ import unittest
+ import argparse
+ from StringIO import StringIO
+@@ -21,25 +22,14 @@ def http(*args, **kwargs):
+ 
+ class BaseTest(unittest.TestCase):
+ 
+-    def assertIn(self, member, container, msg=None):
+-        sup = super(BaseTest, self)
+-        if hasattr('sup', 'assertIn'):
+-            sup.assertIn(member, container, msg)
+-        else:
++    if sys.version < (2, 7):
++","diff --git a/tests.py b/tests.py
+index 276784f..93a6bca 100644
+--- a/tests.py
++++ b/tests.py
+@@ -1,3 +1,4 @@
++import sys
+ import unittest
+ import argparse
+ from StringIO import StringIO
+@@ -21,25 +22,14 @@ def http(*args, **kwargs):
+ 
+ class BaseTest(unittest.TestCase):
+ 
+-    def assertIn(self, member, container, msg=None):
+-        sup = super(BaseTest, self)
+-        if hasattr('sup', 'assertIn'):
+-            sup.assertIn(member, container, msg)
+-        else:
++    if sys.version < (2, 7):
++",No
+repositories/httpie,tests.py,Test Code,bd9209f77adcf73ae6f71cb9bf501e7976eb947d,7d629b4d9480c73b50668e741fbb7ee110cf6a3e,Fixed --pretty tests.,"diff --git a/tests.py b/tests.py
+index 93a6bca..0cb2911 100644
+--- a/tests.py
++++ b/tests.py
+@@ -6,7 +6,7 @@ from httpie import __main__
+ from httpie import cli
+ 
+ 
+-TERMINAL_COLOR_END = '\x1b[39m'
++TERMINAL_COLOR_CHECK = '\x1b['
+ 
+ 
+ def http(*args, **kwargs):
+@@ -96,19 +96,19 @@ class TestPrettyFlag(BaseTest):
+ 
+     def test_pretty_enabled_by_default(self):
+         r = http('GET', 'http://httpbin.org/get', stdout_isatty=True)
+-        self.assertIn(TERMINAL_COLOR_END, r)
++        self.assert","diff --git a/tests.py b/tests.py
+index 93a6bca..0cb2911 100644
+--- a/tests.py
++++ b/tests.py
+@@ -6,7 +6,7 @@ from httpie import __main__
+ from httpie import cli
+ 
+ 
+-TERMINAL_COLOR_END = '\x1b[39m'
++TERMINAL_COLOR_CHECK = '\x1b['
+ 
+ 
+ def http(*args, **kwargs):
+@@ -96,19 +96,19 @@ class TestPrettyFlag(BaseTest):
+ 
+     def test_pretty_enabled_by_default(self):
+         r = http('GET', 'http://httpbin.org/get', stdout_isatty=True)
+-        self.assertIn(TERMINAL_COLOR_END, r)
++        self.assert",No
+repositories/httpie,httpie/__main__.py,Source Code,ebb271334b307c8f345a0f840ab8dc2c74c46b9c,bd9209f77adcf73ae6f71cb9bf501e7976eb947d,Corrected line breaks in the output.,,,No
+repositories/httpie,httpie/pretty.py,Source Code,ebb271334b307c8f345a0f840ab8dc2c74c46b9c,bd9209f77adcf73ae6f71cb9bf501e7976eb947d,Corrected line breaks in the output.,,,No
+repositories/httpie,README.md,README,7ca6191902e57a7ce54737e6a932c003e7b86026,ebb271334b307c8f345a0f840ab8dc2c74c46b9c,v0.1.5,"diff --git a/README.md b/README.md
+index c215d59..9c51f60 100644
+--- a/README.md
++++ b/README.md
+@@ -101,3 +101,7 @@ Most of the flags mirror the arguments you would use with `requests.request`. Se
+       --file PATH           File to multipart upload
+       --timeout TIMEOUT     Float describes the timeout of the request (Use
+                             socket.setdefaulttimeout() as fallback).
++
++### Changelog
++
++* [0.1.5](https://github.com/jkbr/httpie/compare/0.1.4...0.1.5) (2012-03-04)
+","diff --git a/README.md b/README.md
+index c215d59..9c51f60 100644
+--- a/README.md
++++ b/README.md
+@@ -101,3 +101,7 @@ Most of the flags mirror the arguments you would use with `requests.request`. Se
+       --file PATH           File to multipart upload
+       --timeout TIMEOUT     Float describes the timeout of the request (Use
+                             socket.setdefaulttimeout() as fallback).
++
++### Changelog
++
++* [0.1.5](https://github.com/jkbr/httpie/compare/0.1.4...0.1.5) (2012-03-04)
+",No
+repositories/httpie,httpie/__init__.py,Source Code,7ca6191902e57a7ce54737e6a932c003e7b86026,ebb271334b307c8f345a0f840ab8dc2c74c46b9c,v0.1.5,,,No
+repositories/httpie,README.md,README,c446d756ab9f63c9228154c2844ee816c304fcc4,7ca6191902e57a7ce54737e6a932c003e7b86026,Fixed IOError in setup.py.,"diff --git a/README.md b/README.md
+index 9c51f60..fc9523f 100644
+--- a/README.md
++++ b/README.md
+@@ -104,4 +104,4 @@ Most of the flags mirror the arguments you would use with `requests.request`. Se
+ 
+ ### Changelog
+ 
+-* [0.1.5](https://github.com/jkbr/httpie/compare/0.1.4...0.1.5) (2012-03-04)
++* [0.1.6](https://github.com/jkbr/httpie/compare/0.1.4...0.1.6) (2012-03-04)
+","diff --git a/README.md b/README.md
+index 9c51f60..fc9523f 100644
+--- a/README.md
++++ b/README.md
+@@ -104,4 +104,4 @@ Most of the flags mirror the arguments you would use with `requests.request`. Se
+ 
+ ### Changelog
+ 
+-* [0.1.5](https://github.com/jkbr/httpie/compare/0.1.4...0.1.5) (2012-03-04)
++* [0.1.6](https://github.com/jkbr/httpie/compare/0.1.4...0.1.6) (2012-03-04)
+",No
+repositories/httpie,httpie/__init__.py,Source Code,c446d756ab9f63c9228154c2844ee816c304fcc4,7ca6191902e57a7ce54737e6a932c003e7b86026,Fixed IOError in setup.py.,,,No
+repositories/httpie,setup.py,Source Code,c446d756ab9f63c9228154c2844ee816c304fcc4,7ca6191902e57a7ce54737e6a932c003e7b86026,Fixed IOError in setup.py.,"diff --git a/setup.py b/setup.py
+index 80f0a57..75e2325 100644
+--- a/setup.py
++++ b/setup.py
+@@ -14,10 +14,16 @@ if sys.version_info < (2, 7):
+     requirements.append('argparse>=1.2.1')
+ 
+ 
++try:
++    long_description = open('README.md').read()
++except IOError:
++    long_description = ''
++
++
+ setup(
+     name='httpie',version=httpie.__version__,
+     description=httpie.__doc__.strip(),
+-    long_description=open('README.md').read(),
++    long_description=long_description,
+     url='http://httpi","diff --git a/setup.py b/setup.py
+index 80f0a57..75e2325 100644
+--- a/setup.py
++++ b/setup.py
+@@ -14,10 +14,16 @@ if sys.version_info < (2, 7):
+     requirements.append('argparse>=1.2.1')
+ 
+ 
++try:
++    long_description = open('README.md').read()
++except IOError:
++    long_description = ''
++
++
+ setup(
+     name='httpie',version=httpie.__version__,
+     description=httpie.__doc__.strip(),
+-    long_description=open('README.md').read(),
++    long_description=long_description,
+     url='http://httpi",No
+repositories/httpie,httpie.png,Other,d9abf7d31c71d98fa11cf438db34e80cd16eec7a,c446d756ab9f63c9228154c2844ee816c304fcc4,Updated screenshot.,"diff --git a/httpie.png b/httpie.png
+index a931af7..f5642a8 100644
+Binary files a/httpie.png and b/httpie.png differ
+","diff --git a/httpie.png b/httpie.png
+index a931af7..f5642a8 100644
+Binary files a/httpie.png and b/httpie.png differ
+",No
+repositories/httpie,setup.py,Source Code,1517f3d14919aaefadd871b84f701a651d497cdd,d9abf7d31c71d98fa11cf438db34e80cd16eec7a,Include README.md in the source tarball,"diff --git a/setup.py b/setup.py
+index 75e2325..88eba45 100644
+--- a/setup.py
++++ b/setup.py
+@@ -14,16 +14,10 @@ if sys.version_info < (2, 7):
+     requirements.append('argparse>=1.2.1')
+ 
+ 
+-try:
+-    long_description = open('README.md').read()
+-except IOError:
+-    long_description = ''
+-
+-
+ setup(
+     name='httpie',version=httpie.__version__,
+     description=httpie.__doc__.strip(),
+-    long_description=long_description,
++    long_description=open('README.md').read(),
+     url='http://httpi","diff --git a/setup.py b/setup.py
+index 75e2325..88eba45 100644
+--- a/setup.py
++++ b/setup.py
+@@ -14,16 +14,10 @@ if sys.version_info < (2, 7):
+     requirements.append('argparse>=1.2.1')
+ 
+ 
+-try:
+-    long_description = open('README.md').read()
+-except IOError:
+-    long_description = ''
+-
+-
+ setup(
+     name='httpie',version=httpie.__version__,
+     description=httpie.__doc__.strip(),
+-    long_description=long_description,
++    long_description=open('README.md').read(),
+     url='http://httpi",No
+repositories/httpie,setup.py,Source Code,71771dc4a6864ce1e6f3c88cb45dd581913beeb5,1517f3d14919aaefadd871b84f701a651d497cdd,One argument per line,"diff --git a/setup.py b/setup.py
+index 88eba45..03bb0b3 100644
+--- a/setup.py
++++ b/setup.py
+@@ -15,7 +15,8 @@ if sys.version_info < (2, 7):
+ 
+ 
+ setup(
+-    name='httpie',version=httpie.__version__,
++    name='httpie',
++    version=httpie.__version__,
+     description=httpie.__doc__.strip(),
+     long_description=open('README.md').read(),
+     url='http://httpie.org/',
+","diff --git a/setup.py b/setup.py
+index 88eba45..03bb0b3 100644
+--- a/setup.py
++++ b/setup.py
+@@ -15,7 +15,8 @@ if sys.version_info < (2, 7):
+ 
+ 
+ setup(
+-    name='httpie',version=httpie.__version__,
++    name='httpie',
++    version=httpie.__version__,
+     description=httpie.__doc__.strip(),
+     long_description=open('README.md').read(),
+     url='http://httpie.org/',
+",No
+repositories/httpie,README.md,README,e83e601f7c7dc780e6e6ada865f0c4ad304a5204,f995c61892382ccdaaa0e80169f382c972b5709b,Added a link to contributors on GitHub to README.,"diff --git a/README.md b/README.md
+index fc9523f..0dad5a0 100644
+--- a/README.md
++++ b/README.md
+@@ -102,6 +102,12 @@ Most of the flags mirror the arguments you would use with `requests.request`. Se
+       --timeout TIMEOUT     Float describes the timeout of the request (Use
+                             socket.setdefaulttimeout() as fallback).
+ 
++
++### Contributors
++
++[View contributors on GitHub](https://github.com/jkbr/httpie/contributors).
++
++
+ ### Changelog
+ 
+ * [0.1.6](https://github.com/jk","diff --git a/README.md b/README.md
+index fc9523f..0dad5a0 100644
+--- a/README.md
++++ b/README.md
+@@ -102,6 +102,12 @@ Most of the flags mirror the arguments you would use with `requests.request`. Se
+       --timeout TIMEOUT     Float describes the timeout of the request (Use
+                             socket.setdefaulttimeout() as fallback).
+ 
++
++### Contributors
++
++[View contributors on GitHub](https://github.com/jkbr/httpie/contributors).
++
++
+ ### Changelog
+ 
+ * [0.1.6](https://github.com/jk",No
+repositories/httpie,httpie/pretty.py,Source Code,ce952c9e902504267317a4a2fc27088d29e416a1,e83e601f7c7dc780e6e6ada865f0c4ad304a5204,Added support for more 256 color terminals.,,,No
+repositories/httpie,README.rst,README,ccb2aaf94fc7e948c6ad91b789ad5f4b26d7961d,8cff0a3e67295280cf430d727568207ce1989582,Update README.rst,"diff --git a/README.rst b/README.rst
+index b573fad..40ebc1d 100644
+--- a/README.rst
++++ b/README.rst
+@@ -49,7 +49,7 @@ Simple data items
+   Data items are included in the request body. Depending on the ``Content-Type``, they are automatically serialized as a JSON ``Object`` (default) or ``application/x-www-form-urlencoded`` (the ``-f`` flag). Data items use ``=`` as the separator, e.g., ``hello=world``.
+ 
+ Raw JSON items
+-  This item type is needed when ``Content-Type`` is JSON and a field's val","diff --git a/README.rst b/README.rst
+index b573fad..40ebc1d 100644
+--- a/README.rst
++++ b/README.rst
+@@ -49,7 +49,7 @@ Simple data items
+   Data items are included in the request body. Depending on the ``Content-Type``, they are automatically serialized as a JSON ``Object`` (default) or ``application/x-www-form-urlencoded`` (the ``-f`` flag). Data items use ``=`` as the separator, e.g., ``hello=world``.
+ 
+ Raw JSON items
+-  This item type is needed when ``Content-Type`` is JSON and a field's val",No
+repositories/httpie,MANIFEST.in,Other,f5d4addab224c6bc3ea6e9220ff6727ae3d8c713,ccb2aaf94fc7e948c6ad91b789ad5f4b26d7961d,Update references to moved README.,"diff --git a/MANIFEST.in b/MANIFEST.in
+index bb3ec5f..9561fb1 100644
+--- a/MANIFEST.in
++++ b/MANIFEST.in
+@@ -1 +1 @@
+-include README.md
++include README.rst
+","diff --git a/MANIFEST.in b/MANIFEST.in
+index bb3ec5f..9561fb1 100644
+--- a/MANIFEST.in
++++ b/MANIFEST.in
+@@ -1 +1 @@
+-include README.md
++include README.rst
+",No
+repositories/httpie,setup.py,Source Code,f5d4addab224c6bc3ea6e9220ff6727ae3d8c713,ccb2aaf94fc7e948c6ad91b789ad5f4b26d7961d,Update references to moved README.,"diff --git a/setup.py b/setup.py
+index 03bb0b3..e1ef638 100644
+--- a/setup.py
++++ b/setup.py
+@@ -18,7 +18,7 @@ setup(
+     name='httpie',
+     version=httpie.__version__,
+     description=httpie.__doc__.strip(),
+-    long_description=open('README.md').read(),
++    long_description=open('README.rst').read(),
+     url='http://httpie.org/',
+     download_url='https://github.com/jkbr/httpie',
+     author=httpie.__author__,
+","diff --git a/setup.py b/setup.py
+index 03bb0b3..e1ef638 100644
+--- a/setup.py
++++ b/setup.py
+@@ -18,7 +18,7 @@ setup(
+     name='httpie',
+     version=httpie.__version__,
+     description=httpie.__doc__.strip(),
+-    long_description=open('README.md').read(),
++    long_description=open('README.rst').read(),
+     url='http://httpie.org/',
+     download_url='https://github.com/jkbr/httpie',
+     author=httpie.__author__,
+",No
+repositories/httpie,httpie/pretty.py,Source Code,c9eb2255f6355fa2cf8fa7b9f509bddfd5cc6056,028d16d0ff98b6b24c45b9a8bf42600247d698ea,Added proper JSON highlighting,,,No
+repositories/httpie,MANIFEST.in,Other,3c8af4c1700ae8a7768820ad064ed207e122930f,028d16d0ff98b6b24c45b9a8bf42600247d698ea,Added BSD license text,"diff --git a/MANIFEST.in b/MANIFEST.in
+index 9561fb1..0c73842 100644
+--- a/MANIFEST.in
++++ b/MANIFEST.in
+@@ -1 +1 @@
+-include README.rst
++include README.rst LICENSE
+","diff --git a/MANIFEST.in b/MANIFEST.in
+index 9561fb1..0c73842 100644
+--- a/MANIFEST.in
++++ b/MANIFEST.in
+@@ -1 +1 @@
+-include README.rst
++include README.rst LICENSE
+",No
+repositories/httpie,MANIFEST.in,Other,20408e12e9115bd9e825bbcbad37f73e2e519d60,c9eb2255f6355fa2cf8fa7b9f509bddfd5cc6056,Added BSD license text,"diff --git a/MANIFEST.in b/MANIFEST.in
+index 9561fb1..0c73842 100644
+--- a/MANIFEST.in
++++ b/MANIFEST.in
+@@ -1 +1 @@
+-include README.rst
++include README.rst LICENSE
+","diff --git a/MANIFEST.in b/MANIFEST.in
+index 9561fb1..0c73842 100644
+--- a/MANIFEST.in
++++ b/MANIFEST.in
+@@ -1 +1 @@
+-include README.rst
++include README.rst LICENSE
+",No
+repositories/httpie,httpie/pretty.py,Source Code,31c28807c932cb3de2923bd45d5e6b13732b4e94,78e20c6e85dd7e93dcff1acc958549d80ce7efd3,Added better JSON highlighting,,,No
+repositories/httpie,LICENSE,LICENSE,02622a4135077b2635428fbf6885927b80b55b68,31c28807c932cb3de2923bd45d5e6b13732b4e94,Added the option to print the request,"diff --git a/LICENSE b/LICENSE
+index 3384890..027da67 100644
+--- a/LICENSE
++++ b/LICENSE
+@@ -1,4 +1,4 @@
+-Copyright © 2012 Jakub Roztocil
++Copyright © 2012 Jakub Roztocil <jakub@roztocil.name>
+ 
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are met:
+","diff --git a/LICENSE b/LICENSE
+index 3384890..027da67 100644
+--- a/LICENSE
++++ b/LICENSE
+@@ -1,4 +1,4 @@
+-Copyright © 2012 Jakub Roztocil
++Copyright © 2012 Jakub Roztocil <jakub@roztocil.name>
+ 
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are met:
+",No
+repositories/httpie,README.rst,README,02622a4135077b2635428fbf6885927b80b55b68,31c28807c932cb3de2923bd45d5e6b13732b4e94,Added the option to print the request,"diff --git a/README.rst b/README.rst
+index 40ebc1d..562d02b 100644
+--- a/README.rst
++++ b/README.rst
+@@ -89,10 +89,12 @@ Flags
+ Most of the flags mirror the arguments understood by ``requests.request``. See ``http -h`` for more details::
+ 
+     usage: http [-h] [--version] [--json | --form] [--traceback]
+-                [--pretty | --ugly] [--headers | --body] [--style STYLE]
+-                [--auth AUTH] [--verify VERIFY] [--proxy PROXY]
+-                [--allow-redirects] [--file PATH] [--t","diff --git a/README.rst b/README.rst
+index 40ebc1d..562d02b 100644
+--- a/README.rst
++++ b/README.rst
+@@ -89,10 +89,12 @@ Flags
+ Most of the flags mirror the arguments understood by ``requests.request``. See ``http -h`` for more details::
+ 
+     usage: http [-h] [--version] [--json | --form] [--traceback]
+-                [--pretty | --ugly] [--headers | --body] [--style STYLE]
+-                [--auth AUTH] [--verify VERIFY] [--proxy PROXY]
+-                [--allow-redirects] [--file PATH] [--t",No
+repositories/httpie,httpie/__init__.py,Source Code,02622a4135077b2635428fbf6885927b80b55b68,31c28807c932cb3de2923bd45d5e6b13732b4e94,Added the option to print the request,,,No
+repositories/httpie,httpie/__main__.py,Source Code,02622a4135077b2635428fbf6885927b80b55b68,31c28807c932cb3de2923bd45d5e6b13732b4e94,Added the option to print the request,,,No
+repositories/httpie,httpie/cli.py,Source Code,02622a4135077b2635428fbf6885927b80b55b68,31c28807c932cb3de2923bd45d5e6b13732b4e94,Added the option to print the request,,,No
+repositories/httpie,httpie/pretty.py,Source Code,02622a4135077b2635428fbf6885927b80b55b68,31c28807c932cb3de2923bd45d5e6b13732b4e94,Added the option to print the request,,,No
+repositories/httpie,README.rst,README,5e19e1b95d601ea004388e4cc79937cbb78673b4,02622a4135077b2635428fbf6885927b80b55b68,"Added a ""New in development version"" link.","diff --git a/README.rst b/README.rst
+index 562d02b..3331ade 100644
+--- a/README.rst
++++ b/README.rst
+@@ -158,4 +158,5 @@ Contributors
+ Changelog
+ ---------
+ 
++* `New in development version <https://github.com/jkbr/httpie/compare/0.1.6...master>`_
+ * `0.1.6 <https://github.com/jkbr/httpie/compare/0.1.4...0.1.6>`_ (2012-03-04)
+","diff --git a/README.rst b/README.rst
+index 562d02b..3331ade 100644
+--- a/README.rst
++++ b/README.rst
+@@ -158,4 +158,5 @@ Contributors
+ Changelog
+ ---------
+ 
++* `New in development version <https://github.com/jkbr/httpie/compare/0.1.6...master>`_
+ * `0.1.6 <https://github.com/jkbr/httpie/compare/0.1.4...0.1.6>`_ (2012-03-04)
+",No
+repositories/httpie,httpie/__main__.py,Source Code,ed888a2657baa311ec8a60aaca00f388056eb955,5e19e1b95d601ea004388e4cc79937cbb78673b4,Made sure request Host is correct when printing.,,,No
+repositories/httpie,httpie/cli.py,Source Code,578acacdf3b15fddcae4306fbd752a9e3238a6ee,ed888a2657baa311ec8a60aaca00f388056eb955,Added a --verbose / -v flag,,,No
+repositories/httpie,.travis.yml,Other,b7e0473d6cb9155e6b54c5e0ba10a9a3544dd2af,578acacdf3b15fddcae4306fbd752a9e3238a6ee,Added file upload support,"diff --git a/.travis.yml b/.travis.yml
+index 36b8a13..b5b2aca 100644
+--- a/.travis.yml
++++ b/.travis.yml
+@@ -4,7 +4,7 @@ python:
+   - 2.7
+   # TODO: Python 3
+   #- 3.2
+-script: python tests.py
++script: python tests/tests.py
+ install:
+   - pip install requests pygments
+   - ""if [[ $TRAVIS_PYTHON_VERSION == '2.6' ]]; then pip install argparse; fi""
+","diff --git a/.travis.yml b/.travis.yml
+index 36b8a13..b5b2aca 100644
+--- a/.travis.yml
++++ b/.travis.yml
+@@ -4,7 +4,7 @@ python:
+   - 2.7
+   # TODO: Python 3
+   #- 3.2
+-script: python tests.py
++script: python tests/tests.py
+ install:
+   - pip install requests pygments
+   - ""if [[ $TRAVIS_PYTHON_VERSION == '2.6' ]]; then pip install argparse; fi""
+",No
+repositories/httpie,README.rst,README,b7e0473d6cb9155e6b54c5e0ba10a9a3544dd2af,578acacdf3b15fddcae4306fbd752a9e3238a6ee,Added file upload support,"diff --git a/README.rst b/README.rst
+index 3331ade..9768eda 100644
+--- a/README.rst
++++ b/README.rst
+@@ -40,15 +40,18 @@ Synopsis::
+ 
+     http [flags] METHOD URL [items]
+ 
+-There are three types of key-value pair items available:
++There are four types of key-value pair items available:
+ 
+ Headers
+    Arbitrary HTTP headers. The ``:`` character is used to separate a header's name from its value, e.g., ``X-API-Token:123``.
+ 
+-Simple data items
++Simple data fields
+   Data items are included in the","diff --git a/README.rst b/README.rst
+index 3331ade..9768eda 100644
+--- a/README.rst
++++ b/README.rst
+@@ -40,15 +40,18 @@ Synopsis::
+ 
+     http [flags] METHOD URL [items]
+ 
+-There are three types of key-value pair items available:
++There are four types of key-value pair items available:
+ 
+ Headers
+    Arbitrary HTTP headers. The ``:`` character is used to separate a header's name from its value, e.g., ``X-API-Token:123``.
+ 
+-Simple data items
++Simple data fields
+   Data items are included in the",No
+repositories/httpie,httpie/__main__.py,Source Code,b7e0473d6cb9155e6b54c5e0ba10a9a3544dd2af,578acacdf3b15fddcae4306fbd752a9e3238a6ee,Added file upload support,,,No
+repositories/httpie,httpie/cli.py,Source Code,b7e0473d6cb9155e6b54c5e0ba10a9a3544dd2af,578acacdf3b15fddcae4306fbd752a9e3238a6ee,Added file upload support,,,No
+repositories/httpie,tests/tests.py,Test Code,6a1f0248e186c4c012cfcdb5e8b49976e3946b74,b7e0473d6cb9155e6b54c5e0ba10a9a3544dd2af,Fixed tests.,,,No
+repositories/httpie,httpie/__main__.py,Source Code,ccbea8c96ef9136f233f3704544f3d646b0f5313,6a1f0248e186c4c012cfcdb5e8b49976e3946b74,"Assume ""/"" as the Request-URI for printing when none present.",,,No
+repositories/httpie,httpie/__main__.py,Source Code,e2e749b2a6c8315be7d6364017e85f1302902423,ccbea8c96ef9136f233f3704544f3d646b0f5313,Improved request formatting.,,,No
+repositories/httpie,httpie/pretty.py,Source Code,e2e749b2a6c8315be7d6364017e85f1302902423,ccbea8c96ef9136f233f3704544f3d646b0f5313,Improved request formatting.,,,No
+repositories/httpie,README.rst,README,1f49900db6416690a95829e25bce4b224cab9f73,e2e749b2a6c8315be7d6364017e85f1302902423,Improved README.,"diff --git a/README.rst b/README.rst
+index 9768eda..0e814b6 100644
+--- a/README.rst
++++ b/README.rst
+@@ -42,18 +42,19 @@ Synopsis::
+ 
+ There are four types of key-value pair items available:
+ 
+-Headers
++Headers (``Name:Value``)
+    Arbitrary HTTP headers. The ``:`` character is used to separate a header's name from its value, e.g., ``X-API-Token:123``.
+ 
+-Simple data fields
++Simple data fields (``field=value``)
+   Data items are included in the request body. Depending on the ``Content-Type``, th","diff --git a/README.rst b/README.rst
+index 9768eda..0e814b6 100644
+--- a/README.rst
++++ b/README.rst
+@@ -42,18 +42,19 @@ Synopsis::
+ 
+ There are four types of key-value pair items available:
+ 
+-Headers
++Headers (``Name:Value``)
+    Arbitrary HTTP headers. The ``:`` character is used to separate a header's name from its value, e.g., ``X-API-Token:123``.
+ 
+-Simple data fields
++Simple data fields (``field=value``)
+   Data items are included in the request body. Depending on the ``Content-Type``, th",No
+repositories/httpie,.travis.yml,Other,51aa0409e6cf82a96a0b4f616c6b41e1c5549fee,1f49900db6416690a95829e25bce4b224cab9f73,Added Python 3 support,"diff --git a/.travis.yml b/.travis.yml
+index b5b2aca..8d447e0 100644
+--- a/.travis.yml
++++ b/.travis.yml
+@@ -2,8 +2,9 @@ language: python
+ python:
+   - 2.6
+   - 2.7
+-  # TODO: Python 3
+-  #- 3.2
++  - 3.1
++  - 3.2
++  - 3.3
+ script: python tests/tests.py
+ install:
+   - pip install requests pygments
+","diff --git a/.travis.yml b/.travis.yml
+index b5b2aca..8d447e0 100644
+--- a/.travis.yml
++++ b/.travis.yml
+@@ -2,8 +2,9 @@ language: python
+ python:
+   - 2.6
+   - 2.7
+-  # TODO: Python 3
+-  #- 3.2
++  - 3.1
++  - 3.2
++  - 3.3
+ script: python tests/tests.py
+ install:
+   - pip install requests pygments
+",No
+repositories/httpie,README.rst,README,51aa0409e6cf82a96a0b4f616c6b41e1c5549fee,1f49900db6416690a95829e25bce4b224cab9f73,Added Python 3 support,"diff --git a/README.rst b/README.rst
+index 0e814b6..d3b6835 100644
+--- a/README.rst
++++ b/README.rst
+@@ -8,7 +8,7 @@ HTTPie does so by providing an ``http`` command that allows for issuing arbitrar
+ .. image:: https://github.com/jkbr/httpie/raw/master/httpie.png
+     :alt: HTTPie compared to cURL
+ 
+-Under the hood, HTTPie uses the excellent `Requests <http://python-requests.org>`_ and `Pygments <http://pygments.org/>`_ Python libraries.
++Under the hood, HTTPie uses the excellent `Requests <http:","diff --git a/README.rst b/README.rst
+index 0e814b6..d3b6835 100644
+--- a/README.rst
++++ b/README.rst
+@@ -8,7 +8,7 @@ HTTPie does so by providing an ``http`` command that allows for issuing arbitrar
+ .. image:: https://github.com/jkbr/httpie/raw/master/httpie.png
+     :alt: HTTPie compared to cURL
+ 
+-Under the hood, HTTPie uses the excellent `Requests <http://python-requests.org>`_ and `Pygments <http://pygments.org/>`_ Python libraries.
++Under the hood, HTTPie uses the excellent `Requests <http:",No
+repositories/httpie,httpie/__main__.py,Source Code,51aa0409e6cf82a96a0b4f616c6b41e1c5549fee,1f49900db6416690a95829e25bce4b224cab9f73,Added Python 3 support,,,No
+repositories/httpie,httpie/pretty.py,Source Code,51aa0409e6cf82a96a0b4f616c6b41e1c5549fee,1f49900db6416690a95829e25bce4b224cab9f73,Added Python 3 support,,,No
+repositories/httpie,setup.py,Source Code,51aa0409e6cf82a96a0b4f616c6b41e1c5549fee,1f49900db6416690a95829e25bce4b224cab9f73,Added Python 3 support,"diff --git a/setup.py b/setup.py
+index e1ef638..b7d0337 100644
+--- a/setup.py
++++ b/setup.py
+@@ -36,10 +36,9 @@ setup(
+         'Programming Language :: Python',
+         'Programming Language :: Python :: 2.6',
+         'Programming Language :: Python :: 2.7',
+-        # TODO: Python 3
+-        # 'Programming Language :: Python :: 3.1'
+-        # 'Programming Language :: Python :: 3.2'
+-        # 'Programming Language :: Python :: 3.3'
++        'Programming Language :: Python :: 3.1'
++        '","diff --git a/setup.py b/setup.py
+index e1ef638..b7d0337 100644
+--- a/setup.py
++++ b/setup.py
+@@ -36,10 +36,9 @@ setup(
+         'Programming Language :: Python',
+         'Programming Language :: Python :: 2.6',
+         'Programming Language :: Python :: 2.7',
+-        # TODO: Python 3
+-        # 'Programming Language :: Python :: 3.1'
+-        # 'Programming Language :: Python :: 3.2'
+-        # 'Programming Language :: Python :: 3.3'
++        'Programming Language :: Python :: 3.1'
++        '",No
+repositories/httpie,tests/tests.py,Test Code,51aa0409e6cf82a96a0b4f616c6b41e1c5549fee,1f49900db6416690a95829e25bce4b224cab9f73,Added Python 3 support,,,No
+repositories/httpie,setup.py,Source Code,3dbb61a8cacb683a97ee48b0d6a553f52ad7a391,51aa0409e6cf82a96a0b4f616c6b41e1c5549fee,Added `argparse` for Python 3.1.,"diff --git a/setup.py b/setup.py
+index b7d0337..7156958 100644
+--- a/setup.py
++++ b/setup.py
+@@ -10,7 +10,8 @@ if sys.argv[-1] == 'test':
+ 
+ 
+ requirements = ['requests>=0.10.4', 'Pygments>=1.4']
+-if sys.version_info < (2, 7):
++if sys.version_info[:2] in ((2, 6), (3, 1)):
++    # argparse has been added in Python 3.2 / 2.7
+     requirements.append('argparse>=1.2.1')
+ 
+ 
+","diff --git a/setup.py b/setup.py
+index b7d0337..7156958 100644
+--- a/setup.py
++++ b/setup.py
+@@ -10,7 +10,8 @@ if sys.argv[-1] == 'test':
+ 
+ 
+ requirements = ['requests>=0.10.4', 'Pygments>=1.4']
+-if sys.version_info < (2, 7):
++if sys.version_info[:2] in ((2, 6), (3, 1)):
++    # argparse has been added in Python 3.2 / 2.7
+     requirements.append('argparse>=1.2.1')
+ 
+ 
+",No
+repositories/httpie,.travis.yml,Other,ab23037582205ec50904389989e51913257f86a3,3dbb61a8cacb683a97ee48b0d6a553f52ad7a391,Python 3 fixes.,"diff --git a/.travis.yml b/.travis.yml
+index 8d447e0..7effe4c 100644
+--- a/.travis.yml
++++ b/.travis.yml
+@@ -4,9 +4,8 @@ python:
+   - 2.7
+   - 3.1
+   - 3.2
+-  - 3.3
+ script: python tests/tests.py
+ install:
+   - pip install requests pygments
+-  - ""if [[ $TRAVIS_PYTHON_VERSION == '2.6' ]]; then pip install argparse; fi""
++  - ""if [[ $TRAVIS_PYTHON_VERSION == '2.6' ]] || [[ $TRAVIS_PYTHON_VERSION == '3.1' ]]; then echo pip install argparse; fi""
+ 
+","diff --git a/.travis.yml b/.travis.yml
+index 8d447e0..7effe4c 100644
+--- a/.travis.yml
++++ b/.travis.yml
+@@ -4,9 +4,8 @@ python:
+   - 2.7
+   - 3.1
+   - 3.2
+-  - 3.3
+ script: python tests/tests.py
+ install:
+   - pip install requests pygments
+-  - ""if [[ $TRAVIS_PYTHON_VERSION == '2.6' ]]; then pip install argparse; fi""
++  - ""if [[ $TRAVIS_PYTHON_VERSION == '2.6' ]] || [[ $TRAVIS_PYTHON_VERSION == '3.1' ]]; then echo pip install argparse; fi""
+ 
+",No
+repositories/httpie,README.rst,README,ab23037582205ec50904389989e51913257f86a3,3dbb61a8cacb683a97ee48b0d6a553f52ad7a391,Python 3 fixes.,"diff --git a/README.rst b/README.rst
+index d3b6835..13ef9ee 100644
+--- a/README.rst
++++ b/README.rst
+@@ -8,7 +8,7 @@ HTTPie does so by providing an ``http`` command that allows for issuing arbitrar
+ .. image:: https://github.com/jkbr/httpie/raw/master/httpie.png
+     :alt: HTTPie compared to cURL
+ 
+-Under the hood, HTTPie uses the excellent `Requests <http://python-requests.org>`_ and `Pygments <http://pygments.org/>`_ Python libraries. Python >= 2.6 is supported (including Python 3.x).
++Under t","diff --git a/README.rst b/README.rst
+index d3b6835..13ef9ee 100644
+--- a/README.rst
++++ b/README.rst
+@@ -8,7 +8,7 @@ HTTPie does so by providing an ``http`` command that allows for issuing arbitrar
+ .. image:: https://github.com/jkbr/httpie/raw/master/httpie.png
+     :alt: HTTPie compared to cURL
+ 
+-Under the hood, HTTPie uses the excellent `Requests <http://python-requests.org>`_ and `Pygments <http://pygments.org/>`_ Python libraries. Python >= 2.6 is supported (including Python 3.x).
++Under t",No
+repositories/httpie,setup.py,Source Code,ab23037582205ec50904389989e51913257f86a3,3dbb61a8cacb683a97ee48b0d6a553f52ad7a391,Python 3 fixes.,"diff --git a/setup.py b/setup.py
+index 7156958..b18c76d 100644
+--- a/setup.py
++++ b/setup.py
+@@ -39,7 +39,6 @@ setup(
+         'Programming Language :: Python :: 2.7',
+         'Programming Language :: Python :: 3.1'
+         'Programming Language :: Python :: 3.2'
+-        'Programming Language :: Python :: 3.3'
+         'Environment :: Console',
+         'Intended Audience :: Developers',
+         'Intended Audience :: System Administrators',
+","diff --git a/setup.py b/setup.py
+index 7156958..b18c76d 100644
+--- a/setup.py
++++ b/setup.py
+@@ -39,7 +39,6 @@ setup(
+         'Programming Language :: Python :: 2.7',
+         'Programming Language :: Python :: 3.1'
+         'Programming Language :: Python :: 3.2'
+-        'Programming Language :: Python :: 3.3'
+         'Environment :: Console',
+         'Intended Audience :: Developers',
+         'Intended Audience :: System Administrators',
+",No
+repositories/httpie,.travis.yml,Other,1c5fd184655a1a3225a01b06675f8ae60ea3dc1a,ab23037582205ec50904389989e51913257f86a3,Python 3 fixes (travis config).,"diff --git a/.travis.yml b/.travis.yml
+index 7effe4c..470a635 100644
+--- a/.travis.yml
++++ b/.travis.yml
+@@ -7,5 +7,5 @@ python:
+ script: python tests/tests.py
+ install:
+   - pip install requests pygments
+-  - ""if [[ $TRAVIS_PYTHON_VERSION == '2.6' ]] || [[ $TRAVIS_PYTHON_VERSION == '3.1' ]]; then echo pip install argparse; fi""
++  - ""if [[ $TRAVIS_PYTHON_VERSION == '2.6' ]] || [[ $TRAVIS_PYTHON_VERSION == '3.1' ]]; then pip install argparse; fi""
+ 
+","diff --git a/.travis.yml b/.travis.yml
+index 7effe4c..470a635 100644
+--- a/.travis.yml
++++ b/.travis.yml
+@@ -7,5 +7,5 @@ python:
+ script: python tests/tests.py
+ install:
+   - pip install requests pygments
+-  - ""if [[ $TRAVIS_PYTHON_VERSION == '2.6' ]] || [[ $TRAVIS_PYTHON_VERSION == '3.1' ]]; then echo pip install argparse; fi""
++  - ""if [[ $TRAVIS_PYTHON_VERSION == '2.6' ]] || [[ $TRAVIS_PYTHON_VERSION == '3.1' ]]; then pip install argparse; fi""
+ 
+",No
+repositories/httpie,httpie/__main__.py,Source Code,153663cb92bd7f4072fcdc1119fe1a2d17f53bce,1c5fd184655a1a3225a01b06675f8ae60ea3dc1a,Add support for Digest authentication,,,No
+repositories/httpie,httpie/cli.py,Source Code,153663cb92bd7f4072fcdc1119fe1a2d17f53bce,1c5fd184655a1a3225a01b06675f8ae60ea3dc1a,Add support for Digest authentication,,,No
+repositories/httpie,httpie/__main__.py,Source Code,71d21d1feb831e58080947e570b417fde08e0267,1c5fd184655a1a3225a01b06675f8ae60ea3dc1a,make --verify no command line argument work,,,No
+repositories/httpie,README.rst,README,c6c1489212ccfc00c955507779ad87ca9b7c46ef,71d21d1feb831e58080947e570b417fde08e0267,Refactored @mmb's fix to --verify; updated docs.,"diff --git a/README.rst b/README.rst
+index 13ef9ee..9c2ae2c 100644
+--- a/README.rst
++++ b/README.rst
+@@ -103,6 +103,13 @@ Flags
+ ^^^^^
+ Most of the flags mirror the arguments understood by ``requests.request``. See ``http -h`` for more details::
+ 
++    usage: http [-h] [--version] [--json | --form] [--traceback]
++                       [--pretty | --ugly]
++                       [--print OUTPUT_OPTIONS | --verbose | --headers | --body]
++                       [--style STYLE] [--auth AUTH] [--ver","diff --git a/README.rst b/README.rst
+index 13ef9ee..9c2ae2c 100644
+--- a/README.rst
++++ b/README.rst
+@@ -103,6 +103,13 @@ Flags
+ ^^^^^
+ Most of the flags mirror the arguments understood by ``requests.request``. See ``http -h`` for more details::
+ 
++    usage: http [-h] [--version] [--json | --form] [--traceback]
++                       [--pretty | --ugly]
++                       [--print OUTPUT_OPTIONS | --verbose | --headers | --body]
++                       [--style STYLE] [--auth AUTH] [--ver",No
+repositories/httpie,httpie/__main__.py,Source Code,c6c1489212ccfc00c955507779ad87ca9b7c46ef,71d21d1feb831e58080947e570b417fde08e0267,Refactored @mmb's fix to --verify; updated docs.,,,No
+repositories/httpie,httpie/cli.py,Source Code,c6c1489212ccfc00c955507779ad87ca9b7c46ef,71d21d1feb831e58080947e570b417fde08e0267,Refactored @mmb's fix to --verify; updated docs.,,,No
+repositories/httpie,httpie/__main__.py,Source Code,0c4c6c47536a853cf1ac0bb3ff69261a380173e3,ee598d304dd722d312940d1eeb11161bad72e089,Added --auth-type and tests for basic/digest auth.,,,No
+repositories/httpie,httpie/cli.py,Source Code,0c4c6c47536a853cf1ac0bb3ff69261a380173e3,ee598d304dd722d312940d1eeb11161bad72e089,Added --auth-type and tests for basic/digest auth.,,,No
+repositories/httpie,tests/tests.py,Test Code,0c4c6c47536a853cf1ac0bb3ff69261a380173e3,ee598d304dd722d312940d1eeb11161bad72e089,Added --auth-type and tests for basic/digest auth.,,,No
+repositories/httpie,setup.py,Source Code,4da3821bc49113357af5bf683ab9cfddd693916a,0c4c6c47536a853cf1ac0bb3ff69261a380173e3,Lowered the minimum version of requests required,"diff --git a/setup.py b/setup.py
+index b18c76d..9401a0f 100644
+--- a/setup.py
++++ b/setup.py
+@@ -9,7 +9,7 @@ if sys.argv[-1] == 'test':
+     sys.exit()
+ 
+ 
+-requirements = ['requests>=0.10.4', 'Pygments>=1.4']
++requirements = ['requests>=0.10.1', 'Pygments>=1.4']
+ if sys.version_info[:2] in ((2, 6), (3, 1)):
+     # argparse has been added in Python 3.2 / 2.7
+     requirements.append('argparse>=1.2.1')
+","diff --git a/setup.py b/setup.py
+index b18c76d..9401a0f 100644
+--- a/setup.py
++++ b/setup.py
+@@ -9,7 +9,7 @@ if sys.argv[-1] == 'test':
+     sys.exit()
+ 
+ 
+-requirements = ['requests>=0.10.4', 'Pygments>=1.4']
++requirements = ['requests>=0.10.1', 'Pygments>=1.4']
+ if sys.version_info[:2] in ((2, 6), (3, 1)):
+     # argparse has been added in Python 3.2 / 2.7
+     requirements.append('argparse>=1.2.1')
+",No
+repositories/httpie,httpie/__main__.py,Source Code,45ce446017f355981de72dbcd10feb32e1aaf711,4da3821bc49113357af5bf683ab9cfddd693916a,"-j/--json now adds ""Accept"": ""application/json"" to GET requests if no previous Accept header exists.",,,No
+repositories/httpie,tests/tests.py,Test Code,45ce446017f355981de72dbcd10feb32e1aaf711,4da3821bc49113357af5bf683ab9cfddd693916a,"-j/--json now adds ""Accept"": ""application/json"" to GET requests if no previous Accept header exists.",,,No
+repositories/rich,.gitignore,Other,7481db402b68051b04d8fd3126ddfafef0f2fb84,7a5d8184e801ad3c6dce8e847b44e79bc45bc67e,initial commit,"diff --git a/.gitignore b/.gitignore
+index 894a44cc..fddc0135 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1,3 +1,5 @@
++.DS_Store
++
+ # Byte-compiled / optimized / DLL files
+ __pycache__/
+ *.py[cod]
+","diff --git a/.gitignore b/.gitignore
+index 894a44cc..fddc0135 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1,3 +1,5 @@
++.DS_Store
++
+ # Byte-compiled / optimized / DLL files
+ __pycache__/
+ *.py[cod]
+",No
+repositories/rich,rich/text.py,Source Code,d0ece455dad6eb3b11f412d6baca340676920f9d,7481db402b68051b04d8fd3126ddfafef0f2fb84,tidier rich text,,,No
+repositories/rich,rich/text.py,Source Code,065f0a7ac79b81eb81306afbc140355eb81de13e,d0ece455dad6eb3b11f412d6baca340676920f9d,init and doc,,,No
+repositories/rich,.gitignore,Other,a6db216788e082a4c5441713afd265dddea2f64e,065f0a7ac79b81eb81306afbc140355eb81de13e,functionality update,"diff --git a/.gitignore b/.gitignore
+index fddc0135..607b6192 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1,4 +1,5 @@
+ .DS_Store
++.vscode
+ 
+ # Byte-compiled / optimized / DLL files
+ __pycache__/
+","diff --git a/.gitignore b/.gitignore
+index fddc0135..607b6192 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1,4 +1,5 @@
+ .DS_Store
++.vscode
+ 
+ # Byte-compiled / optimized / DLL files
+ __pycache__/
+",No
+repositories/rich,rich/color.py,Source Code,a6db216788e082a4c5441713afd265dddea2f64e,065f0a7ac79b81eb81306afbc140355eb81de13e,functionality update,,,No
+repositories/rich,rich/console.py,Source Code,a6db216788e082a4c5441713afd265dddea2f64e,065f0a7ac79b81eb81306afbc140355eb81de13e,functionality update,,,No
+repositories/rich,rich/default_styles.py,Source Code,a6db216788e082a4c5441713afd265dddea2f64e,065f0a7ac79b81eb81306afbc140355eb81de13e,functionality update,,,No
+repositories/rich,rich/markdown.py,Source Code,a6db216788e082a4c5441713afd265dddea2f64e,065f0a7ac79b81eb81306afbc140355eb81de13e,functionality update,,,No
+repositories/rich,rich/style.py,Source Code,a6db216788e082a4c5441713afd265dddea2f64e,065f0a7ac79b81eb81306afbc140355eb81de13e,functionality update,,,No
+repositories/rich,rich/text.py,Source Code,a6db216788e082a4c5441713afd265dddea2f64e,065f0a7ac79b81eb81306afbc140355eb81de13e,functionality update,,,No
+repositories/rich,rich/console.py,Source Code,44f8d0dcf92d570187b78cbb5ba1ad6d3d44661d,a6db216788e082a4c5441713afd265dddea2f64e,simplify print,,,No
+repositories/rich,rich/markdown.py,Source Code,44f8d0dcf92d570187b78cbb5ba1ad6d3d44661d,a6db216788e082a4c5441713afd265dddea2f64e,simplify print,,,No
+repositories/rich,rich/text.py,Source Code,44f8d0dcf92d570187b78cbb5ba1ad6d3d44661d,a6db216788e082a4c5441713afd265dddea2f64e,simplify print,,,No
+repositories/rich,rich/console.py,Source Code,f4f69255f3ebf7780a6619f7b4d3e7364a187815,44f8d0dcf92d570187b78cbb5ba1ad6d3d44661d,nicer print,,,No
+repositories/rich,rich/style.py,Source Code,6db8f2697bcad3d77778032736517f731790a452,f4f69255f3ebf7780a6619f7b4d3e7364a187815,docstring,,,No
+repositories/rich,rich/style.py,Source Code,62a4aaadeb2d9acc7225045e7146b872623c99c8,6db8f2697bcad3d77778032736517f731790a452,bit based style attributes,,,No
+repositories/rich,rich/style.py,Source Code,3ddaaa3cbac3652803aaa3f1ff9a822647f5d86d,62a4aaadeb2d9acc7225045e7146b872623c99c8,remove print,,,No
+repositories/rich,rich/style.py,Source Code,bcba17277ccfe965f979a779ac52e3b98f831faa,3ddaaa3cbac3652803aaa3f1ff9a822647f5d86d,streamlined color def,,,No
+repositories/rich,rich/style.py,Source Code,f789215e990eabe14e22567af0323b56609ed364,bcba17277ccfe965f979a779ac52e3b98f831faa,optimized,,,No
+repositories/rich,rich/style.py,Source Code,595c49afe93abb404e249487d38dc28c8774e6f6,f789215e990eabe14e22567af0323b56609ed364,optimized style rener,,,No
+repositories/rich,rich/style.py,Source Code,6b1e9588b564c33526cca0612b774f3067f99354,595c49afe93abb404e249487d38dc28c8774e6f6,tidy sig,,,No
+repositories/rich,rich/default_styles.py,Source Code,7c53168fb6c3fc08239f777abf8300ce11191ce5,6b1e9588b564c33526cca0612b774f3067f99354,better markdown renderer,,,No
+repositories/rich,rich/markdown.py,Source Code,7c53168fb6c3fc08239f777abf8300ce11191ce5,6b1e9588b564c33526cca0612b774f3067f99354,better markdown renderer,,,No
+repositories/rich,rich/style.py,Source Code,7c53168fb6c3fc08239f777abf8300ce11191ce5,6b1e9588b564c33526cca0612b774f3067f99354,better markdown renderer,,,No
+repositories/rich,rich/markdown.py,Source Code,f470ca2f5fcf621a7d3c1f2989a284b6eec8cd30,7c53168fb6c3fc08239f777abf8300ce11191ce5,markdown parser,,,No
+repositories/rich,rich/markdown.py,Source Code,8708f78689b074bb348c6fd4e63001020f848639,f470ca2f5fcf621a7d3c1f2989a284b6eec8cd30,constructor fix,,,No
+repositories/rich,rich/console.py,Source Code,724d3d8ae1b1d90af8d69c0dc38ac6de44ed4275,8708f78689b074bb348c6fd4e63001020f848639,text formatting,,,No
+repositories/rich,rich/default_styles.py,Source Code,724d3d8ae1b1d90af8d69c0dc38ac6de44ed4275,8708f78689b074bb348c6fd4e63001020f848639,text formatting,,,No
+repositories/rich,rich/markdown.py,Source Code,724d3d8ae1b1d90af8d69c0dc38ac6de44ed4275,8708f78689b074bb348c6fd4e63001020f848639,text formatting,,,No
+repositories/rich,rich/style.py,Source Code,724d3d8ae1b1d90af8d69c0dc38ac6de44ed4275,8708f78689b074bb348c6fd4e63001020f848639,text formatting,,,No
+repositories/rich,rich/text.py,Source Code,724d3d8ae1b1d90af8d69c0dc38ac6de44ed4275,8708f78689b074bb348c6fd4e63001020f848639,text formatting,,,No
+repositories/rich,rich/console.py,Source Code,8c0e82ce936e07f158206ee5c156cf2cd679c202,724d3d8ae1b1d90af8d69c0dc38ac6de44ed4275,markdown panel,,,No
+repositories/rich,rich/default_styles.py,Source Code,8c0e82ce936e07f158206ee5c156cf2cd679c202,724d3d8ae1b1d90af8d69c0dc38ac6de44ed4275,markdown panel,,,No
+repositories/rich,rich/markdown.py,Source Code,8c0e82ce936e07f158206ee5c156cf2cd679c202,724d3d8ae1b1d90af8d69c0dc38ac6de44ed4275,markdown panel,,,No
+repositories/rich,rich/panel.py,Source Code,8c0e82ce936e07f158206ee5c156cf2cd679c202,724d3d8ae1b1d90af8d69c0dc38ac6de44ed4275,markdown panel,,,No
+repositories/rich,rich/text.py,Source Code,8c0e82ce936e07f158206ee5c156cf2cd679c202,724d3d8ae1b1d90af8d69c0dc38ac6de44ed4275,markdown panel,,,No
+repositories/rich,rich/console.py,Source Code,94757f645a1f390faf89716233c98aeef2a51c04,8c0e82ce936e07f158206ee5c156cf2cd679c202,faster render_lines,,,No
+repositories/rich,rich/panel.py,Source Code,94757f645a1f390faf89716233c98aeef2a51c04,8c0e82ce936e07f158206ee5c156cf2cd679c202,faster render_lines,,,No
+repositories/rich,rich/text.py,Source Code,94757f645a1f390faf89716233c98aeef2a51c04,8c0e82ce936e07f158206ee5c156cf2cd679c202,faster render_lines,,,No
+repositories/rich,rich/console.py,Source Code,9186d6021b4dbad8dca4a816e9a29a816a18c5d8,94757f645a1f390faf89716233c98aeef2a51c04,faster render_lines,,,No
+repositories/rich,rich/console.py,Source Code,87ec1a0e7f3767aee47b8b7cce3d381e174d73a6,9186d6021b4dbad8dca4a816e9a29a816a18c5d8,markdown list items,,,No
+repositories/rich,rich/default_styles.py,Source Code,87ec1a0e7f3767aee47b8b7cce3d381e174d73a6,9186d6021b4dbad8dca4a816e9a29a816a18c5d8,markdown list items,,,No
+repositories/rich,rich/markdown.py,Source Code,87ec1a0e7f3767aee47b8b7cce3d381e174d73a6,9186d6021b4dbad8dca4a816e9a29a816a18c5d8,markdown list items,,,No
+repositories/rich,rich/panel.py,Source Code,87ec1a0e7f3767aee47b8b7cce3d381e174d73a6,9186d6021b4dbad8dca4a816e9a29a816a18c5d8,markdown list items,,,No
+repositories/rich,rich/text.py,Source Code,87ec1a0e7f3767aee47b8b7cce3d381e174d73a6,9186d6021b4dbad8dca4a816e9a29a816a18c5d8,markdown list items,,,No
+repositories/rich,rich/console.py,Source Code,33768bd14e82e7cfecbd513df55451e42dd1971c,9bbe9d4f3e84065108354a7f916c141f26a7ec23,markdown rendering,,,No
+repositories/rich,rich/markdown.py,Source Code,33768bd14e82e7cfecbd513df55451e42dd1971c,9bbe9d4f3e84065108354a7f916c141f26a7ec23,markdown rendering,,,No
+repositories/rich,rich/styled.py,Source Code,33768bd14e82e7cfecbd513df55451e42dd1971c,9bbe9d4f3e84065108354a7f916c141f26a7ec23,markdown rendering,,,No
+repositories/rich,rich/console.py,Source Code,68432bdbc4d93ed8338d3ebaaa7cc80beba9a343,33768bd14e82e7cfecbd513df55451e42dd1971c,renamed Styled to Segment,,,No
+repositories/rich,rich/markdown.py,Source Code,68432bdbc4d93ed8338d3ebaaa7cc80beba9a343,33768bd14e82e7cfecbd513df55451e42dd1971c,renamed Styled to Segment,,,No
+repositories/rich,rich/panel.py,Source Code,68432bdbc4d93ed8338d3ebaaa7cc80beba9a343,33768bd14e82e7cfecbd513df55451e42dd1971c,renamed Styled to Segment,,,No
+repositories/rich,rich/text.py,Source Code,68432bdbc4d93ed8338d3ebaaa7cc80beba9a343,33768bd14e82e7cfecbd513df55451e42dd1971c,renamed Styled to Segment,,,No
+repositories/rich,rich/console.py,Source Code,6edecd80d93cc82eec4befc5e257416c08b3e4bf,68432bdbc4d93ed8338d3ebaaa7cc80beba9a343,docs,,,No
+repositories/rich,rich/text.py,Source Code,6edecd80d93cc82eec4befc5e257416c08b3e4bf,68432bdbc4d93ed8338d3ebaaa7cc80beba9a343,docs,,,No
+repositories/rich,rich/console.py,Source Code,e6b465e937da8b44690ee531a85c2035a8586f33,6edecd80d93cc82eec4befc5e257416c08b3e4bf,style decorator,,,No
+repositories/rich,rich/default_styles.py,Source Code,9e49f3cace49ec69c6cb642a23cf9960aded5f12,e6b465e937da8b44690ee531a85c2035a8586f33,list styles and block quotes in markdown,,,No
+repositories/rich,rich/markdown.py,Source Code,9e49f3cace49ec69c6cb642a23cf9960aded5f12,e6b465e937da8b44690ee531a85c2035a8586f33,list styles and block quotes in markdown,,,No
+repositories/rich,rich/text.py,Source Code,9e49f3cace49ec69c6cb642a23cf9960aded5f12,e6b465e937da8b44690ee531a85c2035a8586f33,list styles and block quotes in markdown,,,No
+repositories/rich,rich/default_styles.py,Source Code,db2455d32fb083b30cb4388b0ded9c22fd8f4ad4,9e49f3cace49ec69c6cb642a23cf9960aded5f12,styles,,,No
+repositories/rich,rich/markdown.py,Source Code,db2455d32fb083b30cb4388b0ded9c22fd8f4ad4,9e49f3cace49ec69c6cb642a23cf9960aded5f12,styles,,,No
+repositories/rich,rich/markdown.py,Source Code,0891b64380fdfc00465926fe3df3e3d6fe31aa10,db2455d32fb083b30cb4388b0ded9c22fd8f4ad4,better split and join,,,No
+repositories/rich,rich/text.py,Source Code,0891b64380fdfc00465926fe3df3e3d6fe31aa10,db2455d32fb083b30cb4388b0ded9c22fd8f4ad4,better split and join,,,No
+repositories/rich,rich/_tools.py,Source Code,9e04720781f5401a045ed6124168e7465ee64e62,c4b36d2a3595d084a6a947f3efacb69b419997df,added bools,,,No
+repositories/rich,rich/text.py,Source Code,9e04720781f5401a045ed6124168e7465ee64e62,c4b36d2a3595d084a6a947f3efacb69b419997df,added bools,,,No
+repositories/rich,rich/markdown.py,Source Code,fc8f17760e1a984f3139e390db47a22bb33c0566,9e04720781f5401a045ed6124168e7465ee64e62,render fix,,,No
+repositories/rich,rich/style.py,Source Code,fc8f17760e1a984f3139e390db47a22bb33c0566,9e04720781f5401a045ed6124168e7465ee64e62,render fix,,,No
+repositories/rich,rich/text.py,Source Code,fc8f17760e1a984f3139e390db47a22bb33c0566,9e04720781f5401a045ed6124168e7465ee64e62,render fix,,,No
+repositories/rich,rich/default_styles.py,Source Code,e76bd507870fd8cd5c07be3ebef33b0970e5c618,fc8f17760e1a984f3139e390db47a22bb33c0566,rendering,,,No
+repositories/rich,rich/markdown.py,Source Code,e76bd507870fd8cd5c07be3ebef33b0970e5c618,fc8f17760e1a984f3139e390db47a22bb33c0566,rendering,,,No
+repositories/rich,rich/text.py,Source Code,e76bd507870fd8cd5c07be3ebef33b0970e5c618,fc8f17760e1a984f3139e390db47a22bb33c0566,rendering,,,No
+repositories/rich,rich/_tools.py,Source Code,6fc2bbe9ca2b3a779fc54a3b147d75c95d716828,e76bd507870fd8cd5c07be3ebef33b0970e5c618,Refinements,,,No
+repositories/rich,rich/default_styles.py,Source Code,6fc2bbe9ca2b3a779fc54a3b147d75c95d716828,e76bd507870fd8cd5c07be3ebef33b0970e5c618,Refinements,,,No
+repositories/rich,rich/markdown.py,Source Code,6fc2bbe9ca2b3a779fc54a3b147d75c95d716828,e76bd507870fd8cd5c07be3ebef33b0970e5c618,Refinements,,,No
+repositories/rich,rich/text.py,Source Code,6fc2bbe9ca2b3a779fc54a3b147d75c95d716828,e76bd507870fd8cd5c07be3ebef33b0970e5c618,Refinements,,,No
+repositories/rich,rich/markdown.py,Source Code,81fe3a3d51b5591d4d6380e5c0a2cb032a104f75,6fc2bbe9ca2b3a779fc54a3b147d75c95d716828,docstring,,,No
+repositories/rich,rich/default_styles.py,Source Code,109faa628299a9e8667f3f785492bb997f14f2f2,81fe3a3d51b5591d4d6380e5c0a2cb032a104f75,remove style name,,,No
+repositories/rich,rich/style.py,Source Code,109faa628299a9e8667f3f785492bb997f14f2f2,81fe3a3d51b5591d4d6380e5c0a2cb032a104f75,remove style name,,,No
+repositories/rich,rich/_stack.py,Source Code,45e1e0b2b33ab8be3b31e9755b89bdc89dd56a2b,109faa628299a9e8667f3f785492bb997f14f2f2,style rendering,,,No
+repositories/rich,rich/console.py,Source Code,45e1e0b2b33ab8be3b31e9755b89bdc89dd56a2b,109faa628299a9e8667f3f785492bb997f14f2f2,style rendering,,,No
+repositories/rich,rich/markdown.py,Source Code,45e1e0b2b33ab8be3b31e9755b89bdc89dd56a2b,109faa628299a9e8667f3f785492bb997f14f2f2,style rendering,,,No
+repositories/rich,rich/style.py,Source Code,45e1e0b2b33ab8be3b31e9755b89bdc89dd56a2b,109faa628299a9e8667f3f785492bb997f14f2f2,style rendering,,,No
+repositories/rich,rich/text.py,Source Code,45e1e0b2b33ab8be3b31e9755b89bdc89dd56a2b,109faa628299a9e8667f3f785492bb997f14f2f2,style rendering,,,No
+repositories/rich,rich/default_styles.py,Source Code,b9bfb5769f7eb3de3b2028090ccd778f37faa2e8,45e1e0b2b33ab8be3b31e9755b89bdc89dd56a2b,change back to bgcolor,,,No
+repositories/rich,rich/style.py,Source Code,b9bfb5769f7eb3de3b2028090ccd778f37faa2e8,45e1e0b2b33ab8be3b31e9755b89bdc89dd56a2b,change back to bgcolor,,,No
+repositories/rich,rich/syntax.py,Source Code,b9bfb5769f7eb3de3b2028090ccd778f37faa2e8,45e1e0b2b33ab8be3b31e9755b89bdc89dd56a2b,change back to bgcolor,,,No
+repositories/rich,rich/color.py,Source Code,a0eaca8d7242f8196022e42188274af6bd9b45d6,b9bfb5769f7eb3de3b2028090ccd778f37faa2e8,syntax highlighting with numbers.,,,No
+repositories/rich,rich/markdown.py,Source Code,a0eaca8d7242f8196022e42188274af6bd9b45d6,b9bfb5769f7eb3de3b2028090ccd778f37faa2e8,syntax highlighting with numbers.,,,No
+repositories/rich,rich/syntax.py,Source Code,a0eaca8d7242f8196022e42188274af6bd9b45d6,b9bfb5769f7eb3de3b2028090ccd778f37faa2e8,syntax highlighting with numbers.,,,No
+repositories/rich,rich/color.py,Source Code,d48c82d8ec32dc46c3db48e5aa294cdf242cad09,a0eaca8d7242f8196022e42188274af6bd9b45d6,background style for syntax,,,No
+repositories/rich,rich/markdown.py,Source Code,d48c82d8ec32dc46c3db48e5aa294cdf242cad09,a0eaca8d7242f8196022e42188274af6bd9b45d6,background style for syntax,,,No
+repositories/rich,rich/syntax.py,Source Code,d48c82d8ec32dc46c3db48e5aa294cdf242cad09,a0eaca8d7242f8196022e42188274af6bd9b45d6,background style for syntax,,,No
+repositories/rich,rich/color.py,Source Code,ced143b7381835e4222e4e57e3e34f103e37be26,d48c82d8ec32dc46c3db48e5aa294cdf242cad09,detect color system,,,No
+repositories/rich,rich/console.py,Source Code,ced143b7381835e4222e4e57e3e34f103e37be26,d48c82d8ec32dc46c3db48e5aa294cdf242cad09,detect color system,,,No
+repositories/rich,rich/markdown.py,Source Code,ced143b7381835e4222e4e57e3e34f103e37be26,d48c82d8ec32dc46c3db48e5aa294cdf242cad09,detect color system,,,No
+repositories/rich,rich/style.py,Source Code,ced143b7381835e4222e4e57e3e34f103e37be26,d48c82d8ec32dc46c3db48e5aa294cdf242cad09,detect color system,,,No
+repositories/rich,rich/color.py,Source Code,8d1046483a11b86d9140a56e496e70a0ae4ed833,ced143b7381835e4222e4e57e3e34f103e37be26,color palettes,,,No
+repositories/rich,rich/syntax.py,Source Code,8d1046483a11b86d9140a56e496e70a0ae4ed833,ced143b7381835e4222e4e57e3e34f103e37be26,color palettes,,,No
+repositories/rich,rich/color.py,Source Code,3e674ab606cacab77cbe32d4e94a966e6fb5eee7,8d1046483a11b86d9140a56e496e70a0ae4ed833,tweaking,,,No
+repositories/rich,rich/console.py,Source Code,3e674ab606cacab77cbe32d4e94a966e6fb5eee7,8d1046483a11b86d9140a56e496e70a0ae4ed833,tweaking,,,No
+repositories/rich,rich/syntax.py,Source Code,3e674ab606cacab77cbe32d4e94a966e6fb5eee7,8d1046483a11b86d9140a56e496e70a0ae4ed833,tweaking,,,No
+repositories/rich,rich/color.py,Source Code,cee2cb7c1ca5711be4ac2a1c97fe0300a2ce74e2,3e674ab606cacab77cbe32d4e94a966e6fb5eee7,faster color reduction,,,No
+repositories/rich,rich/color.py,Source Code,ba2b6bc0fd1a144d4dddf1919869538972e4eb03,cee2cb7c1ca5711be4ac2a1c97fe0300a2ce74e2,refactor palette,,,No
+repositories/rich,rich/color.py,Source Code,2780c0a5dd5bd7e99018ae1eab6a02132f86d870,ba2b6bc0fd1a144d4dddf1919869538972e4eb03,refinement,,,No
+repositories/rich,rich/syntax.py,Source Code,2780c0a5dd5bd7e99018ae1eab6a02132f86d870,ba2b6bc0fd1a144d4dddf1919869538972e4eb03,refinement,,,No
+repositories/rich,rich/_tools.py,Source Code,71aff2dbbd9ecc77dee1817fadd832ce5a91ab0f,2780c0a5dd5bd7e99018ae1eab6a02132f86d870,fix for wrapping,,,No
+repositories/rich,rich/color.py,Source Code,71aff2dbbd9ecc77dee1817fadd832ce5a91ab0f,2780c0a5dd5bd7e99018ae1eab6a02132f86d870,fix for wrapping,,,No
+repositories/rich,rich/syntax.py,Source Code,71aff2dbbd9ecc77dee1817fadd832ce5a91ab0f,2780c0a5dd5bd7e99018ae1eab6a02132f86d870,fix for wrapping,,,No
+repositories/rich,rich/markdown.py,Source Code,4f993064175ead93047aa1abc4ba89e60d8be599,71aff2dbbd9ecc77dee1817fadd832ce5a91ab0f,markdown options,,,No
+repositories/rich,rich/style.py,Source Code,4f993064175ead93047aa1abc4ba89e60d8be599,71aff2dbbd9ecc77dee1817fadd832ce5a91ab0f,markdown options,,,No
+repositories/rich,rich/syntax.py,Source Code,4f993064175ead93047aa1abc4ba89e60d8be599,71aff2dbbd9ecc77dee1817fadd832ce5a91ab0f,markdown options,,,No
+repositories/rich,rich/syntax.py,Source Code,331895e8662d5d13573c33f0cf3362fcb563a888,4f993064175ead93047aa1abc4ba89e60d8be599,Added Syntax.from_path,,,No
+repositories/rich,rich/markdown.py,Source Code,9cf593ee6e0740be0f695d2afc3d7af36cb4368c,21eb838abceb1e273b2a2faebd0992aabffd6855,optimization,,,No
+repositories/rich,rich/syntax.py,Source Code,9cf593ee6e0740be0f695d2afc3d7af36cb4368c,21eb838abceb1e273b2a2faebd0992aabffd6855,optimization,,,No
+repositories/rich,rich/color.py,Source Code,f528e1bb54e90180ec7a3fd4c9a1903206acdfe4,9cf593ee6e0740be0f695d2afc3d7af36cb4368c,lru cache tweaks,,,No
+repositories/rich,rich/syntax.py,Source Code,f528e1bb54e90180ec7a3fd4c9a1903206acdfe4,9cf593ee6e0740be0f695d2afc3d7af36cb4368c,lru cache tweaks,,,No
+repositories/rich,rich/style.py,Source Code,c7c26ecf93dad4625a9d0acf5623e90cc6ebfccb,f528e1bb54e90180ec7a3fd4c9a1903206acdfe4,lru cache tweaks,,,No
+repositories/rich,rich/markdown.py,Source Code,1697f5f6dfedaf6e73a6769cdee334198db5a932,c7c26ecf93dad4625a9d0acf5623e90cc6ebfccb,more lru_cache,,,No
+repositories/rich,rich/style.py,Source Code,1697f5f6dfedaf6e73a6769cdee334198db5a932,c7c26ecf93dad4625a9d0acf5623e90cc6ebfccb,more lru_cache,,,No
+repositories/rich,rich/syntax.py,Source Code,1697f5f6dfedaf6e73a6769cdee334198db5a932,c7c26ecf93dad4625a9d0acf5623e90cc6ebfccb,more lru_cache,,,No
+repositories/rich,rich/style.py,Source Code,874c14a178dd8f58d735ef39f8c7cd9b9edb17ed,1697f5f6dfedaf6e73a6769cdee334198db5a932,"made style immutable, optimizations",,,No
+repositories/rich,rich/color.py,Source Code,a4b68a9388840d1c5f5c119326f8cb430e123f36,874c14a178dd8f58d735ef39f8c7cd9b9edb17ed,emoji support,,,No
+repositories/rich,rich/console.py,Source Code,a4b68a9388840d1c5f5c119326f8cb430e123f36,874c14a178dd8f58d735ef39f8c7cd9b9edb17ed,emoji support,,,No
+repositories/rich,rich/markdown.py,Source Code,a4b68a9388840d1c5f5c119326f8cb430e123f36,874c14a178dd8f58d735ef39f8c7cd9b9edb17ed,emoji support,,,No
+repositories/rich,rich/panel.py,Source Code,a4b68a9388840d1c5f5c119326f8cb430e123f36,874c14a178dd8f58d735ef39f8c7cd9b9edb17ed,emoji support,,,No
+repositories/rich,rich/style.py,Source Code,a4b68a9388840d1c5f5c119326f8cb430e123f36,874c14a178dd8f58d735ef39f8c7cd9b9edb17ed,emoji support,,,No
+repositories/rich,rich/syntax.py,Source Code,a4b68a9388840d1c5f5c119326f8cb430e123f36,874c14a178dd8f58d735ef39f8c7cd9b9edb17ed,emoji support,,,No
+repositories/rich,rich/text.py,Source Code,a4b68a9388840d1c5f5c119326f8cb430e123f36,874c14a178dd8f58d735ef39f8c7cd9b9edb17ed,emoji support,,,No
+repositories/rich,rich/emoji.py,Source Code,1634917841b9548d432fd651116ceae03a330145,a4b68a9388840d1c5f5c119326f8cb430e123f36,emoji support,,,No
+repositories/rich,rich/_emoji_replace.py,Source Code,dd8f00b475cd7cf190bed6084593476aa14eb4b5,1634917841b9548d432fd651116ceae03a330145,typing for emoji rendering,,,No
+repositories/rich,rich/emoji.py,Source Code,dd8f00b475cd7cf190bed6084593476aa14eb4b5,1634917841b9548d432fd651116ceae03a330145,typing for emoji rendering,,,No
+repositories/rich,rich/panel.py,Source Code,dd8f00b475cd7cf190bed6084593476aa14eb4b5,1634917841b9548d432fd651116ceae03a330145,typing for emoji rendering,,,No
+repositories/rich,rich/_emoji_codes.py,Source Code,dbbbbe6d9e8a98872eb6e78164e24f80347825af,dd8f00b475cd7cf190bed6084593476aa14eb4b5,emoji and box drawing,,,No
+repositories/rich,rich/_emoji_replace.py,Source Code,dbbbbe6d9e8a98872eb6e78164e24f80347825af,dd8f00b475cd7cf190bed6084593476aa14eb4b5,emoji and box drawing,,,No
+repositories/rich,rich/console.py,Source Code,dbbbbe6d9e8a98872eb6e78164e24f80347825af,dd8f00b475cd7cf190bed6084593476aa14eb4b5,emoji and box drawing,,,No
+repositories/rich,rich/emoji.py,Source Code,dbbbbe6d9e8a98872eb6e78164e24f80347825af,dd8f00b475cd7cf190bed6084593476aa14eb4b5,emoji and box drawing,,,No
+repositories/rich,rich/markdown.py,Source Code,dbbbbe6d9e8a98872eb6e78164e24f80347825af,dd8f00b475cd7cf190bed6084593476aa14eb4b5,emoji and box drawing,,,No
+repositories/rich,rich/panel.py,Source Code,dbbbbe6d9e8a98872eb6e78164e24f80347825af,dd8f00b475cd7cf190bed6084593476aa14eb4b5,emoji and box drawing,,,No
+repositories/rich,rich/text.py,Source Code,dbbbbe6d9e8a98872eb6e78164e24f80347825af,dd8f00b475cd7cf190bed6084593476aa14eb4b5,emoji and box drawing,,,No
+repositories/rich,rich/markdown.py,Source Code,63d7035df389463b0a92539a88b21660af13629b,dbbbbe6d9e8a98872eb6e78164e24f80347825af,docs,,,No
+repositories/rich,rich/panel.py,Source Code,63d7035df389463b0a92539a88b21660af13629b,dbbbbe6d9e8a98872eb6e78164e24f80347825af,docs,,,No
+repositories/rich,rich/box.py,Source Code,8e1b5a518a6e388467a7415c3594d9796773a95f,63d7035df389463b0a92539a88b21660af13629b,extra box drawing characters,,,No
+repositories/rich,rich/box.py,Source Code,62f1aacd41555c4a9d084a5b256e004d9c3ed2fc,8e1b5a518a6e388467a7415c3594d9796773a95f,extra box drawing chars,,,No
+repositories/rich,rich/box.py,Source Code,7df02f3e9afad7113275e766241b6abeceb5e985,62f1aacd41555c4a9d084a5b256e004d9c3ed2fc,more box characters,,,No
+repositories/rich,rich/panel.py,Source Code,e930cc6e08963d789d19fd0630f24ad765a5911e,7df02f3e9afad7113275e766241b6abeceb5e985,panel fix,,,No
+repositories/rich,rich/box.py,Source Code,5855c0b0f62e1390037232de103c0519c8d25d92,e930cc6e08963d789d19fd0630f24ad765a5911e,"bright standard colors, started table",,,No
+repositories/rich,rich/color.py,Source Code,5855c0b0f62e1390037232de103c0519c8d25d92,e930cc6e08963d789d19fd0630f24ad765a5911e,"bright standard colors, started table",,,No
+repositories/rich,rich/console.py,Source Code,5855c0b0f62e1390037232de103c0519c8d25d92,e930cc6e08963d789d19fd0630f24ad765a5911e,"bright standard colors, started table",,,No
+repositories/rich,rich/style.py,Source Code,5855c0b0f62e1390037232de103c0519c8d25d92,e930cc6e08963d789d19fd0630f24ad765a5911e,"bright standard colors, started table",,,No
+repositories/rich,rich/color.py,Source Code,092cfa4d723a626b7e57c5ff163cfdce287ffc25,12d694bcd44ba04fea8ef4e4726fe95aa8bdd9d6,color parse errors,,,No
+repositories/rich,rich/style.py,Source Code,092cfa4d723a626b7e57c5ff163cfdce287ffc25,12d694bcd44ba04fea8ef4e4726fe95aa8bdd9d6,color parse errors,,,No
+repositories/rich,rich/color.py,Source Code,92e3a44a65096666704716edee6ada974aad67a9,092cfa4d723a626b7e57c5ff163cfdce287ffc25,color parse errors,,,No
+repositories/rich,rich/color.py,Source Code,656295fe6e0b62554e40fcbdda04aec005f1d486,92e3a44a65096666704716edee6ada974aad67a9,"Panel, console_width protocol",,,No
+repositories/rich,rich/console.py,Source Code,656295fe6e0b62554e40fcbdda04aec005f1d486,92e3a44a65096666704716edee6ada974aad67a9,"Panel, console_width protocol",,,No
+repositories/rich,rich/markdown.py,Source Code,656295fe6e0b62554e40fcbdda04aec005f1d486,92e3a44a65096666704716edee6ada974aad67a9,"Panel, console_width protocol",,,No
+repositories/rich,rich/panel.py,Source Code,656295fe6e0b62554e40fcbdda04aec005f1d486,92e3a44a65096666704716edee6ada974aad67a9,"Panel, console_width protocol",,,No
+repositories/rich,rich/segment.py,Source Code,656295fe6e0b62554e40fcbdda04aec005f1d486,92e3a44a65096666704716edee6ada974aad67a9,"Panel, console_width protocol",,,No
+repositories/rich,rich/syntax.py,Source Code,656295fe6e0b62554e40fcbdda04aec005f1d486,92e3a44a65096666704716edee6ada974aad67a9,"Panel, console_width protocol",,,No
+repositories/rich,rich/table.py,Source Code,656295fe6e0b62554e40fcbdda04aec005f1d486,92e3a44a65096666704716edee6ada974aad67a9,"Panel, console_width protocol",,,No
+repositories/rich,rich/text.py,Source Code,656295fe6e0b62554e40fcbdda04aec005f1d486,92e3a44a65096666704716edee6ada974aad67a9,"Panel, console_width protocol",,,No
+repositories/rich,rich/console.py,Source Code,3508c33f3799fb671c595049f81e23740a817fdb,656295fe6e0b62554e40fcbdda04aec005f1d486,"Panel, console_width protocol",,,No
+repositories/rich,rich/console.py,Source Code,44375bb7bd6efdf5f46b8a94f6df491fd3b65087,3508c33f3799fb671c595049f81e23740a817fdb,sanity check,,,No
+repositories/rich,rich/console.py,Source Code,4f7ee0830d319c45c316b443ae779ac30acdabe5,44375bb7bd6efdf5f46b8a94f6df491fd3b65087,render width calc,,,No
+repositories/rich,rich/console.py,Source Code,5d686e8286ec842701b71a6d80e99a3ec6c474a0,4f7ee0830d319c45c316b443ae779ac30acdabe5,"console width protocol, table widths",,,No
+repositories/rich,rich/panel.py,Source Code,5d686e8286ec842701b71a6d80e99a3ec6c474a0,4f7ee0830d319c45c316b443ae779ac30acdabe5,"console width protocol, table widths",,,No
+repositories/rich,rich/table.py,Source Code,5d686e8286ec842701b71a6d80e99a3ec6c474a0,4f7ee0830d319c45c316b443ae779ac30acdabe5,"console width protocol, table widths",,,No
+repositories/rich,rich/text.py,Source Code,5d686e8286ec842701b71a6d80e99a3ec6c474a0,4f7ee0830d319c45c316b443ae779ac30acdabe5,"console width protocol, table widths",,,No
+repositories/rich,rich/console.py,Source Code,19b937b1f3473c268e6a669c40af5cb8775ddf85,5d686e8286ec842701b71a6d80e99a3ec6c474a0,tables,,,No
+repositories/rich,rich/table.py,Source Code,19b937b1f3473c268e6a669c40af5cb8775ddf85,5d686e8286ec842701b71a6d80e99a3ec6c474a0,tables,,,No
+repositories/rich,rich/color.py,Source Code,7f8bbe21f9e06b0df38ded35411de70b498102ce,ae2844e6f7b1ee900ea3f160d1d878e1dd762e26,splified color downgrade,,,No
+repositories/rich,rich/table.py,Source Code,7f8bbe21f9e06b0df38ded35411de70b498102ce,ae2844e6f7b1ee900ea3f160d1d878e1dd762e26,splified color downgrade,,,No
+repositories/rich,rich/_tools.py,Source Code,553f1b21db0401db8d1515a8fc83e9c71ffc2ce6,7f8bbe21f9e06b0df38ded35411de70b498102ce,optimize color downgrade and added ratio_divide to tools,,,No
+repositories/rich,rich/color.py,Source Code,553f1b21db0401db8d1515a8fc83e9c71ffc2ce6,7f8bbe21f9e06b0df38ded35411de70b498102ce,optimize color downgrade and added ratio_divide to tools,,,No
+repositories/rich,rich/console.py,Source Code,749edafe484c12dc898c0a8b464e77d724ee177c,553f1b21db0401db8d1515a8fc83e9c71ffc2ce6,fix adjust_line_length,,,No
+repositories/rich,rich/segment.py,Source Code,749edafe484c12dc898c0a8b464e77d724ee177c,553f1b21db0401db8d1515a8fc83e9c71ffc2ce6,fix adjust_line_length,,,No
+repositories/rich,rich/table.py,Source Code,749edafe484c12dc898c0a8b464e77d724ee177c,553f1b21db0401db8d1515a8fc83e9c71ffc2ce6,fix adjust_line_length,,,No
+repositories/rich,rich/_tools.py,Source Code,ea693e9c38e507de658109cf03f6f796cd91b511,749edafe484c12dc898c0a8b464e77d724ee177c,table formatting,,,No
+repositories/rich,rich/console.py,Source Code,ea693e9c38e507de658109cf03f6f796cd91b511,749edafe484c12dc898c0a8b464e77d724ee177c,table formatting,,,No
+repositories/rich,rich/segment.py,Source Code,ea693e9c38e507de658109cf03f6f796cd91b511,749edafe484c12dc898c0a8b464e77d724ee177c,table formatting,,,No
+repositories/rich,rich/table.py,Source Code,ea693e9c38e507de658109cf03f6f796cd91b511,749edafe484c12dc898c0a8b464e77d724ee177c,table formatting,,,No
+repositories/rich,rich/_tools.py,Source Code,bd0833d864125c6d66afdc4010a480c5762b8b96,ea693e9c38e507de658109cf03f6f796cd91b511,table columns,,,No
+repositories/rich,rich/table.py,Source Code,bd0833d864125c6d66afdc4010a480c5762b8b96,ea693e9c38e507de658109cf03f6f796cd91b511,table columns,,,No
+repositories/rich,rich/console.py,Source Code,dcc8c632868bead23b9ae0d2a9aabbfe29550955,bd0833d864125c6d66afdc4010a480c5762b8b96,table structures,,,No
+repositories/rich,rich/table.py,Source Code,dcc8c632868bead23b9ae0d2a9aabbfe29550955,bd0833d864125c6d66afdc4010a480c5762b8b96,table structures,,,No
+repositories/rich,rich/padding.py,Source Code,89be28bb9c2668d04e7dda0e86ad156643173424,dcc8c632868bead23b9ae0d2a9aabbfe29550955,chaged fit to expand,,,No
+repositories/rich,rich/panel.py,Source Code,89be28bb9c2668d04e7dda0e86ad156643173424,dcc8c632868bead23b9ae0d2a9aabbfe29550955,chaged fit to expand,,,No
+repositories/rich,rich/table.py,Source Code,89be28bb9c2668d04e7dda0e86ad156643173424,dcc8c632868bead23b9ae0d2a9aabbfe29550955,chaged fit to expand,,,No
+repositories/rich,rich/console.py,Source Code,d94b012e73ad251f55532261a9cd975b54804b7b,89be28bb9c2668d04e7dda0e86ad156643173424,NotRenderable error added,,,No
+repositories/rich,rich/errors.py,Source Code,d94b012e73ad251f55532261a9cd975b54804b7b,89be28bb9c2668d04e7dda0e86ad156643173424,NotRenderable error added,,,No
+repositories/rich,rich/color.py,Source Code,11d875944872bf4c12dd14fecfd6bcd0e4449692,d94b012e73ad251f55532261a9cd975b54804b7b,themes and styles,,,No
+repositories/rich,rich/console.py,Source Code,11d875944872bf4c12dd14fecfd6bcd0e4449692,d94b012e73ad251f55532261a9cd975b54804b7b,themes and styles,,,No
+repositories/rich,rich/style.py,Source Code,11d875944872bf4c12dd14fecfd6bcd0e4449692,d94b012e73ad251f55532261a9cd975b54804b7b,themes and styles,,,No
+repositories/rich,rich/table.py,Source Code,11d875944872bf4c12dd14fecfd6bcd0e4449692,d94b012e73ad251f55532261a9cd975b54804b7b,themes and styles,,,No
+repositories/rich,rich/console.py,Source Code,b465d3cc80691de8213cd249b5cca5ef934e6255,11d875944872bf4c12dd14fecfd6bcd0e4449692,write console html,,,No
+repositories/rich,rich/markdown.py,Source Code,b465d3cc80691de8213cd249b5cca5ef934e6255,11d875944872bf4c12dd14fecfd6bcd0e4449692,write console html,,,No
+repositories/rich,rich/style.py,Source Code,b465d3cc80691de8213cd249b5cca5ef934e6255,11d875944872bf4c12dd14fecfd6bcd0e4449692,write console html,,,No
+repositories/rich,rich/syntax.py,Source Code,b465d3cc80691de8213cd249b5cca5ef934e6255,11d875944872bf4c12dd14fecfd6bcd0e4449692,write console html,,,No
+repositories/rich,rich/console.py,Source Code,84f69bc8f293253c5023f750165ab2f1f1f90b38,b465d3cc80691de8213cd249b5cca5ef934e6255,inline styles,,,No
+repositories/rich,rich/markdown.py,Source Code,84f69bc8f293253c5023f750165ab2f1f1f90b38,b465d3cc80691de8213cd249b5cca5ef934e6255,inline styles,,,No
+repositories/rich,rich/style.py,Source Code,84f69bc8f293253c5023f750165ab2f1f1f90b38,b465d3cc80691de8213cd249b5cca5ef934e6255,inline styles,,,No
+repositories/rich,rich/console.py,Source Code,088069301f276984fdb2bec281f9124789cecf72,84f69bc8f293253c5023f750165ab2f1f1f90b38,simplify segments,,,No
+repositories/rich,rich/segment.py,Source Code,088069301f276984fdb2bec281f9124789cecf72,84f69bc8f293253c5023f750165ab2f1f1f90b38,simplify segments,,,No
+repositories/rich,rich/segment.py,Source Code,d5ea2c595df5c964d7f1828aa3e8de8840367561,088069301f276984fdb2bec281f9124789cecf72,signature change,,,No
+repositories/rich,rich/console.py,Source Code,ac23afd00474befda9f08b56f0e07bed54db8006,d5ea2c595df5c964d7f1828aa3e8de8840367561,Segment.simplify is now a generator,,,No
+repositories/rich,rich/segment.py,Source Code,ac23afd00474befda9f08b56f0e07bed54db8006,d5ea2c595df5c964d7f1828aa3e8de8840367561,Segment.simplify is now a generator,,,No
+repositories/rich,rich/console.py,Source Code,82f4d23265fe898890a8f031b2dade39ff591c1a,ac23afd00474befda9f08b56f0e07bed54db8006,simplify html generation,,,No
+repositories/rich,rich/console.py,Source Code,69c97ff458e09637b77ebb0692fa488e0083d356,82f4d23265fe898890a8f031b2dade39ff591c1a,table rendering,,,No
+repositories/rich,rich/segment.py,Source Code,69c97ff458e09637b77ebb0692fa488e0083d356,82f4d23265fe898890a8f031b2dade39ff591c1a,table rendering,,,No
+repositories/rich,rich/table.py,Source Code,69c97ff458e09637b77ebb0692fa488e0083d356,82f4d23265fe898890a8f031b2dade39ff591c1a,table rendering,,,No
+repositories/rich,rich/box.py,Source Code,ad689885538f7641e084508415de6aff8941e139,69c97ff458e09637b77ebb0692fa488e0083d356,table rendering,,,No
+repositories/rich,rich/padding.py,Source Code,ad689885538f7641e084508415de6aff8941e139,69c97ff458e09637b77ebb0692fa488e0083d356,table rendering,,,No
+repositories/rich,rich/panel.py,Source Code,ad689885538f7641e084508415de6aff8941e139,69c97ff458e09637b77ebb0692fa488e0083d356,table rendering,,,No
+repositories/rich,rich/table.py,Source Code,ad689885538f7641e084508415de6aff8941e139,69c97ff458e09637b77ebb0692fa488e0083d356,table rendering,,,No
+repositories/rich,rich/text.py,Source Code,ad689885538f7641e084508415de6aff8941e139,69c97ff458e09637b77ebb0692fa488e0083d356,table rendering,,,No
+repositories/rich,rich/padding.py,Source Code,7b4c4a0d8698dec47e7407cf012b2f7b79650724,ad689885538f7641e084508415de6aff8941e139,padding spec,,,No
+repositories/rich,rich/panel.py,Source Code,7b4c4a0d8698dec47e7407cf012b2f7b79650724,ad689885538f7641e084508415de6aff8941e139,padding spec,,,No
+repositories/rich,rich/table.py,Source Code,7b4c4a0d8698dec47e7407cf012b2f7b79650724,ad689885538f7641e084508415de6aff8941e139,padding spec,,,No
+repositories/rich,rich/console.py,Source Code,2bbcc51a0ac0c6bc21d07295593ff545aeb5a222,7b4c4a0d8698dec47e7407cf012b2f7b79650724,table rendering,,,No
+repositories/rich,rich/markdown.py,Source Code,2bbcc51a0ac0c6bc21d07295593ff545aeb5a222,7b4c4a0d8698dec47e7407cf012b2f7b79650724,table rendering,,,No
+repositories/rich,rich/padding.py,Source Code,2bbcc51a0ac0c6bc21d07295593ff545aeb5a222,7b4c4a0d8698dec47e7407cf012b2f7b79650724,table rendering,,,No
+repositories/rich,rich/table.py,Source Code,2bbcc51a0ac0c6bc21d07295593ff545aeb5a222,7b4c4a0d8698dec47e7407cf012b2f7b79650724,table rendering,,,No
+repositories/rich,rich/padding.py,Source Code,f0a58c35109b7a2d4b5c5b7a6cfe114500581d46,2bbcc51a0ac0c6bc21d07295593ff545aeb5a222,fix width calculation,,,No
+repositories/rich,rich/table.py,Source Code,f0a58c35109b7a2d4b5c5b7a6cfe114500581d46,2bbcc51a0ac0c6bc21d07295593ff545aeb5a222,fix width calculation,,,No
+repositories/rich,rich/text.py,Source Code,f0a58c35109b7a2d4b5c5b7a6cfe114500581d46,2bbcc51a0ac0c6bc21d07295593ff545aeb5a222,fix width calculation,,,No
+repositories/rich,rich/box.py,Source Code,0ea7b2cfa2d0affc568d5731a65a98eb9c916098,f0a58c35109b7a2d4b5c5b7a6cfe114500581d46,more box draws,,,No
+repositories/rich,rich/emoji.py,Source Code,0ea7b2cfa2d0affc568d5731a65a98eb9c916098,f0a58c35109b7a2d4b5c5b7a6cfe114500581d46,more box draws,,,No
+repositories/rich,rich/padding.py,Source Code,0ea7b2cfa2d0affc568d5731a65a98eb9c916098,f0a58c35109b7a2d4b5c5b7a6cfe114500581d46,more box draws,,,No
+repositories/rich,rich/panel.py,Source Code,0ea7b2cfa2d0affc568d5731a65a98eb9c916098,f0a58c35109b7a2d4b5c5b7a6cfe114500581d46,more box draws,,,No
+repositories/rich,rich/table.py,Source Code,0ea7b2cfa2d0affc568d5731a65a98eb9c916098,f0a58c35109b7a2d4b5c5b7a6cfe114500581d46,more box draws,,,No
+repositories/rich,rich/box.py,Source Code,fbf14f41da0bfb9dc67a89e1bd2f35b83ef84fcf,0ea7b2cfa2d0affc568d5731a65a98eb9c916098,add export_text,,,No
+repositories/rich,rich/console.py,Source Code,fbf14f41da0bfb9dc67a89e1bd2f35b83ef84fcf,0ea7b2cfa2d0affc568d5731a65a98eb9c916098,add export_text,,,No
+repositories/rich,rich/table.py,Source Code,fbf14f41da0bfb9dc67a89e1bd2f35b83ef84fcf,0ea7b2cfa2d0affc568d5731a65a98eb9c916098,add export_text,,,No
+repositories/rich,rich/console.py,Source Code,8966d1173ea69ecdf3adf4fe3a374dd92cf25fd3,fbf14f41da0bfb9dc67a89e1bd2f35b83ef84fcf,console options replaced with_width with update,,,No
+repositories/rich,rich/markdown.py,Source Code,8966d1173ea69ecdf3adf4fe3a374dd92cf25fd3,fbf14f41da0bfb9dc67a89e1bd2f35b83ef84fcf,console options replaced with_width with update,,,No
+repositories/rich,rich/padding.py,Source Code,8966d1173ea69ecdf3adf4fe3a374dd92cf25fd3,fbf14f41da0bfb9dc67a89e1bd2f35b83ef84fcf,console options replaced with_width with update,,,No
+repositories/rich,rich/panel.py,Source Code,8966d1173ea69ecdf3adf4fe3a374dd92cf25fd3,fbf14f41da0bfb9dc67a89e1bd2f35b83ef84fcf,console options replaced with_width with update,,,No
+repositories/rich,rich/syntax.py,Source Code,8966d1173ea69ecdf3adf4fe3a374dd92cf25fd3,fbf14f41da0bfb9dc67a89e1bd2f35b83ef84fcf,console options replaced with_width with update,,,No
+repositories/rich,rich/table.py,Source Code,8966d1173ea69ecdf3adf4fe3a374dd92cf25fd3,fbf14f41da0bfb9dc67a89e1bd2f35b83ef84fcf,console options replaced with_width with update,,,No
+repositories/rich,rich/console.py,Source Code,c722c07814b8d67a039dd02e96e8731d8eca6442,8966d1173ea69ecdf3adf4fe3a374dd92cf25fd3,fist justify,,,No
+repositories/rich,rich/containers.py,Source Code,c722c07814b8d67a039dd02e96e8731d8eca6442,8966d1173ea69ecdf3adf4fe3a374dd92cf25fd3,fist justify,,,No
+repositories/rich,rich/table.py,Source Code,c722c07814b8d67a039dd02e96e8731d8eca6442,8966d1173ea69ecdf3adf4fe3a374dd92cf25fd3,fist justify,,,No
+repositories/rich,rich/_tools.py,Source Code,10cf475b48234cb64c3493cebbaa3484650f90b9,c722c07814b8d67a039dd02e96e8731d8eca6442,current style apply,,,No
+repositories/rich,rich/console.py,Source Code,10cf475b48234cb64c3493cebbaa3484650f90b9,c722c07814b8d67a039dd02e96e8731d8eca6442,current style apply,,,No
+repositories/rich,rich/containers.py,Source Code,10cf475b48234cb64c3493cebbaa3484650f90b9,c722c07814b8d67a039dd02e96e8731d8eca6442,current style apply,,,No
+repositories/rich,rich/markdown.py,Source Code,10cf475b48234cb64c3493cebbaa3484650f90b9,c722c07814b8d67a039dd02e96e8731d8eca6442,current style apply,,,No
+repositories/rich,rich/padding.py,Source Code,10cf475b48234cb64c3493cebbaa3484650f90b9,c722c07814b8d67a039dd02e96e8731d8eca6442,current style apply,,,No
+repositories/rich,rich/segment.py,Source Code,10cf475b48234cb64c3493cebbaa3484650f90b9,c722c07814b8d67a039dd02e96e8731d8eca6442,current style apply,,,No
+repositories/rich,rich/style.py,Source Code,10cf475b48234cb64c3493cebbaa3484650f90b9,c722c07814b8d67a039dd02e96e8731d8eca6442,current style apply,,,No
+repositories/rich,rich/syntax.py,Source Code,10cf475b48234cb64c3493cebbaa3484650f90b9,c722c07814b8d67a039dd02e96e8731d8eca6442,current style apply,,,No
+repositories/rich,rich/table.py,Source Code,10cf475b48234cb64c3493cebbaa3484650f90b9,c722c07814b8d67a039dd02e96e8731d8eca6442,current style apply,,,No
+repositories/rich,rich/text.py,Source Code,10cf475b48234cb64c3493cebbaa3484650f90b9,c722c07814b8d67a039dd02e96e8731d8eca6442,current style apply,,,No
+repositories/tqdm,README.md,README,edc7a4a0ad4c760a42534219789e08b50a9ee5d4,fbe7952cce11e8073378b063bdae7ab277a96eb8,Update README.md,"diff --git a/README.md b/README.md
+index bc626a5..b671062 100644
+--- a/README.md
++++ b/README.md
+@@ -2,3 +2,9 @@ tqdm
+ ====
+ 
+ A Simple Python Progress Meter
++
++Wrap any iterator in ""tqdm(iterator)"" and see a nice progress meter.
++
++You can also use trange(N) as a shortcut for tqdm(xrange(N))
++
++![ScreenShot](https://i.imgur.com/8hcg51N.gif)
+","diff --git a/README.md b/README.md
+index bc626a5..b671062 100644
+--- a/README.md
++++ b/README.md
+@@ -2,3 +2,9 @@ tqdm
+ ====
+ 
+ A Simple Python Progress Meter
++
++Wrap any iterator in ""tqdm(iterator)"" and see a nice progress meter.
++
++You can also use trange(N) as a shortcut for tqdm(xrange(N))
++
++![ScreenShot](https://i.imgur.com/8hcg51N.gif)
+",No
+repositories/tqdm,setup.py,Source Code,2ef7f7c6757e430f7a8a8302416ada65a6170b96,d622b1807f4d5a5dd8f80bb3657aa8f9da9617fc,Update setup.py with version (1.0),"diff --git a/setup.py b/setup.py
+index ebc36b2..7b36604 100644
+--- a/setup.py
++++ b/setup.py
+@@ -3,6 +3,7 @@
+ from distutils.core import setup
+ 
+ setup(name='tqdm',
++      version='1.0',
+       description='A Simple Python Progress Meter',
+       author='Noam Yorav-Raphael',
+       author_email='noamraph@gmail.com',
+","diff --git a/setup.py b/setup.py
+index ebc36b2..7b36604 100644
+--- a/setup.py
++++ b/setup.py
+@@ -3,6 +3,7 @@
+ from distutils.core import setup
+ 
+ setup(name='tqdm',
++      version='1.0',
+       description='A Simple Python Progress Meter',
+       author='Noam Yorav-Raphael',
+       author_email='noamraph@gmail.com',
+",No
+repositories/tqdm,README.md,README,a9db35ae26d5d54bc9731009d75f1b029d26bc0c,2ef7f7c6757e430f7a8a8302416ada65a6170b96,Update README.md,"diff --git a/README.md b/README.md
+index b671062..f65d305 100644
+--- a/README.md
++++ b/README.md
+@@ -1,10 +1,33 @@
+ tqdm
+ ====
+ 
+-A Simple Python Progress Meter
++Instantly make your loops show a progress meter - just wrap any iterator with ""tqdm(iterator)"", and you're done!
+ 
+-Wrap any iterator in ""tqdm(iterator)"" and see a nice progress meter.
++![ScreenShot](https://i.imgur.com/he9Aw5C.gif)
++
++tqdm (read ta<i>qa</i>dum, تقدّم) means ""progress"" in arabic.
+ 
+ You can also use trange(N) as a short","diff --git a/README.md b/README.md
+index b671062..f65d305 100644
+--- a/README.md
++++ b/README.md
+@@ -1,10 +1,33 @@
+ tqdm
+ ====
+ 
+-A Simple Python Progress Meter
++Instantly make your loops show a progress meter - just wrap any iterator with ""tqdm(iterator)"", and you're done!
+ 
+-Wrap any iterator in ""tqdm(iterator)"" and see a nice progress meter.
++![ScreenShot](https://i.imgur.com/he9Aw5C.gif)
++
++tqdm (read ta<i>qa</i>dum, تقدّم) means ""progress"" in arabic.
+ 
+ You can also use trange(N) as a short",No
+repositories/tqdm,tqdm.py,Source Code,6464656661ffafda8f68aae8c6e0f751cc1de78c,a9db35ae26d5d54bc9731009d75f1b029d26bc0c,Added an argument to output to any filelike object.,"diff --git a/tqdm.py b/tqdm.py
+index 070bb00..9e53ad0 100644
+--- a/tqdm.py
++++ b/tqdm.py
+@@ -39,15 +39,16 @@ def format_meter(n, total, elapsed):
+         return '%d [elapsed: %s, %s iters/sec]' % (n, elapsed_str, rate)
+ 
+ class StatusPrinter(object):
+-    def __init__(self):
++    def __init__(self, output_to=sys.stdout):
++        self.output_to = output_to
+         self.last_printed_len = 0
+     
+     def print_status(self, s):
+-        sys.stdout.write('\r'+s+' '*max(self.last_printed_len-len(","diff --git a/tqdm.py b/tqdm.py
+index 070bb00..9e53ad0 100644
+--- a/tqdm.py
++++ b/tqdm.py
+@@ -39,15 +39,16 @@ def format_meter(n, total, elapsed):
+         return '%d [elapsed: %s, %s iters/sec]' % (n, elapsed_str, rate)
+ 
+ class StatusPrinter(object):
+-    def __init__(self):
++    def __init__(self, output_to=sys.stdout):
++        self.output_to = output_to
+         self.last_printed_len = 0
+     
+     def print_status(self, s):
+-        sys.stdout.write('\r'+s+' '*max(self.last_printed_len-len(",No
+repositories/tqdm,tqdm.py,Source Code,2cc124dbe5e9d39023a2cbbd9e1d218dcb5b6fe5,6464656661ffafda8f68aae8c6e0f751cc1de78c,Added documentation for the output_to argument.,"diff --git a/tqdm.py b/tqdm.py
+index 9e53ad0..0db292d 100644
+--- a/tqdm.py
++++ b/tqdm.py
+@@ -61,6 +61,8 @@ def tqdm(iterable, desc='', total=None, leave=False, mininterval=0.5, miniters=1
+     iterating over all elements.
+     If less than mininterval seconds or miniters iterations have passed since
+     the last progress meter update, it is not updated again.
++    'output_to' can be a file-like object to output the progress message to
++    If not specified, prints to sys.stdout.
+     """"""
+     i","diff --git a/tqdm.py b/tqdm.py
+index 9e53ad0..0db292d 100644
+--- a/tqdm.py
++++ b/tqdm.py
+@@ -61,6 +61,8 @@ def tqdm(iterable, desc='', total=None, leave=False, mininterval=0.5, miniters=1
+     iterating over all elements.
+     If less than mininterval seconds or miniters iterations have passed since
+     the last progress meter update, it is not updated again.
++    'output_to' can be a file-like object to output the progress message to
++    If not specified, prints to sys.stdout.
+     """"""
+     i",No
+repositories/tqdm,tqdm.py,Source Code,8962c1aef24f96767bfd7ccd7920585f1f38f790,a9db35ae26d5d54bc9731009d75f1b029d26bc0c,Added try/except for python3 compatibility.,"diff --git a/tqdm.py b/tqdm.py
+index 070bb00..afe18a4 100644
+--- a/tqdm.py
++++ b/tqdm.py
+@@ -97,4 +97,9 @@ def tqdm(iterable, desc='', total=None, leave=False, mininterval=0.5, miniters=1
+ 
+ def trange(*args, **kwargs):
+     """"""A shortcut for writing tqdm(xrange)""""""
+-    return tqdm(xrange(*args), **kwargs)
+\ No newline at end of file
++    try:
++        f = xrange
++    except NameError:
++        f = range
++
++    return tqdm(f(*args), **kwargs)
+","diff --git a/tqdm.py b/tqdm.py
+index 070bb00..afe18a4 100644
+--- a/tqdm.py
++++ b/tqdm.py
+@@ -97,4 +97,9 @@ def tqdm(iterable, desc='', total=None, leave=False, mininterval=0.5, miniters=1
+ 
+ def trange(*args, **kwargs):
+     """"""A shortcut for writing tqdm(xrange)""""""
+-    return tqdm(xrange(*args), **kwargs)
+\ No newline at end of file
++    try:
++        f = xrange
++    except NameError:
++        f = range
++
++    return tqdm(f(*args), **kwargs)
+",No
+repositories/tqdm,tqdm.py,Source Code,19c6f5416cd5964f9efe748eafde79ae50a92562,8962c1aef24f96767bfd7ccd7920585f1f38f790,Update trange docstring to reflect using range on py3,"diff --git a/tqdm.py b/tqdm.py
+index afe18a4..d817f4d 100644
+--- a/tqdm.py
++++ b/tqdm.py
+@@ -96,7 +96,7 @@ def tqdm(iterable, desc='', total=None, leave=False, mininterval=0.5, miniters=1
+             sp.print_status(prefix + format_meter(n, total, cur_t-start_t))
+ 
+ def trange(*args, **kwargs):
+-    """"""A shortcut for writing tqdm(xrange)""""""
++    """"""A shortcut for writing tqdm(range()) on py3 or tqdm(xrange()) on py2""""""
+     try:
+         f = xrange
+     except NameError:
+","diff --git a/tqdm.py b/tqdm.py
+index afe18a4..d817f4d 100644
+--- a/tqdm.py
++++ b/tqdm.py
+@@ -96,7 +96,7 @@ def tqdm(iterable, desc='', total=None, leave=False, mininterval=0.5, miniters=1
+             sp.print_status(prefix + format_meter(n, total, cur_t-start_t))
+ 
+ def trange(*args, **kwargs):
+-    """"""A shortcut for writing tqdm(xrange)""""""
++    """"""A shortcut for writing tqdm(range()) on py3 or tqdm(xrange()) on py2""""""
+     try:
+         f = xrange
+     except NameError:
+",No
+repositories/tqdm,tqdm.py,Source Code,0bd6dc84010e3c5d80ca2a6622b4b54e8ae345a3,4a2ab5b8af2937ba73f5aef3bcd3a16d6c2ad3a6,"Change the output_to argument to 'file', like in print().","diff --git a/tqdm.py b/tqdm.py
+index 8e4851f..b2c13cf 100644
+--- a/tqdm.py
++++ b/tqdm.py
+@@ -39,16 +39,17 @@ def format_meter(n, total, elapsed):
+         return '%d [elapsed: %s, %s iters/sec]' % (n, elapsed_str, rate)
+ 
+ class StatusPrinter(object):
+-    def __init__(self, output_to=sys.stdout):
+-        self.output_to = output_to
++    def __init__(self, file):
++        self.file = file
+         self.last_printed_len = 0
+     
+     def print_status(self, s):
+-        self.output_to.write('\r'+","diff --git a/tqdm.py b/tqdm.py
+index 8e4851f..b2c13cf 100644
+--- a/tqdm.py
++++ b/tqdm.py
+@@ -39,16 +39,17 @@ def format_meter(n, total, elapsed):
+         return '%d [elapsed: %s, %s iters/sec]' % (n, elapsed_str, rate)
+ 
+ class StatusPrinter(object):
+-    def __init__(self, output_to=sys.stdout):
+-        self.output_to = output_to
++    def __init__(self, file):
++        self.file = file
+         self.last_printed_len = 0
+     
+     def print_status(self, s):
+-        self.output_to.write('\r'+",No
+repositories/tqdm,tqdm.py,Source Code,2ad667d33819b4ccc28205ec96a376dc050f7256,0bd6dc84010e3c5d80ca2a6622b4b54e8ae345a3,PEP8: Have two space lines before functions. Closes issue #1.,"diff --git a/tqdm.py b/tqdm.py
+index b2c13cf..bdd8c37 100644
+--- a/tqdm.py
++++ b/tqdm.py
+@@ -3,6 +3,7 @@ __all__ = ['tqdm', 'trange']
+ import sys
+ import time
+ 
++
+ def format_interval(t):
+     mins, s = divmod(int(t), 60)
+     h, m = divmod(mins, 60)
+@@ -11,6 +12,7 @@ def format_interval(t):
+     else:
+         return '%02d:%02d' % (m, s)
+ 
++
+ def format_meter(n, total, elapsed):
+     # n - number of finished iterations
+     # total - total number of iterations, or None
+@@ -34,10 +36,11 @@ def f","diff --git a/tqdm.py b/tqdm.py
+index b2c13cf..bdd8c37 100644
+--- a/tqdm.py
++++ b/tqdm.py
+@@ -3,6 +3,7 @@ __all__ = ['tqdm', 'trange']
+ import sys
+ import time
+ 
++
+ def format_interval(t):
+     mins, s = divmod(int(t), 60)
+     h, m = divmod(mins, 60)
+@@ -11,6 +12,7 @@ def format_interval(t):
+     else:
+         return '%02d:%02d' % (m, s)
+ 
++
+ def format_meter(n, total, elapsed):
+     # n - number of finished iterations
+     # total - total number of iterations, or None
+@@ -34,10 +36,11 @@ def f",No
+repositories/tqdm,tqdm.py,Source Code,da5fdbf7c05a9127f04ac5887292457e8335f480,2ad667d33819b4ccc28205ec96a376dc050f7256,Print a newline after leave=True. Closes issue #6,"diff --git a/tqdm.py b/tqdm.py
+index bdd8c37..8c21092 100644
+--- a/tqdm.py
++++ b/tqdm.py
+@@ -101,6 +101,7 @@ def tqdm(iterable, desc='', total=None, leave=False, file=sys.stderr,
+         if last_print_n < n:
+             cur_t = time.time()
+             sp.print_status(prefix + format_meter(n, total, cur_t-start_t))
++        file.write('\n')
+ 
+ 
+ def trange(*args, **kwargs):
+","diff --git a/tqdm.py b/tqdm.py
+index bdd8c37..8c21092 100644
+--- a/tqdm.py
++++ b/tqdm.py
+@@ -101,6 +101,7 @@ def tqdm(iterable, desc='', total=None, leave=False, file=sys.stderr,
+         if last_print_n < n:
+             cur_t = time.time()
+             sp.print_status(prefix + format_meter(n, total, cur_t-start_t))
++        file.write('\n')
+ 
+ 
+ def trange(*args, **kwargs):
+",No
+repositories/tqdm,.gitignore,Other,777314ce9a7f2b5fa842e010d899ea993a3025f7,da5fdbf7c05a9127f04ac5887292457e8335f480,Ignore PyCharm IDE config files,"diff --git a/.gitignore b/.gitignore
+index ded6067..1a1f52a 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -34,3 +34,6 @@ nosetests.xml
+ .mr.developer.cfg
+ .project
+ .pydevproject
++
++# PyCharm
++.idea
+","diff --git a/.gitignore b/.gitignore
+index ded6067..1a1f52a 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -34,3 +34,6 @@ nosetests.xml
+ .mr.developer.cfg
+ .project
+ .pydevproject
++
++# PyCharm
++.idea
+",No
+repositories/tqdm,pytest.ini,Test Code,a16cdc66c0c090e3320ceb4956dd3e711d824a2a,da4b29f3cd48726b21d1c37aff854d3e29ce1507,New lines at the end of files,"diff --git a/pytest.ini b/pytest.ini
+index 258cfb7..8722621 100644
+--- a/pytest.ini
++++ b/pytest.ini
+@@ -1,2 +1,2 @@
+ [pytest]
+-python_files = test*.py
+\ No newline at end of file
++python_files = test*.py
+","diff --git a/pytest.ini b/pytest.ini
+index 258cfb7..8722621 100644
+--- a/pytest.ini
++++ b/pytest.ini
+@@ -1,2 +1,2 @@
+ [pytest]
+-python_files = test*.py
+\ No newline at end of file
++python_files = test*.py
+",No
+repositories/tqdm,tox.ini,Other,a16cdc66c0c090e3320ceb4956dd3e711d824a2a,da4b29f3cd48726b21d1c37aff854d3e29ce1507,New lines at the end of files,"diff --git a/tox.ini b/tox.ini
+index ecd9f5e..8493648 100644
+--- a/tox.ini
++++ b/tox.ini
+@@ -9,4 +9,4 @@ envlist = py26, py27, py32
+ [testenv]
+ commands = py.test
+ deps =
+-    pytest
+\ No newline at end of file
++    pytest
+","diff --git a/tox.ini b/tox.ini
+index ecd9f5e..8493648 100644
+--- a/tox.ini
++++ b/tox.ini
+@@ -9,4 +9,4 @@ envlist = py26, py27, py32
+ [testenv]
+ commands = py.test
+ deps =
+-    pytest
+\ No newline at end of file
++    pytest
+",No
+repositories/tqdm,tests.py,Test Code,2f46d5468b7eaabfb23081669e6c1c2760a1bc16,a16cdc66c0c090e3320ceb4956dd3e711d824a2a,Test of format_meter (failed on py32),"diff --git a/tests.py b/tests.py
+index bd45004..220cfa9 100644
+--- a/tests.py
++++ b/tests.py
+@@ -1,5 +1,5 @@
+ from __future__ import unicode_literals
+-from tqdm import format_interval
++from tqdm import format_interval, format_meter
+ 
+ 
+ def test_format_interval():
+@@ -7,3 +7,9 @@ def test_format_interval():
+     assert format_interval(6160) == '1:42:40'
+     assert format_interval(238113) == '66:08:33'
+ 
++
++def test_format_meter():
++    assert format_meter(231, 1000, 392) == \
++        ""|##-----","diff --git a/tests.py b/tests.py
+index bd45004..220cfa9 100644
+--- a/tests.py
++++ b/tests.py
+@@ -1,5 +1,5 @@
+ from __future__ import unicode_literals
+-from tqdm import format_interval
++from tqdm import format_interval, format_meter
+ 
+ 
+ def test_format_interval():
+@@ -7,3 +7,9 @@ def test_format_interval():
+     assert format_interval(6160) == '1:42:40'
+     assert format_interval(238113) == '66:08:33'
+ 
++
++def test_format_meter():
++    assert format_meter(231, 1000, 392) == \
++        ""|##-----",No
+repositories/tqdm,tests.py,Test Code,8bb8a1731be429f1a93dbc2b351e747faf355960,2f46d5468b7eaabfb23081669e6c1c2760a1bc16,Another format meter test,"diff --git a/tests.py b/tests.py
+index 220cfa9..a208487 100644
+--- a/tests.py
++++ b/tests.py
+@@ -9,7 +9,9 @@ def test_format_interval():
+ 
+ 
+ def test_format_meter():
++    assert format_meter(0, 1000, 13) == \
++        ""|----------| 0/1000   0% [elapsed: "" \
++        ""00:13 left: ?,  0.00 iters/sec]""
+     assert format_meter(231, 1000, 392) == \
+         ""|##--------| 231/1000  23% [elapsed: "" \
+         ""06:32 left: 12:49,  0.00 iters/sec]""
+-
+","diff --git a/tests.py b/tests.py
+index 220cfa9..a208487 100644
+--- a/tests.py
++++ b/tests.py
+@@ -9,7 +9,9 @@ def test_format_interval():
+ 
+ 
+ def test_format_meter():
++    assert format_meter(0, 1000, 13) == \
++        ""|----------| 0/1000   0% [elapsed: "" \
++        ""00:13 left: ?,  0.00 iters/sec]""
+     assert format_meter(231, 1000, 392) == \
+         ""|##--------| 231/1000  23% [elapsed: "" \
+         ""06:32 left: 12:49,  0.00 iters/sec]""
+-
+",No
+repositories/tqdm,tests.py,Test Code,e2e15d1f4dae5e3dd190cd0ebfee8537723b600d,8bb8a1731be429f1a93dbc2b351e747faf355960,Fixed the calculation of rate in format_meter,"diff --git a/tests.py b/tests.py
+index a208487..f003757 100644
+--- a/tests.py
++++ b/tests.py
+@@ -14,4 +14,4 @@ def test_format_meter():
+         ""00:13 left: ?,  0.00 iters/sec]""
+     assert format_meter(231, 1000, 392) == \
+         ""|##--------| 231/1000  23% [elapsed: "" \
+-        ""06:32 left: 12:49,  0.00 iters/sec]""
++        ""06:32 left: 21:44,  0.59 iters/sec]""
+","diff --git a/tests.py b/tests.py
+index a208487..f003757 100644
+--- a/tests.py
++++ b/tests.py
+@@ -14,4 +14,4 @@ def test_format_meter():
+         ""00:13 left: ?,  0.00 iters/sec]""
+     assert format_meter(231, 1000, 392) == \
+         ""|##--------| 231/1000  23% [elapsed: "" \
+-        ""06:32 left: 12:49,  0.00 iters/sec]""
++        ""06:32 left: 21:44,  0.59 iters/sec]""
+",No
+repositories/tqdm,tqdm.py,Source Code,e2e15d1f4dae5e3dd190cd0ebfee8537723b600d,8bb8a1731be429f1a93dbc2b351e747faf355960,Fixed the calculation of rate in format_meter,"diff --git a/tqdm.py b/tqdm.py
+index 8c21092..aede108 100644
+--- a/tqdm.py
++++ b/tqdm.py
+@@ -1,9 +1,12 @@
+-__all__ = ['tqdm', 'trange']
++from __future__ import division
+ 
+ import sys
+ import time
+ 
+ 
++__all__ = ['tqdm', 'trange']
++
++
+ def format_interval(t):
+     mins, s = divmod(int(t), 60)
+     h, m = divmod(mins, 60)
+","diff --git a/tqdm.py b/tqdm.py
+index 8c21092..aede108 100644
+--- a/tqdm.py
++++ b/tqdm.py
+@@ -1,9 +1,12 @@
+-__all__ = ['tqdm', 'trange']
++from __future__ import division
+ 
+ import sys
+ import time
+ 
+ 
++__all__ = ['tqdm', 'trange']
++
++
+ def format_interval(t):
+     mins, s = divmod(int(t), 60)
+     h, m = divmod(mins, 60)
+",No
+repositories/tqdm,README.md,README,5f0c72dfd6a82891bd92c96ff6cae4872faf8357,e2e15d1f4dae5e3dd190cd0ebfee8537723b600d,Readme: how to run tests,"diff --git a/README.md b/README.md
+index f65d305..2e2aaf6 100644
+--- a/README.md
++++ b/README.md
+@@ -31,3 +31,9 @@ def trange(*args, **kwargs):
+     """"""A shortcut for writing tqdm(xrange)""""""
+     return tqdm(xrange(*args), **kwargs)
+ ```
++
++Running tests
++-------------
++
++Please make sure tox (http://tox.testrunner.org/) is installed and type
++`tox` from the command line
+\ No newline at end of file
+","diff --git a/README.md b/README.md
+index f65d305..2e2aaf6 100644
+--- a/README.md
++++ b/README.md
+@@ -31,3 +31,9 @@ def trange(*args, **kwargs):
+     """"""A shortcut for writing tqdm(xrange)""""""
+     return tqdm(xrange(*args), **kwargs)
+ ```
++
++Running tests
++-------------
++
++Please make sure tox (http://tox.testrunner.org/) is installed and type
++`tox` from the command line
+\ No newline at end of file
+",No
+repositories/tqdm,README.md,README,7b62451047dc3aa7d2acefccbef1a57cc15e933a,5f0c72dfd6a82891bd92c96ff6cae4872faf8357,Fixed the link to tox,"diff --git a/README.md b/README.md
+index 2e2aaf6..16d03e9 100644
+--- a/README.md
++++ b/README.md
+@@ -35,5 +35,5 @@ def trange(*args, **kwargs):
+ Running tests
+ -------------
+ 
+-Please make sure tox (http://tox.testrunner.org/) is installed and type
++Please make sure tox (http://tox.testrun.org/) is installed and type
+ `tox` from the command line
+\ No newline at end of file
+","diff --git a/README.md b/README.md
+index 2e2aaf6..16d03e9 100644
+--- a/README.md
++++ b/README.md
+@@ -35,5 +35,5 @@ def trange(*args, **kwargs):
+ Running tests
+ -------------
+ 
+-Please make sure tox (http://tox.testrunner.org/) is installed and type
++Please make sure tox (http://tox.testrun.org/) is installed and type
+ `tox` from the command line
+\ No newline at end of file
+",No
+repositories/tqdm,README.md,README,ff2b39a1537a01c2eae576ba5b8da01dfaa55c8f,da5fdbf7c05a9127f04ac5887292457e8335f480,Change 'iterator' to 'iterable' in README,"diff --git a/README.md b/README.md
+index f65d305..c77c914 100644
+--- a/README.md
++++ b/README.md
+@@ -1,7 +1,7 @@
+ tqdm
+ ====
+ 
+-Instantly make your loops show a progress meter - just wrap any iterator with ""tqdm(iterator)"", and you're done!
++Instantly make your loops show a progress meter - just wrap any iterable with ""tqdm(iterable)"", and you're done!
+ 
+ ![ScreenShot](https://i.imgur.com/he9Aw5C.gif)
+ 
+","diff --git a/README.md b/README.md
+index f65d305..c77c914 100644
+--- a/README.md
++++ b/README.md
+@@ -1,7 +1,7 @@
+ tqdm
+ ====
+ 
+-Instantly make your loops show a progress meter - just wrap any iterator with ""tqdm(iterator)"", and you're done!
++Instantly make your loops show a progress meter - just wrap any iterable with ""tqdm(iterable)"", and you're done!
+ 
+ ![ScreenShot](https://i.imgur.com/he9Aw5C.gif)
+ 
+",No
+repositories/tqdm,tests.py,Test Code,4539ebc92d59dd0388658fa482626185088222b8,7b62451047dc3aa7d2acefccbef1a57cc15e933a,Test that tqdm fails when iterating over a csv file,"diff --git a/tests.py b/tests.py
+index f003757..8f515ef 100644
+--- a/tests.py
++++ b/tests.py
+@@ -1,5 +1,7 @@
+ from __future__ import unicode_literals
+-from tqdm import format_interval, format_meter
++from StringIO import StringIO
++import csv
++from tqdm import format_interval, format_meter, tqdm
+ 
+ 
+ def test_format_interval():
+@@ -15,3 +17,17 @@ def test_format_meter():
+     assert format_meter(231, 1000, 392) == \
+         ""|##--------| 231/1000  23% [elapsed: "" \
+         ""06:32 left: 21:44,  0","diff --git a/tests.py b/tests.py
+index f003757..8f515ef 100644
+--- a/tests.py
++++ b/tests.py
+@@ -1,5 +1,7 @@
+ from __future__ import unicode_literals
+-from tqdm import format_interval, format_meter
++from StringIO import StringIO
++import csv
++from tqdm import format_interval, format_meter, tqdm
+ 
+ 
+ def test_format_interval():
+@@ -15,3 +17,17 @@ def test_format_meter():
+     assert format_meter(231, 1000, 392) == \
+         ""|##--------| 231/1000  23% [elapsed: "" \
+         ""06:32 left: 21:44,  0",No
+repositories/tqdm,tests.py,Test Code,f565179a2e4487610790a8fdeccd0cccf2f2e2cb,4539ebc92d59dd0388658fa482626185088222b8,Another python 3 fix,"diff --git a/tests.py b/tests.py
+index 8f515ef..bdd31d3 100644
+--- a/tests.py
++++ b/tests.py
+@@ -1,5 +1,5 @@
+ from __future__ import unicode_literals
+-from StringIO import StringIO
++from six import StringIO
+ import csv
+ from tqdm import format_interval, format_meter, tqdm
+ 
+","diff --git a/tests.py b/tests.py
+index 8f515ef..bdd31d3 100644
+--- a/tests.py
++++ b/tests.py
+@@ -1,5 +1,5 @@
+ from __future__ import unicode_literals
+-from StringIO import StringIO
++from six import StringIO
+ import csv
+ from tqdm import format_interval, format_meter, tqdm
+ 
+",No
+repositories/tqdm,tox.ini,Other,f565179a2e4487610790a8fdeccd0cccf2f2e2cb,4539ebc92d59dd0388658fa482626185088222b8,Another python 3 fix,"diff --git a/tox.ini b/tox.ini
+index 8493648..64b1e7b 100644
+--- a/tox.ini
++++ b/tox.ini
+@@ -9,4 +9,5 @@ envlist = py26, py27, py32
+ [testenv]
+ commands = py.test
+ deps =
++    six
+     pytest
+","diff --git a/tox.ini b/tox.ini
+index 8493648..64b1e7b 100644
+--- a/tox.ini
++++ b/tox.ini
+@@ -9,4 +9,5 @@ envlist = py26, py27, py32
+ [testenv]
+ commands = py.test
+ deps =
++    six
+     pytest
+",No
+repositories/tqdm,tqdm.py,Source Code,f565179a2e4487610790a8fdeccd0cccf2f2e2cb,4539ebc92d59dd0388658fa482626185088222b8,Another python 3 fix,"diff --git a/tqdm.py b/tqdm.py
+index aede108..14fcbe5 100644
+--- a/tqdm.py
++++ b/tqdm.py
+@@ -20,7 +20,7 @@ def format_meter(n, total, elapsed):
+     # n - number of finished iterations
+     # total - total number of iterations, or None
+     # elapsed - number of seconds passed since start
+-    if n > total:
++    if total and n > total:
+         total = None
+     
+     elapsed_str = format_interval(elapsed)
+@@ -74,7 +74,7 @@ def tqdm(iterable, desc='', total=None, leave=False, file=sys.stderr,
+  ","diff --git a/tqdm.py b/tqdm.py
+index aede108..14fcbe5 100644
+--- a/tqdm.py
++++ b/tqdm.py
+@@ -20,7 +20,7 @@ def format_meter(n, total, elapsed):
+     # n - number of finished iterations
+     # total - total number of iterations, or None
+     # elapsed - number of seconds passed since start
+-    if n > total:
++    if total and n > total:
+         total = None
+     
+     elapsed_str = format_interval(elapsed)
+@@ -74,7 +74,7 @@ def tqdm(iterable, desc='', total=None, leave=False, file=sys.stderr,
+  ",No
+repositories/tqdm,tests.py,Test Code,152dfd55bd5b53e6967acb97286b5b6a8faa7ab8,f565179a2e4487610790a8fdeccd0cccf2f2e2cb,Some more tests,"diff --git a/tests.py b/tests.py
+index bdd31d3..3b49e3d 100644
+--- a/tests.py
++++ b/tests.py
+@@ -1,6 +1,8 @@
+ from __future__ import unicode_literals
+-from six import StringIO
++
+ import csv
++import sys
++from six import StringIO
+ from tqdm import format_interval, format_meter, tqdm
+ 
+ 
+@@ -19,6 +21,12 @@ def test_format_meter():
+         ""06:32 left: 21:44,  0.59 iters/sec]""
+ 
+ 
++def test_nothing_fails():
++    """""" Just make sure we're able to iterate using tqdm """"""
++    for i in tqdm(range(10)):
+","diff --git a/tests.py b/tests.py
+index bdd31d3..3b49e3d 100644
+--- a/tests.py
++++ b/tests.py
+@@ -1,6 +1,8 @@
+ from __future__ import unicode_literals
+-from six import StringIO
++
+ import csv
++import sys
++from six import StringIO
+ from tqdm import format_interval, format_meter, tqdm
+ 
+ 
+@@ -19,6 +21,12 @@ def test_format_meter():
+         ""06:32 left: 21:44,  0.59 iters/sec]""
+ 
+ 
++def test_nothing_fails():
++    """""" Just make sure we're able to iterate using tqdm """"""
++    for i in tqdm(range(10)):
+",No
+repositories/tqdm,setup.py,Source Code,cbc632262f0a8eaf3c5d2d65b866c37f29744513,da5fdbf7c05a9127f04ac5887292457e8335f480,do my wheel !,"diff --git a/setup.py b/setup.py
+index 7b36604..1e357a0 100644
+--- a/setup.py
++++ b/setup.py
+@@ -1,7 +1,6 @@
+ #!/usr/bin/env python
+-
+-from distutils.core import setup
+-
++# -*- coding: utf-8 -*-
++from setuptools import setup
+ setup(name='tqdm',
+       version='1.0',
+       description='A Simple Python Progress Meter',
+","diff --git a/setup.py b/setup.py
+index 7b36604..1e357a0 100644
+--- a/setup.py
++++ b/setup.py
+@@ -1,7 +1,6 @@
+ #!/usr/bin/env python
+-
+-from distutils.core import setup
+-
++# -*- coding: utf-8 -*-
++from setuptools import setup
+ setup(name='tqdm',
+       version='1.0',
+       description='A Simple Python Progress Meter',
+",No
+repositories/tqdm,tests.py,Test Code,3d9fd154bcc75686706d00c4fc7bbe26988be99c,2e6cee712c3365659141deb330dc49fec509248a,add more interpreters to tox.ini,"diff --git a/tests.py b/tests.py
+index 3b49e3d..c377bf1 100644
+--- a/tests.py
++++ b/tests.py
+@@ -1,7 +1,6 @@
+ from __future__ import unicode_literals
+ 
+ import csv
+-import sys
+ from six import StringIO
+ from tqdm import format_interval, format_meter, tqdm
+ 
+@@ -67,4 +66,4 @@ def test_leave_option():
+         pass
+     our_file2.seek(0)
+     assert '3/3 100%' not in our_file2.read()
+-    our_file2.close()
+\ No newline at end of file
++    our_file2.close()
+","diff --git a/tests.py b/tests.py
+index 3b49e3d..c377bf1 100644
+--- a/tests.py
++++ b/tests.py
+@@ -1,7 +1,6 @@
+ from __future__ import unicode_literals
+ 
+ import csv
+-import sys
+ from six import StringIO
+ from tqdm import format_interval, format_meter, tqdm
+ 
+@@ -67,4 +66,4 @@ def test_leave_option():
+         pass
+     our_file2.seek(0)
+     assert '3/3 100%' not in our_file2.read()
+-    our_file2.close()
+\ No newline at end of file
++    our_file2.close()
+",No
+repositories/tqdm,tox.ini,Other,3d9fd154bcc75686706d00c4fc7bbe26988be99c,2e6cee712c3365659141deb330dc49fec509248a,add more interpreters to tox.ini,"diff --git a/tox.ini b/tox.ini
+index 64b1e7b..00fd947 100644
+--- a/tox.ini
++++ b/tox.ini
+@@ -4,7 +4,7 @@
+ # and then run ""tox"" from this directory.
+ 
+ [tox]
+-envlist = py26, py27, py32
++envlist = py26, py27, py32, py33, py34, pypy, pypy3
+ 
+ [testenv]
+ commands = py.test
+","diff --git a/tox.ini b/tox.ini
+index 64b1e7b..00fd947 100644
+--- a/tox.ini
++++ b/tox.ini
+@@ -4,7 +4,7 @@
+ # and then run ""tox"" from this directory.
+ 
+ [tox]
+-envlist = py26, py27, py32
++envlist = py26, py27, py32, py33, py34, pypy, pypy3
+ 
+ [testenv]
+ commands = py.test
+",No
+repositories/tqdm,setup.py,Source Code,4c979245b5d7749b381b22daa11ed719369eed9d,888775afe7552b0f93bb23f2e86667f677523824,add license and Python version info to setup.py,"diff --git a/setup.py b/setup.py
+index 1e357a0..2b9a035 100644
+--- a/setup.py
++++ b/setup.py
+@@ -1,11 +1,27 @@
+ #!/usr/bin/env python
+ # -*- coding: utf-8 -*-
+ from setuptools import setup
+-setup(name='tqdm',
+-      version='1.0',
+-      description='A Simple Python Progress Meter',
+-      author='Noam Yorav-Raphael',
+-      author_email='noamraph@gmail.com',
+-      url='https://github.com/noamraph/tqdm',
+-      py_modules=['tqdm'],
+-     )
++
++setup(
++    name='tqdm',
++    version='1.0',
++    de","diff --git a/setup.py b/setup.py
+index 1e357a0..2b9a035 100644
+--- a/setup.py
++++ b/setup.py
+@@ -1,11 +1,27 @@
+ #!/usr/bin/env python
+ # -*- coding: utf-8 -*-
+ from setuptools import setup
+-setup(name='tqdm',
+-      version='1.0',
+-      description='A Simple Python Progress Meter',
+-      author='Noam Yorav-Raphael',
+-      author_email='noamraph@gmail.com',
+-      url='https://github.com/noamraph/tqdm',
+-      py_modules=['tqdm'],
+-     )
++
++setup(
++    name='tqdm',
++    version='1.0',
++    de",No
+repositories/tqdm,README.md,README,ecc79f96291ca5f704cf56330598070d4798f89a,4c979245b5d7749b381b22daa11ed719369eed9d,add Travis badge to README,"diff --git a/README.md b/README.md
+index 68e5dea..b749ccf 100644
+--- a/README.md
++++ b/README.md
+@@ -1,6 +1,8 @@
+ tqdm
+ ====
+ 
++[![Build Status](https://img.shields.io/travis/kmike/tqdm.svg?branch=all-fixes)](https://travis-ci.org/kmike/tqdm)
++
+ Instantly make your loops show a progress meter - just wrap any iterable with ""tqdm(iterable)"", and you're done!
+ 
+ ![ScreenShot](https://i.imgur.com/he9Aw5C.gif)
+@@ -36,4 +38,4 @@ Running tests
+ -------------
+ 
+ Please make sure tox (http://tox.testrun.","diff --git a/README.md b/README.md
+index 68e5dea..b749ccf 100644
+--- a/README.md
++++ b/README.md
+@@ -1,6 +1,8 @@
+ tqdm
+ ====
+ 
++[![Build Status](https://img.shields.io/travis/kmike/tqdm.svg?branch=all-fixes)](https://travis-ci.org/kmike/tqdm)
++
+ Instantly make your loops show a progress meter - just wrap any iterable with ""tqdm(iterable)"", and you're done!
+ 
+ ![ScreenShot](https://i.imgur.com/he9Aw5C.gif)
+@@ -36,4 +38,4 @@ Running tests
+ -------------
+ 
+ Please make sure tox (http://tox.testrun.",No
+repositories/tqdm,.travis.yml,Other,ccb05c2e041bbb2f9b3acccb2a80b48993d36f12,ecc79f96291ca5f704cf56330598070d4798f89a,New tqdm module structure and add a Makefile,"diff --git a/.travis.yml b/.travis.yml
+index b509775..3694df6 100644
+--- a/.travis.yml
++++ b/.travis.yml
+@@ -1,14 +1,16 @@
+ language: python
+-python: 2.7
+-env:
+-- TOXENV=py26
+-- TOXENV=py27
+-- TOXENV=py32
+-- TOXENV=py33
+-- TOXENV=py34
+-- TOXENV=pypy
+-- TOXENV=pypy3
++
++python:
++  - ""2.7""
++  - ""3.4""
++
+ install:
+-- pip install tox
++  - pip install nose flake8 coverage python-coveralls
++  - pip install .
++
+ script:
+-- tox
++  - make flake8
++  - make coverage
++
++after_success:
++  - coveralls
+","diff --git a/.travis.yml b/.travis.yml
+index b509775..3694df6 100644
+--- a/.travis.yml
++++ b/.travis.yml
+@@ -1,14 +1,16 @@
+ language: python
+-python: 2.7
+-env:
+-- TOXENV=py26
+-- TOXENV=py27
+-- TOXENV=py32
+-- TOXENV=py33
+-- TOXENV=py34
+-- TOXENV=pypy
+-- TOXENV=pypy3
++
++python:
++  - ""2.7""
++  - ""3.4""
++
+ install:
+-- pip install tox
++  - pip install nose flake8 coverage python-coveralls
++  - pip install .
++
+ script:
+-- tox
++  - make flake8
++  - make coverage
++
++after_success:
++  - coveralls
+",No
+repositories/tqdm,README.md,README,ccb05c2e041bbb2f9b3acccb2a80b48993d36f12,ecc79f96291ca5f704cf56330598070d4798f89a,New tqdm module structure and add a Makefile,"diff --git a/README.md b/README.md
+index b749ccf..c005598 100644
+--- a/README.md
++++ b/README.md
+@@ -1,32 +1,49 @@
+-tqdm
+-====
++# tqdm
+ 
+-[![Build Status](https://img.shields.io/travis/kmike/tqdm.svg?branch=all-fixes)](https://travis-ci.org/kmike/tqdm)
++[![Build Status](https://travis-ci.org/tqdm/tqdm.svg?branch=master)](https://travis-ci.org/tqdm/tqdm)
++[![Coverage Status](https://coveralls.io/repos/tqdm/tqdm/badge.svg)](https://coveralls.io/r/tqdm/tqdm)
+ 
+-Instantly make your loops show a prog","diff --git a/README.md b/README.md
+index b749ccf..c005598 100644
+--- a/README.md
++++ b/README.md
+@@ -1,32 +1,49 @@
+-tqdm
+-====
++# tqdm
+ 
+-[![Build Status](https://img.shields.io/travis/kmike/tqdm.svg?branch=all-fixes)](https://travis-ci.org/kmike/tqdm)
++[![Build Status](https://travis-ci.org/tqdm/tqdm.svg?branch=master)](https://travis-ci.org/tqdm/tqdm)
++[![Coverage Status](https://coveralls.io/repos/tqdm/tqdm/badge.svg)](https://coveralls.io/r/tqdm/tqdm)
+ 
+-Instantly make your loops show a prog",Yes
+repositories/tqdm,setup.py,Source Code,ccb05c2e041bbb2f9b3acccb2a80b48993d36f12,ecc79f96291ca5f704cf56330598070d4798f89a,New tqdm module structure and add a Makefile,"diff --git a/setup.py b/setup.py
+index 2b9a035..a3f8f14 100644
+--- a/setup.py
++++ b/setup.py
+@@ -4,12 +4,12 @@ from setuptools import setup
+ 
+ setup(
+     name='tqdm',
+-    version='1.0',
++    version='2.0',
+     description='A Simple Python Progress Meter',
+     license='MIT License',
+     author='Noam Yorav-Raphael',
+     author_email='noamraph@gmail.com',
+-    url='https://github.com/noamraph/tqdm',
++    url='https://github.com/tqdm/tqdm',
+     py_modules=['tqdm'],
+     classifiers=[
+        ","diff --git a/setup.py b/setup.py
+index 2b9a035..a3f8f14 100644
+--- a/setup.py
++++ b/setup.py
+@@ -4,12 +4,12 @@ from setuptools import setup
+ 
+ setup(
+     name='tqdm',
+-    version='1.0',
++    version='2.0',
+     description='A Simple Python Progress Meter',
+     license='MIT License',
+     author='Noam Yorav-Raphael',
+     author_email='noamraph@gmail.com',
+-    url='https://github.com/noamraph/tqdm',
++    url='https://github.com/tqdm/tqdm',
+     py_modules=['tqdm'],
+     classifiers=[
+        ",No
+repositories/tqdm,README.md,README,c8edafc74c04207240a3ecc9ac55d691cc415d32,ccb05c2e041bbb2f9b3acccb2a80b48993d36f12,Add logo to tqdm,"diff --git a/README.md b/README.md
+index c005598..997b483 100644
+--- a/README.md
++++ b/README.md
+@@ -1,3 +1,5 @@
++![Logo](logo.png)
++
+ # tqdm
+ 
+ [![Build Status](https://travis-ci.org/tqdm/tqdm.svg?branch=master)](https://travis-ci.org/tqdm/tqdm)
+@@ -7,7 +9,7 @@ Instantly make your loops show a progress meter - just wrap any iterable with ""t
+ 
+ tqdm (read ta<i>qa</i>dum, تقدّم) means ""progress"" in arabic.
+ 
+-![ScreenShot](tqdm.gif)
++![Screenshot](tqdm.gif)
+ 
+ You can also use trange(N) as a shor","diff --git a/README.md b/README.md
+index c005598..997b483 100644
+--- a/README.md
++++ b/README.md
+@@ -1,3 +1,5 @@
++![Logo](logo.png)
++
+ # tqdm
+ 
+ [![Build Status](https://travis-ci.org/tqdm/tqdm.svg?branch=master)](https://travis-ci.org/tqdm/tqdm)
+@@ -7,7 +9,7 @@ Instantly make your loops show a progress meter - just wrap any iterable with ""t
+ 
+ tqdm (read ta<i>qa</i>dum, تقدّم) means ""progress"" in arabic.
+ 
+-![ScreenShot](tqdm.gif)
++![Screenshot](tqdm.gif)
+ 
+ You can also use trange(N) as a shor",No
+repositories/tqdm,.gitignore,Other,3b5352a50eda66ca4ff951718b7a67f3e5dc9eac,a24c943119b9c86eafe8e95b6e95ef6e61bc7a46,cleanup,"diff --git a/.gitignore b/.gitignore
+index 1a1f52a..7caab15 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -18,13 +18,15 @@ develop-eggs
+ lib
+ lib64
+ __pycache__
++MANIFEST
++cover/
+ 
+ # Installer logs
+ pip-log.txt
+ 
+ # Unit test / coverage reports
+ .coverage
+-.tox
++.tox/
+ nosetests.xml
+ 
+ # Translations
+","diff --git a/.gitignore b/.gitignore
+index 1a1f52a..7caab15 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -18,13 +18,15 @@ develop-eggs
+ lib
+ lib64
+ __pycache__
++MANIFEST
++cover/
+ 
+ # Installer logs
+ pip-log.txt
+ 
+ # Unit test / coverage reports
+ .coverage
+-.tox
++.tox/
+ nosetests.xml
+ 
+ # Translations
+",No
+repositories/tqdm,.travis.yml,Other,3b5352a50eda66ca4ff951718b7a67f3e5dc9eac,a24c943119b9c86eafe8e95b6e95ef6e61bc7a46,cleanup,"diff --git a/.travis.yml b/.travis.yml
+index 3694df6..4fe7ae3 100644
+--- a/.travis.yml
++++ b/.travis.yml
+@@ -1,16 +1,15 @@
+ language: python
+-
+-python:
+-  - ""2.7""
+-  - ""3.4""
+-
++python: 2.7
++env:
++- TOXENV=py26
++- TOXENV=py27
++- TOXENV=py32
++- TOXENV=py33
++- TOXENV=py34
++- TOXENV=pypy
++- TOXENV=pypy3
++- TOXENV=flake8
+ install:
+-  - pip install nose flake8 coverage python-coveralls
+-  - pip install .
+-
++- pip install tox
+ script:
+-  - make flake8
+-  - make coverage
+-
+-after_success:
+-  - coveralls","diff --git a/.travis.yml b/.travis.yml
+index 3694df6..4fe7ae3 100644
+--- a/.travis.yml
++++ b/.travis.yml
+@@ -1,16 +1,15 @@
+ language: python
+-
+-python:
+-  - ""2.7""
+-  - ""3.4""
+-
++python: 2.7
++env:
++- TOXENV=py26
++- TOXENV=py27
++- TOXENV=py32
++- TOXENV=py33
++- TOXENV=py34
++- TOXENV=pypy
++- TOXENV=pypy3
++- TOXENV=flake8
+ install:
+-  - pip install nose flake8 coverage python-coveralls
+-  - pip install .
+-
++- pip install tox
+ script:
+-  - make flake8
+-  - make coverage
+-
+-after_success:
+-  - coveralls",No
+repositories/tqdm,setup.py,Source Code,3b5352a50eda66ca4ff951718b7a67f3e5dc9eac,a24c943119b9c86eafe8e95b6e95ef6e61bc7a46,cleanup,"diff --git a/setup.py b/setup.py
+index a3f8f14..2ec8bc9 100644
+--- a/setup.py
++++ b/setup.py
+@@ -4,13 +4,13 @@ from setuptools import setup
+ 
+ setup(
+     name='tqdm',
+-    version='2.0',
++    version='1.0',
+     description='A Simple Python Progress Meter',
+     license='MIT License',
+     author='Noam Yorav-Raphael',
+     author_email='noamraph@gmail.com',
+     url='https://github.com/tqdm/tqdm',
+-    py_modules=['tqdm'],
++    packages=['tqdm'],
+     classifiers=[
+         'Development Status ","diff --git a/setup.py b/setup.py
+index a3f8f14..2ec8bc9 100644
+--- a/setup.py
++++ b/setup.py
+@@ -4,13 +4,13 @@ from setuptools import setup
+ 
+ setup(
+     name='tqdm',
+-    version='2.0',
++    version='1.0',
+     description='A Simple Python Progress Meter',
+     license='MIT License',
+     author='Noam Yorav-Raphael',
+     author_email='noamraph@gmail.com',
+     url='https://github.com/tqdm/tqdm',
+-    py_modules=['tqdm'],
++    packages=['tqdm'],
+     classifiers=[
+         'Development Status ",No
+repositories/tqdm,tqdm/_tqdm.py,Source Code,3b5352a50eda66ca4ff951718b7a67f3e5dc9eac,a24c943119b9c86eafe8e95b6e95ef6e61bc7a46,cleanup,,,No
+repositories/tqdm,README.md,README,98955ab13856b2e2a5d910433cad4f2c0135fc75,3b5352a50eda66ca4ff951718b7a67f3e5dc9eac,use 80 columns again,"diff --git a/README.md b/README.md
+index 997b483..c583b52 100644
+--- a/README.md
++++ b/README.md
+@@ -27,25 +27,27 @@ pip install -e git+https://github.com/tqdm/tqdm.git#egg=master
+ def tqdm(iterable, desc='', total=None,
+          leave=False, file=sys.stderr,
+          min_interval=0.5, miniters=1):
+-
+-    """"""Get an iterable object, and return an iterator which acts exactly like the
+-    iterable, but prints a progress meter and updates it every time a value is
+-    requested.
++         
++    ""","diff --git a/README.md b/README.md
+index 997b483..c583b52 100644
+--- a/README.md
++++ b/README.md
+@@ -27,25 +27,27 @@ pip install -e git+https://github.com/tqdm/tqdm.git#egg=master
+ def tqdm(iterable, desc='', total=None,
+          leave=False, file=sys.stderr,
+          min_interval=0.5, miniters=1):
+-
+-    """"""Get an iterable object, and return an iterator which acts exactly like the
+-    iterable, but prints a progress meter and updates it every time a value is
+-    requested.
++         
++    """,No
+repositories/tqdm,tox.ini,Other,98955ab13856b2e2a5d910433cad4f2c0135fc75,3b5352a50eda66ca4ff951718b7a67f3e5dc9eac,use 80 columns again,"diff --git a/tox.ini b/tox.ini
+index 7bd39c0..99216eb 100644
+--- a/tox.ini
++++ b/tox.ini
+@@ -19,4 +19,4 @@ after_success:
+ basepython = python2.7
+ deps = flake8
+ commands =
+-    flake8 --max-line-length=100 --count --statistics tqdm/
++    flake8 --count --statistics tqdm/
+","diff --git a/tox.ini b/tox.ini
+index 7bd39c0..99216eb 100644
+--- a/tox.ini
++++ b/tox.ini
+@@ -19,4 +19,4 @@ after_success:
+ basepython = python2.7
+ deps = flake8
+ commands =
+-    flake8 --max-line-length=100 --count --statistics tqdm/
++    flake8 --count --statistics tqdm/
+",No
+repositories/tqdm,tqdm/_tqdm.py,Source Code,98955ab13856b2e2a5d910433cad4f2c0135fc75,3b5352a50eda66ca4ff951718b7a67f3e5dc9eac,use 80 columns again,,,No
+repositories/tqdm,README.md,README,71c46107315a90cec85b6018b68115dd2d3eb735,98955ab13856b2e2a5d910433cad4f2c0135fc75,Rename min_interval back to mininterval; add defaults to docstring; document miniters and iterable parameters.,"diff --git a/README.md b/README.md
+index c583b52..688efb2 100644
+--- a/README.md
++++ b/README.md
+@@ -26,28 +26,34 @@ pip install -e git+https://github.com/tqdm/tqdm.git#egg=master
+ ```python
+ def tqdm(iterable, desc='', total=None,
+          leave=False, file=sys.stderr,
+-         min_interval=0.5, miniters=1):
+-         
++         mininterval=0.5, miniters=1):         
+     """"""Get an iterable object, and return an iterator which acts exactly like
+     the iterable, but prints a progress meter a","diff --git a/README.md b/README.md
+index c583b52..688efb2 100644
+--- a/README.md
++++ b/README.md
+@@ -26,28 +26,34 @@ pip install -e git+https://github.com/tqdm/tqdm.git#egg=master
+ ```python
+ def tqdm(iterable, desc='', total=None,
+          leave=False, file=sys.stderr,
+-         min_interval=0.5, miniters=1):
+-         
++         mininterval=0.5, miniters=1):         
+     """"""Get an iterable object, and return an iterator which acts exactly like
+     the iterable, but prints a progress meter a",No
+repositories/tqdm,tqdm/_tqdm.py,Source Code,71c46107315a90cec85b6018b68115dd2d3eb735,98955ab13856b2e2a5d910433cad4f2c0135fc75,Rename min_interval back to mininterval; add defaults to docstring; document miniters and iterable parameters.,,,No
+repositories/tqdm,tqdm/tests/tests_tqdm.py,Test Code,71c46107315a90cec85b6018b68115dd2d3eb735,98955ab13856b2e2a5d910433cad4f2c0135fc75,Rename min_interval back to mininterval; add defaults to docstring; document miniters and iterable parameters.,,,No
+repositories/tqdm,README.md,README,3ae3bc42195c844c3052ce620e801d18a8064cc9,71c46107315a90cec85b6018b68115dd2d3eb735,update contributing docs; remove a whitespace before !; add executable flag to setup.py,"diff --git a/README.md b/README.md
+index 688efb2..a58d3bf 100644
+--- a/README.md
++++ b/README.md
+@@ -5,7 +5,8 @@
+ [![Build Status](https://travis-ci.org/tqdm/tqdm.svg?branch=master)](https://travis-ci.org/tqdm/tqdm)
+ [![Coverage Status](https://coveralls.io/repos/tqdm/tqdm/badge.svg)](https://coveralls.io/r/tqdm/tqdm)
+ 
+-Instantly make your loops show a progress meter - just wrap any iterable with ""tqdm(iterable)"", and you're done !
++Instantly make your loops show a progress meter - just wrap an","diff --git a/README.md b/README.md
+index 688efb2..a58d3bf 100644
+--- a/README.md
++++ b/README.md
+@@ -5,7 +5,8 @@
+ [![Build Status](https://travis-ci.org/tqdm/tqdm.svg?branch=master)](https://travis-ci.org/tqdm/tqdm)
+ [![Coverage Status](https://coveralls.io/repos/tqdm/tqdm/badge.svg)](https://coveralls.io/r/tqdm/tqdm)
+ 
+-Instantly make your loops show a progress meter - just wrap any iterable with ""tqdm(iterable)"", and you're done !
++Instantly make your loops show a progress meter - just wrap an",No
+repositories/tqdm,README.md,README,5671e43757ec4d68dbe84ffbe33664d83f1b5e51,38d18f18cce1444e7385f701a74f0f6f4243854c,Update readme,"diff --git a/README.md b/README.md
+index a58d3bf..3efadd1 100644
+--- a/README.md
++++ b/README.md
+@@ -5,7 +5,7 @@
+ [![Build Status](https://travis-ci.org/tqdm/tqdm.svg?branch=master)](https://travis-ci.org/tqdm/tqdm)
+ [![Coverage Status](https://coveralls.io/repos/tqdm/tqdm/badge.svg)](https://coveralls.io/r/tqdm/tqdm)
+ 
+-Instantly make your loops show a progress meter - just wrap any iterable with 
++Instantly make your loops show a progress meter - just wrap any iterable with
+ ""tqdm(iterable)"", ","diff --git a/README.md b/README.md
+index a58d3bf..3efadd1 100644
+--- a/README.md
++++ b/README.md
+@@ -5,7 +5,7 @@
+ [![Build Status](https://travis-ci.org/tqdm/tqdm.svg?branch=master)](https://travis-ci.org/tqdm/tqdm)
+ [![Coverage Status](https://coveralls.io/repos/tqdm/tqdm/badge.svg)](https://coveralls.io/r/tqdm/tqdm)
+ 
+-Instantly make your loops show a progress meter - just wrap any iterable with 
++Instantly make your loops show a progress meter - just wrap any iterable with
+ ""tqdm(iterable)"", ",No
+repositories/tqdm,tqdm/_tqdm.py,Source Code,fbbc7bfa73664b89a79c858d8a49cad212bbfa77,5861e10ac5d87b3d60a7a5d721c457f52a379bd7,"better docs (wording, linebreaks), new-style string formatting",,,No
+repositories/tqdm,tqdm/_tqdm.py,Source Code,2ed6664b6cbd55386e4954d978798d40b6e09911,fbbc7bfa73664b89a79c858d8a49cad212bbfa77,"prettier and more fine-grained default output: unicode chars and fractions, bigger bar and more compact stats",,,No
+repositories/tqdm,tqdm/_tqdm.py,Source Code,f1a124e0657d218a83e708e2ba31cd74b8651b96,2ed6664b6cbd55386e4954d978798d40b6e09911,"prettier and more fine-grained default output: unicode chars and fractions, bigger bar and more compact stats",,,No
+repositories/tqdm,tqdm/tests/tests_tqdm.py,Test Code,373d0bad85f3b955f789952e17f9b3c7446a673f,f1a124e0657d218a83e708e2ba31cd74b8651b96,updated tests,,,No
+repositories/tqdm,tqdm/_tqdm.py,Source Code,e9ccb10310f7bb1eca9d53b4ca199a1f18987101,373d0bad85f3b955f789952e17f9b3c7446a673f,"revert to N_BAR=10 as default, a sligtly faster (10Hz rather than 2Hz) update interval looks better without measurable reduction in iteration speed",,,No
+repositories/tqdm,tqdm/tests/tests_tqdm.py,Test Code,e9ccb10310f7bb1eca9d53b4ca199a1f18987101,373d0bad85f3b955f789952e17f9b3c7446a673f,"revert to N_BAR=10 as default, a sligtly faster (10Hz rather than 2Hz) update interval looks better without measurable reduction in iteration speed",,,No
+repositories/tqdm,README.md,README,77c1d2815993829048549cc4d136570a26878530,e9ccb10310f7bb1eca9d53b4ca199a1f18987101,updated readme,"diff --git a/README.md b/README.md
+index 3efadd1..6f64f2b 100644
+--- a/README.md
++++ b/README.md
+@@ -25,41 +25,47 @@ pip install -e git+https://github.com/tqdm/tqdm.git#egg=master
+ ## Documentation
+ 
+ ```python
+-def tqdm(iterable, desc='', total=None,
+-         leave=False, file=sys.stderr,
+-         mininterval=0.5, miniters=1):
+-    """"""Get an iterable object, and return an iterator which acts exactly like
+-    the iterable, but prints a progress meter and updates it every time a
+-    value is ","diff --git a/README.md b/README.md
+index 3efadd1..6f64f2b 100644
+--- a/README.md
++++ b/README.md
+@@ -25,41 +25,47 @@ pip install -e git+https://github.com/tqdm/tqdm.git#egg=master
+ ## Documentation
+ 
+ ```python
+-def tqdm(iterable, desc='', total=None,
+-         leave=False, file=sys.stderr,
+-         mininterval=0.5, miniters=1):
+-    """"""Get an iterable object, and return an iterator which acts exactly like
+-    the iterable, but prints a progress meter and updates it every time a
+-    value is ",No
+repositories/tqdm,tqdm/_tqdm.py,Source Code,a3a983dd3b26099b33516b1140d0c677b330b6e3,77c1d2815993829048549cc4d136570a26878530,travis::flake8 compatible,,,No
+repositories/tqdm,tqdm/tests/tests_tqdm.py,Test Code,a3a983dd3b26099b33516b1140d0c677b330b6e3,77c1d2815993829048549cc4d136570a26878530,travis::flake8 compatible,,,No
+repositories/tqdm,tqdm/__init__.py,Source Code,d744bbd3f5492b385418cf48e8fb4d4955915f28,f6ed2b7f0691556ad9cc7b55921641c3c3996e3a,Add progress bar to pandas apply function,,,No
+repositories/tqdm,tqdm/_pandas.py,Source Code,8add12710e7087b32fd65f4cea634354d21cfee6,d744bbd3f5492b385418cf48e8fb4d4955915f28,Fix lines larger than 80 (I would prefer 100),,,No
+repositories/tqdm,tqdm/tests/tests_pandas.py,Test Code,8add12710e7087b32fd65f4cea634354d21cfee6,d744bbd3f5492b385418cf48e8fb4d4955915f28,Fix lines larger than 80 (I would prefer 100),,,No
+repositories/tqdm,Makefile,Other,8ac163e1e7043a615eeb38c63aa765abd2345692,f6ed2b7f0691556ad9cc7b55921641c3c3996e3a,"make automates all tests by default, version changed to 2.0 in anticipation of pypi","diff --git a/Makefile b/Makefile
+index 20cbeb4..bc6ee19 100644
+--- a/Makefile
++++ b/Makefile
+@@ -1,7 +1,8 @@
+-.PHONY: flake8 test coverage
++.PHONY: all flake8 test coverage
+ 
++all: flake8 coverage
+ flake8:
+-	flake8 --exclude ""test_*"" --max-line-length=80 --count --statistics --exit-zero tqdm/
++	flake8 --max-line-length=80 --count --statistics --exit-zero tqdm/
+ 
+ test:
+ 	nosetests tqdm -v
+","diff --git a/Makefile b/Makefile
+index 20cbeb4..bc6ee19 100644
+--- a/Makefile
++++ b/Makefile
+@@ -1,7 +1,8 @@
+-.PHONY: flake8 test coverage
++.PHONY: all flake8 test coverage
+ 
++all: flake8 coverage
+ flake8:
+-	flake8 --exclude ""test_*"" --max-line-length=80 --count --statistics --exit-zero tqdm/
++	flake8 --max-line-length=80 --count --statistics --exit-zero tqdm/
+ 
+ test:
+ 	nosetests tqdm -v
+",No
+repositories/tqdm,setup.py,Source Code,8ac163e1e7043a615eeb38c63aa765abd2345692,f6ed2b7f0691556ad9cc7b55921641c3c3996e3a,"make automates all tests by default, version changed to 2.0 in anticipation of pypi","diff --git a/setup.py b/setup.py
+index 2ec8bc9..612f934 100755
+--- a/setup.py
++++ b/setup.py
+@@ -4,7 +4,7 @@ from setuptools import setup
+ 
+ setup(
+     name='tqdm',
+-    version='1.0',
++    version='2.0',
+     description='A Simple Python Progress Meter',
+     license='MIT License',
+     author='Noam Yorav-Raphael',
+","diff --git a/setup.py b/setup.py
+index 2ec8bc9..612f934 100755
+--- a/setup.py
++++ b/setup.py
+@@ -4,7 +4,7 @@ from setuptools import setup
+ 
+ setup(
+     name='tqdm',
+-    version='1.0',
++    version='2.0',
+     description='A Simple Python Progress Meter',
+     license='MIT License',
+     author='Noam Yorav-Raphael',
+",No
+repositories/tqdm,README.md,README,ac4646c723a22aaa14a005613d892822cf81eebb,8ac163e1e7043a615eeb38c63aa765abd2345692,"major and minor efficiency improvements, minor function signature and documentation update","diff --git a/README.md b/README.md
+index 6f64f2b..3ba1e84 100644
+--- a/README.md
++++ b/README.md
+@@ -5,14 +5,21 @@
+ [![Build Status](https://travis-ci.org/tqdm/tqdm.svg?branch=master)](https://travis-ci.org/tqdm/tqdm)
+ [![Coverage Status](https://coveralls.io/repos/tqdm/tqdm/badge.svg)](https://coveralls.io/r/tqdm/tqdm)
+ 
++tqdm (read ta<i>qa</i>dum, تقدّم) means ""progress"" in arabic.
++
+ Instantly make your loops show a progress meter - just wrap any iterable with
+-""tqdm(iterable)"", and you're do","diff --git a/README.md b/README.md
+index 6f64f2b..3ba1e84 100644
+--- a/README.md
++++ b/README.md
+@@ -5,14 +5,21 @@
+ [![Build Status](https://travis-ci.org/tqdm/tqdm.svg?branch=master)](https://travis-ci.org/tqdm/tqdm)
+ [![Coverage Status](https://coveralls.io/repos/tqdm/tqdm/badge.svg)](https://coveralls.io/r/tqdm/tqdm)
+ 
+-Instantly make your loops show a progress meter - just wrap any iterable with
+-""tqdm(iterable)"", and you're done!
+-
+ tqdm (read ta<i>qa</i>dum, تقدّم) means ""progress"" in arab",Yes
+repositories/tqdm,tqdm/_tqdm.py,Source Code,ac4646c723a22aaa14a005613d892822cf81eebb,8ac163e1e7043a615eeb38c63aa765abd2345692,"major and minor efficiency improvements, minor function signature and documentation update",,,No
+repositories/tqdm,tqdm/_tqdm.py,Source Code,ffdafd64aa16ec50e56beda8d49d3b08b1da5a77,ac4646c723a22aaa14a005613d892822cf81eebb,removed redundant decorator example -- not worth it,,,No
+repositories/tqdm,setup.py,Source Code,92bf2cff525daec69b6f4a48eec79ab0d97db10f,ffdafd64aa16ec50e56beda8d49d3b08b1da5a77,"miniter test, more specific exceptions, version 1.1","diff --git a/setup.py b/setup.py
+index 612f934..c304dd5 100755
+--- a/setup.py
++++ b/setup.py
+@@ -4,7 +4,7 @@ from setuptools import setup
+ 
+ setup(
+     name='tqdm',
+-    version='2.0',
++    version='1.1',
+     description='A Simple Python Progress Meter',
+     license='MIT License',
+     author='Noam Yorav-Raphael',
+","diff --git a/setup.py b/setup.py
+index 612f934..c304dd5 100755
+--- a/setup.py
++++ b/setup.py
+@@ -4,7 +4,7 @@ from setuptools import setup
+ 
+ setup(
+     name='tqdm',
+-    version='2.0',
++    version='1.1',
+     description='A Simple Python Progress Meter',
+     license='MIT License',
+     author='Noam Yorav-Raphael',
+",No
+repositories/tqdm,tqdm/_tqdm.py,Source Code,92bf2cff525daec69b6f4a48eec79ab0d97db10f,ffdafd64aa16ec50e56beda8d49d3b08b1da5a77,"miniter test, more specific exceptions, version 1.1",,,No
+repositories/tqdm,tqdm/tests/tests_tqdm.py,Test Code,92bf2cff525daec69b6f4a48eec79ab0d97db10f,ffdafd64aa16ec50e56beda8d49d3b08b1da5a77,"miniter test, more specific exceptions, version 1.1",,,No
+repositories/tqdm,setup.py,Source Code,11551d316d77675f75b5b7d8a64a0abb074e2916,92bf2cff525daec69b6f4a48eec79ab0d97db10f,argh revert to 1.0,"diff --git a/setup.py b/setup.py
+index c304dd5..2ec8bc9 100755
+--- a/setup.py
++++ b/setup.py
+@@ -4,7 +4,7 @@ from setuptools import setup
+ 
+ setup(
+     name='tqdm',
+-    version='1.1',
++    version='1.0',
+     description='A Simple Python Progress Meter',
+     license='MIT License',
+     author='Noam Yorav-Raphael',
+","diff --git a/setup.py b/setup.py
+index c304dd5..2ec8bc9 100755
+--- a/setup.py
++++ b/setup.py
+@@ -4,7 +4,7 @@ from setuptools import setup
+ 
+ setup(
+     name='tqdm',
+-    version='1.1',
++    version='1.0',
+     description='A Simple Python Progress Meter',
+     license='MIT License',
+     author='Noam Yorav-Raphael',
+",No
+repositories/tqdm,README.md,README,0679775478d570de1708d4c182a01199737f9b48,d16381a91146c8d9742f3d7674b812335df7da31,Add option to disable progress bar. Should fix GH-1,"diff --git a/README.md b/README.md
+index 3ba1e84..6fa9183 100644
+--- a/README.md
++++ b/README.md
+@@ -33,7 +33,7 @@ pip install -e git+https://github.com/tqdm/tqdm.git#egg=master
+ 
+ ```python
+ def tqdm(iterable, desc=None, total=None, leave=False, file=sys.stderr,
+-         ncols=None, mininterval=0.1, miniters=None):
++         ncols=None, mininterval=0.1, miniters=None, disable=False):
+     """"""
+     Decorate an iterable object, returning an iterator which acts exactly
+     like the orignal itera","diff --git a/README.md b/README.md
+index 3ba1e84..6fa9183 100644
+--- a/README.md
++++ b/README.md
+@@ -33,7 +33,7 @@ pip install -e git+https://github.com/tqdm/tqdm.git#egg=master
+ 
+ ```python
+ def tqdm(iterable, desc=None, total=None, leave=False, file=sys.stderr,
+-         ncols=None, mininterval=0.1, miniters=None):
++         ncols=None, mininterval=0.1, miniters=None, disable=False):
+     """"""
+     Decorate an iterable object, returning an iterator which acts exactly
+     like the orignal itera",No
+repositories/tqdm,tqdm/_tqdm.py,Source Code,0679775478d570de1708d4c182a01199737f9b48,d16381a91146c8d9742f3d7674b812335df7da31,Add option to disable progress bar. Should fix GH-1,,,No
+repositories/tqdm,tqdm/tests/tests_tqdm.py,Test Code,0679775478d570de1708d4c182a01199737f9b48,d16381a91146c8d9742f3d7674b812335df7da31,Add option to disable progress bar. Should fix GH-1,,,No
+repositories/tqdm,.travis.yml,Other,abb4166a0a4acfb1212177e59f14d1c783f1374c,d16381a91146c8d9742f3d7674b812335df7da31,"Add flag to travis file to switch to container based infrastructure build, which should allow faster build","diff --git a/.travis.yml b/.travis.yml
+index 4fe7ae3..81f652e 100644
+--- a/.travis.yml
++++ b/.travis.yml
+@@ -1,3 +1,4 @@
++sudo: false
+ language: python
+ python: 2.7
+ env:
+","diff --git a/.travis.yml b/.travis.yml
+index 4fe7ae3..81f652e 100644
+--- a/.travis.yml
++++ b/.travis.yml
+@@ -1,3 +1,4 @@
++sudo: false
+ language: python
+ python: 2.7
+ env:
+",No
+repositories/tqdm,README.md,README,ef61853720c34e5e9fb9ae513ea8338ffbcd16a2,d16381a91146c8d9742f3d7674b812335df7da31,added fallback ascii support,"diff --git a/README.md b/README.md
+index 3ba1e84..99b0d3b 100644
+--- a/README.md
++++ b/README.md
+@@ -33,7 +33,7 @@ pip install -e git+https://github.com/tqdm/tqdm.git#egg=master
+ 
+ ```python
+ def tqdm(iterable, desc=None, total=None, leave=False, file=sys.stderr,
+-         ncols=None, mininterval=0.1, miniters=None):
++         ncols=None, mininterval=0.1, miniters=None, ascii=False):
+     """"""
+     Decorate an iterable object, returning an iterator which acts exactly
+     like the orignal iterabl","diff --git a/README.md b/README.md
+index 3ba1e84..99b0d3b 100644
+--- a/README.md
++++ b/README.md
+@@ -33,7 +33,7 @@ pip install -e git+https://github.com/tqdm/tqdm.git#egg=master
+ 
+ ```python
+ def tqdm(iterable, desc=None, total=None, leave=False, file=sys.stderr,
+-         ncols=None, mininterval=0.1, miniters=None):
++         ncols=None, mininterval=0.1, miniters=None, ascii=False):
+     """"""
+     Decorate an iterable object, returning an iterator which acts exactly
+     like the orignal iterabl",No
+repositories/tqdm,tqdm/_tqdm.py,Source Code,ef61853720c34e5e9fb9ae513ea8338ffbcd16a2,d16381a91146c8d9742f3d7674b812335df7da31,added fallback ascii support,,,No
+repositories/tqdm,tqdm/tests/tests_tqdm.py,Test Code,ef61853720c34e5e9fb9ae513ea8338ffbcd16a2,d16381a91146c8d9742f3d7674b812335df7da31,added fallback ascii support,,,No
+repositories/tqdm,README.md,README,7b97027f0878cd114899f8b3390e72b7c95cc894,ef61853720c34e5e9fb9ae513ea8338ffbcd16a2,update README,"diff --git a/README.md b/README.md
+index 99b0d3b..07d3188 100644
+--- a/README.md
++++ b/README.md
+@@ -33,7 +33,7 @@ pip install -e git+https://github.com/tqdm/tqdm.git#egg=master
+ 
+ ```python
+ def tqdm(iterable, desc=None, total=None, leave=False, file=sys.stderr,
+-         ncols=None, mininterval=0.1, miniters=None, ascii=False):
++         ncols=None, mininterval=0.1, miniters=None, ascii=None):
+     """"""
+     Decorate an iterable object, returning an iterator which acts exactly
+     like the ori","diff --git a/README.md b/README.md
+index 99b0d3b..07d3188 100644
+--- a/README.md
++++ b/README.md
+@@ -33,7 +33,7 @@ pip install -e git+https://github.com/tqdm/tqdm.git#egg=master
+ 
+ ```python
+ def tqdm(iterable, desc=None, total=None, leave=False, file=sys.stderr,
+-         ncols=None, mininterval=0.1, miniters=None, ascii=False):
++         ncols=None, mininterval=0.1, miniters=None, ascii=None):
+     """"""
+     Decorate an iterable object, returning an iterator which acts exactly
+     like the ori",No
+repositories/tqdm,.travis.yml,Other,3c9eee01123feee1067cd2cc9fa11cd4d5ab7a01,9386fcb9ebc3d32f7253933b02e9d3ac21d7bafb,Make coveralls happy (first try),"diff --git a/.travis.yml b/.travis.yml
+index 81f652e..8d400b3 100644
+--- a/.travis.yml
++++ b/.travis.yml
+@@ -2,15 +2,17 @@ sudo: false
+ language: python
+ python: 2.7
+ env:
+-- TOXENV=py26
+-- TOXENV=py27
+-- TOXENV=py32
+-- TOXENV=py33
+-- TOXENV=py34
+-- TOXENV=pypy
+-- TOXENV=pypy3
+-- TOXENV=flake8
++  - TOXENV=py26
++  - TOXENV=py27
++  - TOXENV=py32
++  - TOXENV=py33
++  - TOXENV=py34
++  - TOXENV=pypy
++  - TOXENV=pypy3
++  - TOXENV=flake8
+ install:
+-- pip install tox
++  - pip install tox python-coveralls","diff --git a/.travis.yml b/.travis.yml
+index 81f652e..8d400b3 100644
+--- a/.travis.yml
++++ b/.travis.yml
+@@ -2,15 +2,17 @@ sudo: false
+ language: python
+ python: 2.7
+ env:
+-- TOXENV=py26
+-- TOXENV=py27
+-- TOXENV=py32
+-- TOXENV=py33
+-- TOXENV=py34
+-- TOXENV=pypy
+-- TOXENV=pypy3
+-- TOXENV=flake8
++  - TOXENV=py26
++  - TOXENV=py27
++  - TOXENV=py32
++  - TOXENV=py33
++  - TOXENV=py34
++  - TOXENV=pypy
++  - TOXENV=pypy3
++  - TOXENV=flake8
+ install:
+-- pip install tox
++  - pip install tox python-coveralls",No
+repositories/tqdm,tqdm/_tqdm.py,Source Code,cdfc5e8bca71e3866937c196ca4850b0457d53e3,7b97027f0878cd114899f8b3390e72b7c95cc894,added docstring for format_meter,,,No
+repositories/tqdm,tqdm/_tqdm.py,Source Code,7d6eca11ac122f22d9940a41b0c529bd81418b5c,cdfc5e8bca71e3866937c196ca4850b0457d53e3,abstracted utf-enables stream checking,,,No
+repositories/tqdm,.travis.yml,Other,00048426006957f0333bb9bba612f2982de9b734,3c9eee01123feee1067cd2cc9fa11cd4d5ab7a01,Another try,"diff --git a/.travis.yml b/.travis.yml
+index 8d400b3..ca5f57d 100644
+--- a/.travis.yml
++++ b/.travis.yml
+@@ -11,7 +11,7 @@ env:
+   - TOXENV=pypy3
+   - TOXENV=flake8
+ install:
+-  - pip install tox python-coveralls
++  - pip install tox coveralls
+ script:
+   - tox
+ after_success:
+","diff --git a/.travis.yml b/.travis.yml
+index 8d400b3..ca5f57d 100644
+--- a/.travis.yml
++++ b/.travis.yml
+@@ -11,7 +11,7 @@ env:
+   - TOXENV=pypy3
+   - TOXENV=flake8
+ install:
+-  - pip install tox python-coveralls
++  - pip install tox coveralls
+ script:
+   - tox
+ after_success:
+",No
+repositories/tqdm,tox.ini,Other,00048426006957f0333bb9bba612f2982de9b734,3c9eee01123feee1067cd2cc9fa11cd4d5ab7a01,Another try,"diff --git a/tox.ini b/tox.ini
+index 99216eb..89eeb94 100644
+--- a/tox.ini
++++ b/tox.ini
+@@ -7,13 +7,14 @@
+ envlist = py26, py27, py32, py33, py34, pypy, pypy3, flake8
+ 
+ [testenv]
++passenv = TRAVIS TRAVIS_JOB_ID TRAVIS_BRANCH
+ deps =
+     nose
+     coverage
+-    python-coveralls
+-commands = nosetests --with-coverage --cover-package=tqdm -v tqdm/
+-after_success:
+-  - coveralls
++    coveralls
++commands =
++    nosetests --with-coverage --cover-package=tqdm -v tqdm/
++    coveralls
+ 
+ [testenv:flake","diff --git a/tox.ini b/tox.ini
+index 99216eb..89eeb94 100644
+--- a/tox.ini
++++ b/tox.ini
+@@ -7,13 +7,14 @@
+ envlist = py26, py27, py32, py33, py34, pypy, pypy3, flake8
+ 
+ [testenv]
++passenv = TRAVIS TRAVIS_JOB_ID TRAVIS_BRANCH
+ deps =
+     nose
+     coverage
+-    python-coveralls
+-commands = nosetests --with-coverage --cover-package=tqdm -v tqdm/
+-after_success:
+-  - coveralls
++    coveralls
++commands =
++    nosetests --with-coverage --cover-package=tqdm -v tqdm/
++    coveralls
+ 
+ [testenv:flake",No
+repositories/tqdm,.travis.yml,Other,c476c4f04ae9d91965e780413bdae8803a598b3e,00048426006957f0333bb9bba612f2982de9b734,Use python 3.4 for main travis python,"diff --git a/.travis.yml b/.travis.yml
+index ca5f57d..386deb9 100644
+--- a/.travis.yml
++++ b/.travis.yml
+@@ -1,6 +1,6 @@
+ sudo: false
+ language: python
+-python: 2.7
++python: 3.4
+ env:
+   - TOXENV=py26
+   - TOXENV=py27
+","diff --git a/.travis.yml b/.travis.yml
+index ca5f57d..386deb9 100644
+--- a/.travis.yml
++++ b/.travis.yml
+@@ -1,6 +1,6 @@
+ sudo: false
+ language: python
+-python: 2.7
++python: 3.4
+ env:
+   - TOXENV=py26
+   - TOXENV=py27
+",No
+repositories/tqdm,tqdm/_tqdm.py,Source Code,df67c60ff22793cdd4d2dfc20e9ea49da98106a3,0c19feaf0c997230feb171accd0b4f23f941c5f7,flake8 be happy,,,No
+repositories/tqdm,tqdm/_tqdm.py,Source Code,4c53793d8ad6006a6db1bf4c5f3d2d8dbba36def,86d6cfad2d7c9eb81d513b18f311189fb8388c80,silly unicode bugfix,,,No
+repositories/tqdm,tqdm/_tqdm.py,Source Code,aa18f56ef0b480af04baf9c2a5a2ef67e9be39fb,ad6714ff1671c1e02195d001c99e46a330c2cf45,"stdout and miniter bugfix, more tests with better output",,,No
+repositories/tqdm,tqdm/tests/tests_tqdm.py,Test Code,aa18f56ef0b480af04baf9c2a5a2ef67e9be39fb,ad6714ff1671c1e02195d001c99e46a330c2cf45,"stdout and miniter bugfix, more tests with better output",,,No
+repositories/tqdm,tqdm/_tqdm.py,Source Code,2b4d73526bfd6d87b26aa950652b04d3d0bb1d65,4c53793d8ad6006a6db1bf4c5f3d2d8dbba36def,attempt to set ncols from terminal environs,,,No
+repositories/tqdm,tqdm/_tqdm.py,Source Code,18c430b3d6561778fb3f55f0c1414d1c3874b393,2b4d73526bfd6d87b26aa950652b04d3d0bb1d65,initial attempt to modularise utils,,,No
+repositories/tqdm,tqdm/_tqdm.py,Source Code,21912c821ccb984f79c911f7cb89698a111662ab,18c430b3d6561778fb3f55f0c1414d1c3874b393,import bugfix,,,No
+repositories/tqdm,tqdm/_tqdm.py,Source Code,c58a7c3f216c0a681f6abc0ce95b0eb97c77b08f,21912c821ccb984f79c911f7cb89698a111662ab,moved more to utils,,,No
+repositories/tqdm,tqdm/_utils.py,Source Code,c58a7c3f216c0a681f6abc0ce95b0eb97c77b08f,21912c821ccb984f79c911f7cb89698a111662ab,moved more to utils,,,No
+repositories/tqdm,tqdm/_tqdm.py,Source Code,39e814b2d692479b677aef46618d2881fb8cb791,bccfcd23454e0565ad5ffa2b85fd6bad46e1ded4,silly ncols bugfix,,,No
+repositories/tqdm,tqdm/_utils.py,Source Code,39e814b2d692479b677aef46618d2881fb8cb791,bccfcd23454e0565ad5ffa2b85fd6bad46e1ded4,silly ncols bugfix,,,No
+repositories/tqdm,README.md,README,cb668bea0f29bde2980bb709f1236e97847df54b,39e814b2d692479b677aef46618d2881fb8cb791,Add unit and unit_scale arguments + tqdm is now a class to allow manual update() and close(),"diff --git a/README.md b/README.md
+index 80ae8e7..63fd074 100644
+--- a/README.md
++++ b/README.md
+@@ -32,8 +32,11 @@ pip install -e git+https://github.com/tqdm/tqdm.git#egg=master
+ ## Documentation
+ 
+ ```python
+-def tqdm(iterable, desc=None, total=None, leave=False, file=sys.stderr,
+-         ncols=None, mininterval=0.1, miniters=None, ascii=None, disable=False):
++class tqdm:
++
++    def __init__(self, iterable=None, desc=None, total=None, leave=False, file=sys.stderr,
++         ncols=None, minint","diff --git a/README.md b/README.md
+index 80ae8e7..63fd074 100644
+--- a/README.md
++++ b/README.md
+@@ -32,8 +32,11 @@ pip install -e git+https://github.com/tqdm/tqdm.git#egg=master
+ ## Documentation
+ 
+ ```python
+-def tqdm(iterable, desc=None, total=None, leave=False, file=sys.stderr,
+-         ncols=None, mininterval=0.1, miniters=None, ascii=None, disable=False):
++class tqdm:
++
++    def __init__(self, iterable=None, desc=None, total=None, leave=False, file=sys.stderr,
++         ncols=None, minint",No
+repositories/tqdm,tqdm/_tqdm.py,Source Code,cb668bea0f29bde2980bb709f1236e97847df54b,39e814b2d692479b677aef46618d2881fb8cb791,Add unit and unit_scale arguments + tqdm is now a class to allow manual update() and close(),,,No
+repositories/tqdm,README.md,README,1305eacbeebe310641a79d63a93272c54b801c51,cb668bea0f29bde2980bb709f1236e97847df54b,Fixed doc about unit_scale,"diff --git a/README.md b/README.md
+index 63fd074..b32a755 100644
+--- a/README.md
++++ b/README.md
+@@ -71,10 +71,10 @@ class tqdm:
+     unit  : str, optional
+         String that will be used to define the unit of each iteration.
+         [default: ""it""]
+-    unit_scale  : str, optional
++    unit_scale  : bool, optional
+         If set, the number of iterations will be reduced/scaled automatically
+         and a metric prefix following the International System of Units standard
+-        will be ad","diff --git a/README.md b/README.md
+index 63fd074..b32a755 100644
+--- a/README.md
++++ b/README.md
+@@ -71,10 +71,10 @@ class tqdm:
+     unit  : str, optional
+         String that will be used to define the unit of each iteration.
+         [default: ""it""]
+-    unit_scale  : str, optional
++    unit_scale  : bool, optional
+         If set, the number of iterations will be reduced/scaled automatically
+         and a metric prefix following the International System of Units standard
+-        will be ad",No
+repositories/tqdm,tqdm/_tqdm.py,Source Code,1305eacbeebe310641a79d63a93272c54b801c51,cb668bea0f29bde2980bb709f1236e97847df54b,Fixed doc about unit_scale,,,No
+repositories/tqdm,tqdm/_tqdm.py,Source Code,05dc6d5011affe35c35997e2290aef90053ef023,1305eacbeebe310641a79d63a93272c54b801c51,Flake fix,,,No
+repositories/tqdm,README.md,README,eca7c4378de61006a3f50648ddcfab9ad2455b12,39e814b2d692479b677aef46618d2881fb8cb791,Update readme to reflect unfortunate pypi status,"diff --git a/README.md b/README.md
+index 80ae8e7..07bb020 100644
+--- a/README.md
++++ b/README.md
+@@ -24,9 +24,10 @@ version is much more visually appealing.
+ ## Installation
+ 
+ ```sh
+-pip install tqdm
+-# or
++# newer, faster, prettier, stable version
+ pip install -e git+https://github.com/tqdm/tqdm.git#egg=master
++# or (old version on pypi)
++pip install tqdm
+ ```
+ 
+ ## Documentation
+","diff --git a/README.md b/README.md
+index 80ae8e7..07bb020 100644
+--- a/README.md
++++ b/README.md
+@@ -24,9 +24,10 @@ version is much more visually appealing.
+ ## Installation
+ 
+ ```sh
+-pip install tqdm
+-# or
++# newer, faster, prettier, stable version
+ pip install -e git+https://github.com/tqdm/tqdm.git#egg=master
++# or (old version on pypi)
++pip install tqdm
+ ```
+ 
+ ## Documentation
+",No
+repositories/tqdm,tqdm/_tqdm.py,Source Code,26317f3c2f67148dfa4a9eee3650e14635be2d61,05dc6d5011affe35c35997e2290aef90053ef023,fix len_s regression,,,No
+repositories/tqdm,tqdm/_tqdm.py,Source Code,1f671ecf43eedc06b10f9e222085714b3bead29f,26317f3c2f67148dfa4a9eee3650e14635be2d61,fix regressions + string formatting,,,No
+repositories/tqdm,tqdm/tests/tests_tqdm.py,Test Code,841585e5cb33962c1ca336c39aa894d88ced13ac,1f671ecf43eedc06b10f9e222085714b3bead29f,add test_unit(),,,No
+repositories/tqdm,tqdm/_tqdm.py,Source Code,b625ff4bbdbf1b5e56d4e7504c40819d381ec457,841585e5cb33962c1ca336c39aa894d88ced13ac,fix flake8,,,No
+repositories/tqdm,tqdm/_tqdm.py,Source Code,fffe2e70bc7a96795e44d1e784e7e2940d0f2c10,b625ff4bbdbf1b5e56d4e7504c40819d381ec457,fix flake8 again,,,No
+repositories/tqdm,README.md,README,7f81f8f64bb2cf715d8c3abeda23077345b090d1,eca7c4378de61006a3f50648ddcfab9ad2455b12,"#egg to refer to the project name, not the branch name","diff --git a/README.md b/README.md
+index 07bb020..5c5d3f6 100644
+--- a/README.md
++++ b/README.md
+@@ -25,7 +25,7 @@ version is much more visually appealing.
+ 
+ ```sh
+ # newer, faster, prettier, stable version
+-pip install -e git+https://github.com/tqdm/tqdm.git#egg=master
++pip install -e git+https://github.com/tqdm/tqdm.git#egg=tqdm
+ # or (old version on pypi)
+ pip install tqdm
+ ```
+","diff --git a/README.md b/README.md
+index 07bb020..5c5d3f6 100644
+--- a/README.md
++++ b/README.md
+@@ -25,7 +25,7 @@ version is much more visually appealing.
+ 
+ ```sh
+ # newer, faster, prettier, stable version
+-pip install -e git+https://github.com/tqdm/tqdm.git#egg=master
++pip install -e git+https://github.com/tqdm/tqdm.git#egg=tqdm
+ # or (old version on pypi)
+ pip install tqdm
+ ```
+",No
+repositories/tqdm,README.md,README,01667314e2e3abf461f3ef32ed727fb63cbfa86d,7f81f8f64bb2cf715d8c3abeda23077345b090d1,slightly more specific egg syntax,"diff --git a/README.md b/README.md
+index 5c5d3f6..2a12b7b 100644
+--- a/README.md
++++ b/README.md
+@@ -25,7 +25,7 @@ version is much more visually appealing.
+ 
+ ```sh
+ # newer, faster, prettier, stable version
+-pip install -e git+https://github.com/tqdm/tqdm.git#egg=tqdm
++pip install -e git+https://github.com/tqdm/tqdm.git@master#egg=tqdm-2.0
+ # or (old version on pypi)
+ pip install tqdm
+ ```
+","diff --git a/README.md b/README.md
+index 5c5d3f6..2a12b7b 100644
+--- a/README.md
++++ b/README.md
+@@ -25,7 +25,7 @@ version is much more visually appealing.
+ 
+ ```sh
+ # newer, faster, prettier, stable version
+-pip install -e git+https://github.com/tqdm/tqdm.git#egg=tqdm
++pip install -e git+https://github.com/tqdm/tqdm.git@master#egg=tqdm-2.0
+ # or (old version on pypi)
+ pip install tqdm
+ ```
+",No
+repositories/tqdm,tqdm/_tqdm.py,Source Code,737df0a0899d288151e5a3b3547eb55cbf86c046,fffe2e70bc7a96795e44d1e784e7e2940d0f2c10,fix speed regression by inlining,,,No
+repositories/tqdm,tqdm/_tqdm.py,Source Code,13c6045fe19721a59dcbc1c29b126ea75cd3c4e3,737df0a0899d288151e5a3b3547eb55cbf86c046,formatting fixes and minor optimisation,,,No
+repositories/tqdm,README.md,README,c31f80de96a06bff01ef0b591148e48b81326e89,4f03fd960fdc96145b43ba5ad3bf7500ca29e978,"removed 0-sloc ""authors""","diff --git a/README.md b/README.md
+index e8cedf4..bc06a88 100644
+--- a/README.md
++++ b/README.md
+@@ -104,10 +104,7 @@ $ make coverage
+ ## Authors
+ 
+ - noamraph (original author)
+-- JackMc
+-- arkottke
+ - obiwanus
+-- fordhurley
+ - kmike
+ - hadim
+ - casperdcl
+","diff --git a/README.md b/README.md
+index e8cedf4..bc06a88 100644
+--- a/README.md
++++ b/README.md
+@@ -104,10 +104,7 @@ $ make coverage
+ ## Authors
+ 
+ - noamraph (original author)
+-- JackMc
+-- arkottke
+ - obiwanus
+-- fordhurley
+ - kmike
+ - hadim
+ - casperdcl
+",No
+repositories/tqdm,tqdm/_tqdm.py,Source Code,c31f80de96a06bff01ef0b591148e48b81326e89,4f03fd960fdc96145b43ba5ad3bf7500ca29e978,"removed 0-sloc ""authors""",,,No
+repositories/tqdm,tqdm/_tqdm.py,Source Code,ee6c3ce95c4452b4829f2e6685334386ad8fda51,13c6045fe19721a59dcbc1c29b126ea75cd3c4e3,"cursory tidying, optimisation, tests",,,No
+repositories/tqdm,tqdm/tests/tests_tqdm.py,Test Code,ee6c3ce95c4452b4829f2e6685334386ad8fda51,13c6045fe19721a59dcbc1c29b126ea75cd3c4e3,"cursory tidying, optimisation, tests",,,No
