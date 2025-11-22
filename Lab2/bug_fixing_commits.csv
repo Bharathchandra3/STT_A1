@@ -1,0 +1,280 @@
+Hash,Message,Parents,Is_Merge,Modified_Files
+1311782bedaa31c28edf36bf1dfb0decd971b6e3,Apprise and AppriseAsset unittesting + bugfixes,['ce2d4f4fb24507d9e3cda6ee5c2acb7cb7eec732'],False,"['Apprise.py', 'AppriseAsset.py', 'test_api.py']"
+82c5a11e5bf174dc4845b00b589ec079eac3168c,more unittesting + bugfixes,['6cca5946e1a7cb335fefef2115d72dfc5f8dca88'],False,"['README.md', 'Apprise.py', 'AppriseAsset.py', 'NotifyBase.py', 'NotifyBoxcar.py', 'NotifyEmail.py', 'NotifyFaast.py', 'NotifyGrowl.py', 'NotifyJSON.py', 'NotifyJoin.py', 'NotifyPushBullet.py', 'NotifyPushalot.py', 'NotifySlack.py', 'NotifyTelegram.py', 'NotifyToasty.py', 'NotifyXBMC.py', 'NotifyXML.py', 'utils.py', 'notify.py', 'test_api.py', 'test_notify_base.py', 'test_rest_plugins.py']"
+0c0449fc70c462609e2ee6975bed5d3cefb98a6c,fixed commented typo,['e544260ec52c1512f249cf64b9366185ce9fe5ba'],False,"['NotifyBoxcar.py', 'NotifySlack.py', 'NotifyTelegram.py', 'NotifyTwitter.py']"
+17438fa22b824118c2650e0430679c3477fdc1c8,cli logging bugfix,['70bdb947de80e4e3a40be999c6efb7ba0f4b6888'],False,['notify.py']
+44a053c4433480b2de35c60339bd8569676d5d3f,fixed typo with readme,['17438fa22b824118c2650e0430679c3477fdc1c8'],False,['README.md']
+afddd9e89736699184a66ec9f2bc2c020d3c7e32,Added IFTTT support; fixes #7,['30570774513a20d94fb1d24661b6d4ecd6fa1041'],False,"['README.md', 'NotifyIFTTT.py', '__init__.py', 'test_rest_plugins.py']"
+bf4b309d37db8e188fe6ac89ab0efe50e5bf42fb,"Merge pull request #8 from caronc/7-ifttt-support
+
+Added IFTTT support; fixes #7","['30570774513a20d94fb1d24661b6d4ecd6fa1041', 'afddd9e89736699184a66ec9f2bc2c020d3c7e32']",True,[]
+cc6151909ed5fc666ccecffbf1978b5d18d84bf1,fixed KODI notification bug,['bbf365d9ae6ae16ca71c9c9bc11359668beaf607'],False,['NotifyXBMC.py']
+11d9e0dc21ca0abe66ae4de56aedfb074a216a36,"Merge pull request #12 from geeseven/remove-nma
+
+remove NMA as it has been since decommissioned, fixes #9","['7e389218355e5ebd9b3761f6a30438d242e7aac2', 'c8cab5ca674b32ddb45eb96a6caa66546b2e147c']",True,[]
+ae2f11f27e109f6e055da20238bd465281a1431e,fixes icon display on kodi v6 and v2 protocol; refs #13,['11d9e0dc21ca0abe66ae4de56aedfb074a216a36'],False,['NotifyXBMC.py']
+6177e6553fdc2fcd9c3361a4e72b586f34aacadf,EmailPlugin now better supports to= variable; fixes #11,['ae2f11f27e109f6e055da20238bd465281a1431e'],False,"['NotifyEmail.py', 'test_email_plugin.py']"
+dbab994f3707c2ce4ceb9bb57781ad33be35d6c3,pep8 fixes,['8d1b67aebb606114eedba44434affad8c3c83661'],False,"['NotifyEmail.py', 'test_cli.py', 'test_email_plugin.py']"
+8ff3fc2884d18b1ac900f0bbafd336b40078bdcf,"Merge pull request #24 from sentriz/patch-1
+
+update discord setup url","['7ed2c91a9b55eaec2e5ae18c3255895ada96b3ee', 'f844c7965d27b1c7179b062fb679ab8aea7ff939']",True,[]
+0621e2ff4a6773b218af16f5c45f2fbdf300f8af,"Merge pull request #24 from sentriz/patch-1
+
+update discord setup url","['7ed2c91a9b55eaec2e5ae18c3255895ada96b3ee', 'f844c7965d27b1c7179b062fb679ab8aea7ff939']",True,[]
+f8370c8624632e1cf9f33b94e0fe83751fa9bb8c,pep8 fixes,['4ee5ac22bde5252eec7a29ab1b5da9bd037b3377'],False,"['NotifyRocketChat.py', 'setup.cfg']"
+6119fdb52863e1aa7a74c1afe0d1f939043d0625,"Merge pull request #30 from circa10a/fix_to_docs
+
+add more clarification to mailto:// object","['8928cfeaf4a4c7305f313a951578004e2e3444aa', 'd5df87ef9419c5c5ffacb1fd161fd11d9bbfdd07']",True,[]
+e54e909b29509b8506e8f36a49e81bf520f72484,gntp reference fixed (for Prowl Notifications); refs #37,['60bfd0224ecb5bce0c2653becd8b49bdd89301a3'],False,['config.py']
+2e648eef17a1d8b335953d738115756a3bf39b48,"Merge pull request #38 from cclauss/discover-undefined-names
+
+tox: Add flake8 tests for syntax errors and undefined names; refs #37","['e54e909b29509b8506e8f36a49e81bf520f72484', '99b54d5456eb3876b9ed806ee36f3802a1e46fcb']",True,[]
+c56b1203ffee0313d664cef3e31a9033fcef399a,"Use 'plain' instead of 'text' for mime subtype.
+
+Also remove manually set headers as they're not required.
+
+Fixes #41.",['2e648eef17a1d8b335953d738115756a3bf39b48'],False,['NotifyEmail.py']
+ba27267563193f2650852d2b14a7947d75a58986,"Merge pull request #42 from djl/content_type_fix
+
+NotifyEmail.py / Use 'plain' instead of 'text' for mime subtype; refs #41","['2e648eef17a1d8b335953d738115756a3bf39b48', 'c56b1203ffee0313d664cef3e31a9033fcef399a']",True,[]
+446acb54ffbaf3b82465abf5380928261548a046,"grammer, wording, and formatting fixes",['64002132d6650ff9995a7c60ec306269fbb8279e'],False,"['README', 'README.md']"
+4cbea545fdbd41fe59525761f373f627b8c107bb,Fix ref to image_path_mask,['70fb66966fec022cded5c19baf081c8d5f1ce44e'],False,['AppriseAsset.py']
+aa50f1ac6ff291ea7859399bee686fb2c48eb881,"Merge pull request #51 from philborman/master
+
+Fix ref to image_path_mask","['70fb66966fec022cded5c19baf081c8d5f1ce44e', '4cbea545fdbd41fe59525761f373f627b8c107bb']",True,[]
+b5066e90a05c0a41a7ca07409e76dc5b19c3f86a,NotifyGnome code cleanup + pep8 fixes; refs #36,['aa50f1ac6ff291ea7859399bee686fb2c48eb881'],False,"['NotifyGnome.py', '__init__.py', 'test_gnome_plugin.py']"
+5092819849b6442435bba36248aace7cac64965b,text clarification (copy/paste leftover fix),['48af02360e30bd01a36dde69f405ef80598fb56c'],False,['test_twitter_plugin.py']
+c2507617cd85c496f10421b7247eddf4fc72d4d6,"Merge pull request #58 from caronc/53-discord-formatting-bug
+
+Discord supports other input forms other than just markdown; refs #53","['4f2d917a2fb621647ee931a8ba91cd792894b593', 'bfdeb340f5cb063c3073e86fe754775b15b63faf']",True,[]
+753e36feab203caff54a6d340da13a4e73693847,Issue 69: Adding Headers Support for JSON and XML,['ef7699682608df9b5a1c2a39af3e8430fc91edaa'],False,"['.gitignore', 'NotifyBase.py', 'NotifyJSON.py', 'NotifyXML.py']"
+761291e65cd5295612888b59b5e9a2f323f971a0,Issue 69: Tests for Headers support,['753e36feab203caff54a6d340da13a4e73693847'],False,"['NotifyBase.py', 'NotifyDiscord.py', 'NotifySNS.py', 'test_notify_base.py', 'test_rest_plugins.py']"
+ab306dc74b30dffad9bdd8f0ae58dc2f63042935,"Merge pull request #70 from kphatak/Issue-69-headers
+
+Adding HTTP Headers Support for JSON and XML; refs #69","['ef7699682608df9b5a1c2a39af3e8430fc91edaa', '0f2524cc905d1565b5597da064b00032a8a783d6']",True,[]
+b1133be85b142b35bf151d1d04475629a18947f9,refactored how +/- prefixed url arguments are handled,['cdd72086ee8fa38ef5cb49fceb86642a6b5b5973'],False,"['NotifyBase.py', 'NotifyIFTTT.py', 'NotifyJSON.py', 'NotifyXML.py', 'utils.py', 'test_notify_base.py', 'test_rest_plugins.py', 'test_utils.py']"
+8e284f159fb9e13f9570ae9b0d11c4eb264edc8a,random test failing on split() fix,['c6cf06e6f8e5462db68244899643ac05349fed79'],False,['test_rest_plugins.py']
+9f1f2059d917dc55cd62ce2b98a81e6195175c12,handle ValueError Exception via Dbus import; refs #75,['40cb91df5ed89a1696c5009a8b94bd9bc155a7ab'],False,"['NotifyDBus.py', 'test_glib_plugin.py', 'test_gnome_plugin.py']"
+e61d9ddab3f476d5f259e649786dbfe174a4cf53,"Merge pull request #76 from caronc/75-bug-gdk-gnome-exception
+
+Handle ValueError Exception via Dbus import; refs #75","['40cb91df5ed89a1696c5009a8b94bd9bc155a7ab', '9f1f2059d917dc55cd62ce2b98a81e6195175c12']",True,[]
+81b6e7a212769d4bd1316096f6e61cc741fc34d1,handle ValueError Exception via Gnome import; refs #75,['e61d9ddab3f476d5f259e649786dbfe174a4cf53'],False,"['NotifyGnome.py', 'test_glib_plugin.py', 'test_gnome_plugin.py']"
+d329f8cdcd3b6f9341ee43d3a162955d71d30837,"Merge pull request #77 from caronc/75-gnome-notify-namepace-bulletproofing
+
+Handle ValueError Exception via Gnome import; refs #75","['e61d9ddab3f476d5f259e649786dbfe174a4cf53', '81b6e7a212769d4bd1316096f6e61cc741fc34d1']",True,[]
+838370f441a9e5a411e4641b2edec0f0fc8d6917,Updated README to reference tagging and fixed typos,['edf6d36c7d176fa3e61b2c3450d5841c59249ae0'],False,['README.md']
+764aa5393ffe9e09b7da6bde82078b88e39e5e58,remove shebang so rpmlint doesn't produce an error,['c8778e9a00edc870d28fbf68b846c7f88319834e'],False,['cli.py']
+c8d83565f4b1f927c5ea2a0c199e35e8e546bcfe,Fix color for Discord webhook embed API,['764aa5393ffe9e09b7da6bde82078b88e39e5e58'],False,['NotifyDiscord.py']
+240785b2d2fe5ec1ab42a9b77b0d3f8f314d2c96,"Merge pull request #84 from BramCeulemans/master
+
+Fix color for Discord webhook embed API","['764aa5393ffe9e09b7da6bde82078b88e39e5e58', '901a69e0f40b4eb4c99248834b32a92164cbaae7']",True,[]
+16635a8d8ff0aeb02029c8e99e9d6daa9e3da672,Fixed warning issued on pyYAML v5.1+,['240785b2d2fe5ec1ab42a9b77b0d3f8f314d2c96'],False,['ConfigBase.py']
+2d5fe7ac7a66c13b1c66e441f1eaa3058e02cf22,"Merge pull request #86 from caronc/85-yaml-warning-fix
+
+Fixed warning issued on pyYAML v5.1+; refs #86","['240785b2d2fe5ec1ab42a9b77b0d3f8f314d2c96', '16635a8d8ff0aeb02029c8e99e9d6daa9e3da672']",True,[]
+bc363efa563fd8f0877eac94d587f37762167a08,added discord server & link fix in README,['b4867c7a05bba5877a08f0ae75451a0e0ee00ba9'],False,['README.md']
+ec46c4322e39fb754b5696a1605064ed9a27da58,formatting and typo's in README.md fixed,['c9b957c4341e7d43e5be6463bd317a7401d083d9'],False,['README.md']
+6a9faffb0b33a2d2651e102f0a612cefdbca3068,configuration file reading bugfix; refs #99,['2357395c612e3c65e0b32df5852fb2342bb7600e'],False,"['AppriseConfig.py', 'cli.py', 'ConfigBase.py', 'ConfigFile.py']"
+2b0af9b2de7e7d73bf1b8fe293a31d11499966e6,"Merge pull request #100 from caronc/99-config-file-detection
+
+Auto-loading of configuration file bugfix; refs #99","['2357395c612e3c65e0b32df5852fb2342bb7600e', '6a9faffb0b33a2d2651e102f0a612cefdbca3068']",True,[]
+2c080d7269e64fa6718ba7f1b2a29e93c3770194,fixed bug preventing email as userid for custom emails; refs #101,['f86974aa259fd5f05709670c45aef4ce13fb45f4'],False,"['NotifyEmail.py', 'test_email_plugin.py']"
+68c8a0e6f08c8d8828d7d9dc1f801f25b3842550,"Merge pull request #102 from caronc/101-bugfix-custom-email-userid
+
+Custom SMTP usernames (credentials) to support email addresses","['f86974aa259fd5f05709670c45aef4ce13fb45f4', '2c080d7269e64fa6718ba7f1b2a29e93c3770194']",True,[]
+5bf3f9ad269b9117ef7fe9ba52d733b0108fd48b,Fix Matrix webhook URL,['603e00bbce4bd78409d5724122064736f4fae9c0'],False,['NotifyMatrix.py']
+92523f191b347b03c062c94367d0a045c7f14e18,"Merge pull request #125 from Nauxuron/fix-matrix-webhook
+
+Fix Matrix webhook URL","['603e00bbce4bd78409d5724122064736f4fae9c0', '5bf3f9ad269b9117ef7fe9ba52d733b0108fd48b']",True,[]
+e7ba4c03df2b97ae6d661d9d4ba3309981e74f5e,ValueError unknown locale error fix (#128),['92523f191b347b03c062c94367d0a045c7f14e18'],False,"['AppriseLocale.py', 'test_locale.py']"
+084c14fee9400e2a4c3b5c515f3e41096adfef6a,inline documentation cleanup and small logging fix,['6376ec50f7b59cdac16e4e6fde9c8f40b73ea3f9'],False,['NotifyGitter.py']
+02e48f3c2f357a60d234c3e6be4595cffa0792ad,Initial commit of bug and new service reporting templates,['2609680792edaed0fe98b6bed12c7d12f5d5599b'],False,"['bug_report.md', 'new-notification-request.md']"
+a3abe06bbfd48ecebc16e71c52cf5c36fb9c8fb4,bugfix with email plugin and targets in url() call,['d9c5e9f7ac4824521490c3b78b4315f99586df87'],False,['NotifyEmail.py']
+805bec23968a350dac4e89e2c0ab5b57932ad1d7,bugfix - exception no longer thrown on lone comment delimiter,['a3abe06bbfd48ecebc16e71c52cf5c36fb9c8fb4'],False,"['ConfigBase.py', 'test_config_base.py']"
+b32021a8b4e26e04bd1578f6d70e74160cd16d73,MSG91 minor bugfixes; refs #141,['12fed2b6bd3f309619f8de6924b7741ca7f35b4b'],False,['NotifyMSG91.py']
+119863568a3ad05dafd7fa1dd50a5b178552d01b,inline doc cleanup + messagebird minor fix,['03295517edbf6b80c7e14bfd2ef3aa8a9344ada8'],False,"['NotifyMessageBird.py', 'test_rest_plugins.py']"
+a459aaffef356e6537b583a8c36300c9a852f700,Fixed bug related to discord markdown formatting; refs #149 (#150),['24fd7d5baaba32d5dc4c9b08178dd0f3f0c85715'],False,"['NotifyDiscord.py', 'test_rest_plugins.py']"
+011fbc9b5fd1e64cb3097af3a10e36f57aaeb4fd,updated issue/bug templates,['6aa52c37dd98e45d53e3b84536d4dd5b9ff4893f'],False,"['1_bug_report.md', '2_enhancement_request.md', '3_new-notification-request.md', '4_question.md']"
+acc461d598e26d802c7282cf89fc712fc41d4945,Notica Support Added; fixes #165 (#166),['2a31d393b7d426421154771c637d32e67de11b50'],False,"['README.md', 'NotifyNotica.py', 'python-apprise.spec', 'setup.py', 'test_rest_plugins.py']"
+71b59f9bbbeb16adc56d91b904b25edc29c781c6,dbus:// url() lookup bugfix,['031f6776cc17baa2310f13ffb90046f3ea9d6b24'],False,"['NotifyDBus.py', 'test_glib_plugin.py']"
+cc8fae4c73cc5df0bb6c9e0b492bc088ce412427,Fixes AttributeError while importing `gi` (#177),['3b19f432447cd78a52068e55117abce14aaab92b'],False,"['NotifyDBus.py', 'NotifyGnome.py']"
+054b674852e8896e9f802170ec4a0db124c6cd48,Fixes Discord error code 50006 when sending message (#180),['4692941efa493497d93f47b45eb5863cbbce8ae3'],False,['NotifyDiscord.py']
+384dd94b0675408f30d5a586c020f20a6a98cdc7,Resolves error response on successful Slack post (#196),['2e6a996980f63648ad991c0b224d25f3fba02e38'],False,"['NotifySlack.py', 'test_slack_plugin.py']"
+a8ec23a9e8e4065f20f05e0a17d69383cef2ddec,Telegram plugins ability to detect format=html bugfix (#204),['148ac806511e50aa4b668ccabb7c3e7ae1de3dd2'],False,['NotifyTelegram.py']
+7627ec80645304036f858ab0e07546edea62dd4a,drop references to fixes kw,['1ce7cbb67966ffea5eebd054533049b6fd9ae170'],False,['PULL_REQUEST_TEMPLATE.md']
+7c251bf35cece7dc4892a5e8c4dfe153df095959,Fix XMPP plugin (#217),['3895ad9b58eeffa876079d984acda7a61c3b3633'],False,"['.gitignore', 'CONTRIBUTIONS.md', 'NotifyXMPP.py', 'dev-requirements.txt', 'test_xmpp_plugin.py']"
+3a8a7711dca164d641d18d5c326ebc59e9283666,ImportErrors thrown if sleekxmpp was missing fixed,['6a79d38e126383a6d06ca16dc566f0e71dcbc42f'],False,"['SleekXmppAdapter.py', '__init__.py', 'test_xmpp_plugin.py']"
+28f416093d99341ecdf821a5311a8bb831b2a722,office 365 formatting issue fix,['e9452b6f0320e1ffca106936a49983d36c95199a'],False,['README.md']
+b318c4d20889760635ec992f2815fdd2f558d4d5,flake8 InvocationError's resolved (#238),['28f416093d99341ecdf821a5311a8bb831b2a722'],False,"['NotifyBase.py', 'setup.cfg', 'test_office365.py', 'test_rest_plugins.py']"
+73046207d59aa47a456ec767fa2ec75cb3e687a9,apprise-api python 3 compatibility bugfix (#239),['3af32412df59159eda4746a1e0e597c000a0642d'],False,"['ConfigHTTP.py', 'test_config_http.py']"
+138c8ebf07efb1fd432603862e1d62fd1493624d,Bugfix + Eased up on Nexmo credential QA (left for upstream),['e54e4e7a07eb838274c97b031fd9fe4663cc3d7b'],False,['NotifyNexmo.py']
+fbaf1e4059a67749ef873d8bdc821aa30374b413,Bugfix :beetle: - Global parameters placed in url() again (#275),['ca695ed398a3b7647f46cfa96016d497f00754bd'],False,['NotifyBase.py']
+31cd61540caf93065bd49a7931958edbee45462a,CLI config/attachment help info inverted; fixed,['cba85997642853fc2ad0df4bb501cf7f3b96624d'],False,['cli.py']
+93efa2d26be699b079445f9353f7c64bc4c228de,cryptography v3.1 / travis-ci test runners compatible fixed,['31cd61540caf93065bd49a7931958edbee45462a'],False,['.travis.yml']
+f1bd97a25954701dd25cec9907275799c51f1a61,logging grammer fix,['490d51d492088f731af9b58c307afaa2efc08873'],False,['asyncio.py']
+49faa9a201df79a3f48ee2afc7819c64c585186e,Lametric Time cloud mode support fixed (#293),['f1bd97a25954701dd25cec9907275799c51f1a61'],False,"['README.md', 'NotifyLametric.py', 'test_rest_plugins.py']"
+a853546f0f1b06b78a33ff196e80544014c998ab,"Strict enforcing of +, -, and : prefixed kwargs in URLs (#302)",['fcd81160befeec943867b1a83a22d060ba7dc31d'],False,"['ConfigBase.py', 'NotifyEnigma2.py', 'NotifyIFTTT.py', 'NotifyJSON.py', 'NotifyNextcloud.py', 'NotifyNotica.py', 'NotifyXML.py', 'test_apprise_config.py', 'test_config_base.py', 'test_rest_plugins.py']"
+a823e250c17701ee78490831be2c9b03ef9ea4c7,typo in README.md fixed,['54c3f6d9dfb15a0bbccb285758fa36a6c18eecc0'],False,['README.md']
+3531912991405d5a0ab713417003d63c2253fc81,Fix version of cryptography to v3.1.1 for Travis CI PyPy3.5 runner (#322),['a823e250c17701ee78490831be2c9b03ef9ea4c7'],False,['tox.ini']
+87d4b8a26c65b0c49e211c77e54c5a7c310b16ce,fixed FCM log message,['c7d6aefebbffd46047ff2e7e882dbe69bf0e173b'],False,['NotifyFCM.py']
+5e002044a43c00243763af8d9e336ed67124ccd7,fixed failing unit test,['ef2057c10aabd8119796338f41cd7970daeaacf9'],False,['test_cli.py']
+ca3629f2e1a8600fbbabd66fbf0ba94cda48bbc7,Update README.md; there/their grammer fix (#342),['5e002044a43c00243763af8d9e336ed67124ccd7'],False,['README.md']
+f18b7c83ac3136b653464e6346beec93078125f7,mailgun http error code lookup bugfix,['fec6de1403ebbb409349b756f022183e77866d68'],False,['NotifyMailgun.py']
+073dad68d016b16a590f44f9ead0a9fced96ee3d,escape handling tests in Python v2.x fixed,['b322e24b1b3c2c69051bca6bff33f717b61ba5ff'],False,['test_escapes.py']
+5b7afe9a764a96db1fc93490f8991e42f3f63417,fixed EL7 RPM compatiblity,['64a103f14a58e02d87af857c2e8dbc6e5b26dae9'],False,['python-apprise.spec']
+9cf8188961e5912549ead926f5386b0df8b0129d,fixes path issue with home assistant notifications  (#370),['10939d333ddfcf6a7ad6104bc088b8ac4a03c31b'],False,"['NotifyHomeAssistant.py', 'test_homeassistant_plugin.py']"
+975b1721afb38adc1a4f69f4cfb5cfd22a15ff44,Fixed MSTeams webhook handling for new format (#380),['0b60e99aa4a38a04e49b297c1ae30957f638c6ca'],False,"['NotifyMSTeams.py', 'test_rest_plugins.py']"
+ab6b6b51c72eca3b37adfaf19885fe612b7fd2b1,Fixed argument parsing within YAML files (#404),['8a455695baa2e914c567af899fdcbe406f671e7e'],False,"['ConfigBase.py', 'NotifyEmail.py', 'test_apprise_config.py']"
+45d5ec1f181724e971aff188a2059152e72aa7bd,Matrix double slash in URL for API call fixed  (#411),['ab6b6b51c72eca3b37adfaf19885fe612b7fd2b1'],False,['NotifyMatrix.py']
+0b26d1c884922f183acd0ea860a6e1045e41ba19,"Rocket.Chat basic message structure fix (#419)
+
+You only can send alias and avatar properties if your user has the bot role. We implement this rule to avoid users to impersonate other users. - quoted from Rocket.Chat website
+
+This update accounts for this restriction",['49af85bfe148d7f9d9fb2ef307718ab2feff0ef2'],False,"['NotifyRocketChat.py', 'test_rest_plugins.py']"
+bca44c02a57bfc4abaf7c443e899fbdad8580fc6,ModuleNotFoundError exception on sys.exit() bugfix (#417),['0b26d1c884922f183acd0ea860a6e1045e41ba19'],False,"['NotifyEmby.py', 'NotifyMatrix.py', 'NotifyTwist.py', 'test_rest_plugins.py']"
+db69fc44a2cc5efaf66c42b455299a324ddc1d30,updated icon on bug-report to reflect upstream change,['e20fce630d55e4ca9b0a1e325a5fea6997489831'],False,['1_bug_report.md']
+a9ce6b355672298038ee18f891ac204351726977,bugfix with pushover url parameter (#477),['d248012d8be59bd3e9da71038f53f627f137f6a8'],False,['NotifyPushover.py']
+1dfde961e8f1b7e078a6e60377c16fd5381585cf,Fixed XMPP Support & SleekXMPP dropped  (#485),['f6ca01be11dedfdd9697c21072da3e7eb4efb4a5'],False,"['README.md', 'SleekXmppAdapter.py', 'SliXmppAdapter.py', '__init__.py', '__init__.py', 'dev-requirements.txt', 'test_xmpp_plugin.py']"
+3ca141d06b328f3365e7e10990963f518584e511,RHEL7 support patch updated,['68f371a63ae775603efad3982aaab08a28de6b77'],False,['apprise-rhel7-support.patch']
+c06a2f3f8756f74eaff9c70746182a654f0a7860,AWS SNS PhoneNumber parameter  bugfix (#502),['5bf89aeefcd657189b8eef34b66801c29bbd6b84'],False,['NotifySNS.py']
+e5945e0be1b7051ab4890bf78949058304f2d641,docs: fix typo in README's URL (#516),['e077344b1db317ab92a02183dd72584d6be81cba'],False,['README.md']
+6fbe23832b3d82ce1497d070e28c083543513c39,Bugfix: Avoid duplicate target Dapnet call signs (#521),['aa3d30f7b7ea54aa2101d6bf9af44e050e0c3242'],False,"['NotifyDapnet.py', 'test_plugin_dapnet.py']"
+a00ce7456662e30ba7a58e2600cd3fe74d236138,Reddit Secret and App ID Validation Fixed (#528),['6a2b6130dbdb5df33cf9a5f4d89d02b5bf43ab3a'],False,"['NotifyReddit.py', 'test_plugin_reddit.py']"
+b130e0e39a99d37bceb3851cf63535473f75f590,ServerChan reference in README.md fixed; refs #551,['4b4ec6bf305e5f86d4cd79cdf1ebbfb57360d77d'],False,['README.md']
+fee93c1caecb39f08ca91ae8e0b0445e421a7163,fixed unsupported start tag on Telegram notification; refs #565,['32e2a79dd014b86eb7073914b54696edd1004bce'],False,['NotifyTelegram.py']
+af2919fbb5885d09c6d171b14482a52623e63783,Fix Zulip 401 when botname contains a dash (#581),['fd0cb3ffcc192bc132ac341cc8c555fd571b5345'],False,"['NotifyZulip.py', 'utils.py', 'test_plugin_zulip.py']"
+62edc52871705440e2e6d4d04c7cd032c5d39dc9,Fix Pushover parsing of integer priorities (#598),['aaf0aea6681d8142590d2e4ca8bef90e357d27b4'],False,['NotifyPushover.py']
+6d56ed549275ea2528feab225f65c1a899198d84,Fixed parsing of custom nid for Home Assistant plugin (#627),['113fa365f2cbc0cd124888c047ae0938ac0a4e5d'],False,['NotifyHomeAssistant.py']
+b34051ccafb1d4649440258282633523fd240357,Fix notify() failing when being called from an existing asynchronous event loop (#624),['0be8f9024477fd7f4e62f4209b9300a1a4f07f22'],False,"['Apprise.py', 'asyncio.py', 'test_asyncio.py']"
+782f2e602b90c9b43058c977ffcc689bd3b1dfb8,Fixed PagerDuty notifications (#644),['1816c448aca348425b46d5ac76db90505f5b6bf8'],False,['NotifyPagerDuty.py']
+892e961041a1392534bbebffc7fe0997462cc37e,Fixed Travis-CI v3.7 build support (#668),['3efb2c6f3e352065ec65840fda3e1bce94846217'],False,['.travis.yml']
+e9f040a2d0e2eb8714a08f1859afee6d4cd90d5f,fix(pushover): ignore unsupported attachments as intended instead of discarding the entire notification (#650),['f1990b14ce0a367fe92129387c6e4ba03c37d346'],False,['NotifyPushover.py']
+f7244cce3da54c5a3dc06a9603faa0e3cc6a47b0,Bugfix: Decorator handles multiple URLs correctly now (#678),['e9f040a2d0e2eb8714a08f1859afee6d4cd90d5f'],False,"['.travis.yml', 'CustomNotifyPlugin.py', 'test_decorator_notify.py', 'tox.ini']"
+41b4ddb942b56f306b8f52078e4ba83f58c66650,"Use `super()` instead of `super(__class__, self)` (#686)
+
+Removes some further Python 2 intricicanties.
+
+It is `ruff` rule SPR001, taken from `flake8-super`.
+- https://github.com/charliermarsh/ruff#rules
+- https://pypi.org/project/flake8-super/
+
+Implemented with:
+
+  ruff --select SPR001 apprise test --fix",['44887e9c1daf6a78a4bb462b038871754cf9433f'],False,"['AppriseLocale.py', 'AttachBase.py', 'AttachFile.py', 'AttachHTTP.py', 'ConfigBase.py', 'ConfigFile.py', 'ConfigHTTP.py', 'ConfigMemory.py', 'conversion.py', 'CustomNotifyPlugin.py', 'NotifyAppriseAPI.py', 'NotifyBark.py', 'NotifyBase.py', 'NotifyBoxcar.py', 'NotifyClickSend.py', 'NotifyD7Networks.py', 'NotifyDBus.py', 'NotifyDapnet.py', 'NotifyDingTalk.py', 'NotifyDiscord.py', 'NotifyEmail.py', 'NotifyEmby.py', 'NotifyEnigma2.py', '__init__.py', 'NotifyFaast.py', 'NotifyFlock.py', 'NotifyForm.py', 'NotifyGitter.py', 'NotifyGnome.py', 'NotifyGoogleChat.py', 'NotifyGotify.py', 'NotifyGrowl.py', 'NotifyHomeAssistant.py', 'NotifyIFTTT.py', 'NotifyJSON.py', 'NotifyJoin.py', 'NotifyKavenegar.py', 'NotifyKumulos.py', 'NotifyLametric.py', 'NotifyLine.py', 'NotifyMQTT.py', 'NotifyMSG91.py', 'NotifyMSTeams.py', 'NotifyMacOSX.py', 'NotifyMailgun.py', 'NotifyMatrix.py', 'NotifyMattermost.py', 'NotifyMessageBird.py', 'NotifyNextcloud.py', 'NotifyNextcloudTalk.py', 'NotifyNotica.py', 'NotifyNotifico.py', 'NotifyNtfy.py', 'NotifyOffice365.py', 'NotifyOneSignal.py', 'NotifyOpsgenie.py', 'NotifyPagerDuty.py', 'NotifyParsePlatform.py', 'NotifyPopcornNotify.py', 'NotifyProwl.py', 'NotifyPushBullet.py', 'NotifyPushSafer.py', 'NotifyPushed.py', 'NotifyPushjet.py', 'NotifyPushover.py', 'NotifyReddit.py', 'NotifyRocketChat.py', 'NotifyRyver.py', 'NotifySES.py', 'NotifySMSEagle.py', 'NotifySMTP2Go.py', 'NotifySNS.py', 'NotifySendGrid.py', 'NotifyServerChan.py', 'NotifySignalAPI.py', 'NotifySimplePush.py', 'NotifySinch.py', 'NotifySlack.py', 'NotifySparkPost.py', 'NotifySpontit.py', 'NotifyStreamlabs.py', 'NotifySyslog.py', 'NotifyTechulusPush.py', 'NotifyTelegram.py', 'NotifyTwilio.py', 'NotifyTwist.py', 'NotifyTwitter.py', 'NotifyVonage.py', 'NotifyWebexTeams.py', 'NotifyWindows.py', 'NotifyXBMC.py', 'NotifyXML.py', 'NotifyZulip.py', 'test_api.py', 'test_apprise_attachments.py', 'test_apprise_config.py', 'test_asyncio.py', 'test_attach_http.py', 'test_cli.py', 'test_config_http.py', 'test_rest_plugins.py']"
+5db016cfb37f3a772a25f776cbc0216bddffef6d,Chore: Fix `ResourceWarning: unclosed file <_io.TextIOWrapper name=...`,['d895471b7919322c8705813fd501cdd16b08daf3'],False,['logger.py']
+c797d1e2ebc074e535ed46f0f9fcbe286d87e031,Tests: Use `no_throttling` fixture everywhere,['85daf12fbd4bd25c139d453c56535e6c4fe46e2c'],False,"['conftest.py', 'test_plugin_boxcar.py', 'test_plugin_bulksms.py', 'test_plugin_custom_form.py', 'test_plugin_custom_json.py', 'test_plugin_custom_xml.py', 'test_plugin_discord.py', 'test_plugin_email.py', 'test_plugin_emby.py', 'test_plugin_fcm.py', 'test_plugin_flock.py', 'test_plugin_gitter.py', 'test_plugin_growl.py', 'test_plugin_guilded.py', 'test_plugin_homeassistant.py', 'test_plugin_ifttt.py', 'test_plugin_join.py', 'test_plugin_kumulos.py', 'test_plugin_mailgun.py', 'test_plugin_matrix.py', 'test_plugin_mattermost.py', 'test_plugin_messagebird.py', 'test_plugin_mqtt.py', 'test_plugin_msg91.py', 'test_plugin_msteams.py', 'test_plugin_nextcloud.py', 'test_plugin_nextcloudtalk.py', 'test_plugin_ntfy.py', 'test_plugin_office365.py', 'test_plugin_pushbullet.py', 'test_plugin_pushed.py', 'test_plugin_pushjet.py', 'test_plugin_reddit.py', 'test_plugin_rocket_chat.py', 'test_plugin_ryver.py', 'test_plugin_sendgrid.py', 'test_plugin_signal.py', 'test_plugin_simplepush.py', 'test_plugin_sinch.py', 'test_plugin_smseagle.py', 'test_plugin_smtp2go.py', 'test_plugin_sparkpost.py', 'test_plugin_twilio.py', 'test_plugin_twist.py', 'test_plugin_twitter.py', 'test_plugin_vonage.py', 'test_plugin_zulip.py', 'test_rest_plugins.py']"
+c9f0751b6132fedf8cb831ed924b113f27c630f9,"Resolve ambiguity with `apprise.plugins` module namespace
+
+While the namespace is physically made of modules, it has been amended
+to be the namespace home for the corresponding notifier classes as well.
+
+This turned out to confuse both humans and machines on various ends.
+
+While it has apparently worked for a while, it croaks on Python 3.11
+now, and is not considered to have been a good idea in general.",['c797d1e2ebc074e535ed46f0f9fcbe286d87e031'],False,"['__init__.py', '__init__.py', 'module.py', 'rest.py', 'test_config_base.py', 'test_plugin_apprise_api.py', 'test_plugin_bark.py', 'test_plugin_boxcar.py', 'test_plugin_bulksms.py', 'test_plugin_clicksend.py', 'test_plugin_custom_form.py', 'test_plugin_custom_json.py', 'test_plugin_custom_xml.py', 'test_plugin_d7networks.py', 'test_plugin_dapnet.py', 'test_plugin_dingtalk.py', 'test_plugin_discord.py', 'test_plugin_email.py', 'test_plugin_emby.py', 'test_plugin_enigma2.py', 'test_plugin_faast.py', 'test_plugin_fcm.py', 'test_plugin_flock.py', 'test_plugin_gitter.py', 'test_plugin_glib.py', 'test_plugin_gnome.py', 'test_plugin_google_chat.py', 'test_plugin_gotify.py', 'test_plugin_growl.py', 'test_plugin_guilded.py', 'test_plugin_homeassistant.py', 'test_plugin_ifttt.py', 'test_plugin_join.py', 'test_plugin_kavenegar.py', 'test_plugin_kumulos.py', 'test_plugin_lametric.py', 'test_plugin_line.py', 'test_plugin_macosx.py', 'test_plugin_mailgun.py', 'test_plugin_matrix.py', 'test_plugin_mattermost.py', 'test_plugin_messagebird.py', 'test_plugin_mqtt.py', 'test_plugin_msg91.py', 'test_plugin_msteams.py', 'test_plugin_nextcloud.py', 'test_plugin_nextcloudtalk.py', 'test_plugin_notica.py', 'test_plugin_notifico.py', 'test_plugin_ntfy.py', 'test_plugin_office365.py', 'test_plugin_onesignal.py', 'test_plugin_opsgenie.py', 'test_plugin_pagerduty.py', 'test_plugin_parse_platform.py', 'test_plugin_popcorn_notify.py', 'test_plugin_prowl.py', 'test_plugin_pushbullet.py', 'test_plugin_pushed.py', 'test_plugin_pushjet.py', 'test_plugin_pushover.py', 'test_plugin_pushsafer.py', 'test_plugin_reddit.py', 'test_plugin_rocket_chat.py', 'test_plugin_ryver.py', 'test_plugin_sendgrid.py', 'test_plugin_serverchan.py', 'test_plugin_ses.py', 'test_plugin_signal.py', 'test_plugin_simplepush.py', 'test_plugin_sinch.py', 'test_plugin_slack.py', 'test_plugin_smseagle.py', 'test_plugin_smtp2go.py', 'test_plugin_sns.py', 'test_plugin_sparkpost.py', 'test_plugin_spontit.py', 'test_plugin_streamlabs.py', 'test_plugin_syslog.py', 'test_plugin_techululs_push.py', 'test_plugin_telegram.py', 'test_plugin_twilio.py', 'test_plugin_twist.py', 'test_plugin_twitter.py', 'test_plugin_vonage.py', 'test_plugin_webex_teams.py', 'test_plugin_xbmc_kodi.py', 'test_plugin_zulip.py']"
+47c2000a7eee2e7052eaa0da087c1390e96e21f3,"Merge pull request #687 from panodata/amo/modernize-tests
+
+Resolve ambiguity with `apprise.plugins` module namespace","['d895471b7919322c8705813fd501cdd16b08daf3', 'c9f0751b6132fedf8cb831ed924b113f27c630f9']",True,[]
+c81d2465e432474c27648cdfcf88cbed6c5feb07,"Tests: Use global `no_throttling_everywhere` fixture (#701)
+
+Instead of needing to individually disable throttling on a per-plugin
+basis, this fixture takes care of all notifiers in `NOTIFY_MODULE_MAP`
+automatically. With `autouse=True`, there is no need to activate it
+manually.",['ed876d1ca2972b82b433a46bd4c193cd61241967'],False,"['common.pyi', 'dev-requirements.txt', 'conftest.py', 'rest.py', 'test_plugin_boxcar.py', 'test_plugin_bulksms.py', 'test_plugin_custom_form.py', 'test_plugin_custom_json.py', 'test_plugin_custom_xml.py', 'test_plugin_dapnet.py', 'test_plugin_discord.py', 'test_plugin_email.py', 'test_plugin_emby.py', 'test_plugin_fcm.py', 'test_plugin_flock.py', 'test_plugin_gitter.py', 'test_plugin_gotify.py', 'test_plugin_growl.py', 'test_plugin_guilded.py', 'test_plugin_homeassistant.py', 'test_plugin_ifttt.py', 'test_plugin_join.py', 'test_plugin_kumulos.py', 'test_plugin_mailgun.py', 'test_plugin_matrix.py', 'test_plugin_mattermost.py', 'test_plugin_messagebird.py', 'test_plugin_mqtt.py', 'test_plugin_msg91.py', 'test_plugin_msteams.py', 'test_plugin_nextcloud.py', 'test_plugin_nextcloudtalk.py', 'test_plugin_ntfy.py', 'test_plugin_office365.py', 'test_plugin_opsgenie.py', 'test_plugin_prowl.py', 'test_plugin_pushbullet.py', 'test_plugin_pushed.py', 'test_plugin_pushjet.py', 'test_plugin_pushover.py', 'test_plugin_pushsafer.py', 'test_plugin_reddit.py', 'test_plugin_rocket_chat.py', 'test_plugin_ryver.py', 'test_plugin_sendgrid.py', 'test_plugin_ses.py', 'test_plugin_signal.py', 'test_plugin_simplepush.py', 'test_plugin_sinch.py', 'test_plugin_slack.py', 'test_plugin_smseagle.py', 'test_plugin_smtp2go.py', 'test_plugin_sns.py', 'test_plugin_sparkpost.py', 'test_plugin_telegram.py', 'test_plugin_twilio.py', 'test_plugin_twist.py', 'test_plugin_twitter.py', 'test_plugin_vonage.py', 'test_plugin_zulip.py', 'test_rest_plugins.py']"
+f01e6d8a3b0e5471c3a49bd9d4ef179610e6a9c4,Fix tests for `NotifyGnome` (#703),['89832882367484f569b5d054bc66845ac0918535'],False,"['NotifyGnome.py', 'test_plugin_gnome.py']"
+d753c11c80533cc7035169d3ccd486555a5fcda2,Fix tests for `NotifyDBus` (#704),['f01e6d8a3b0e5471c3a49bd9d4ef179610e6a9c4'],False,['test_plugin_glib.py']
+c13bf84d035bb2c22091a6a50a2784ebe943899e,fixed README typo,['eafa7498b28f3a81819e1e51ed8858a74114ef37'],False,['README.md']
+17202e2fa3ef586e6acab31efca618b5d2c5c2a8,Discord bugfix to better handle provided markdown (#718),['b3cca772f655c1ae066a6123d726a09079b4594b'],False,"['NotifyDiscord.py', 'test_plugin_discord.py']"
+0cd64c1026c458f3f03eb4a23ebf3f3f7d66107d,Tests: Fix minor typo (#725),['cddd5c4fb3fff9c87c7ca6b3dbc7a112860cfae8'],False,['test_cli.py']
+29e4c5ebd826a16a007b2c7ddf21a01488371f17,fix: cto= and rto= lines now work from YAML config (#751),['640c00ae70465f274b5aba171d0eedd1768d1f3d'],False,"['URLBase.py', 'test_config_base.py']"
+2912dfd1e328b9803501e0e7e6772f0bcded77d1,Fixed Outlook.com email template (#755),['29e4c5ebd826a16a007b2c7ddf21a01488371f17'],False,"['NotifyEmail.py', 'test_plugin_email.py']"
+949f88a0dddbda4a8109a48ceacf675f65825766,RPM Package Compatibility Fix (#757),['fc16c7bf0b0e243318baa470b16df56987bf4a1f'],False,"['.gitignore', 'Dockerfile.el8', 'Dockerfile.el9', 'Dockerfile.f37', 'README.md', 'build-rpm.sh', 'docker-compose.yml', 'apprise-no-macosx-testing.patch', 'apprise-pytest-session_mocker-removal.patch', 'python-apprise.spec', 'setup.cfg', 'test_plugin_mqtt.py', 'test_plugin_syslog.py']"
+9a9703c5822d2a323bdefeba5315718084769eeb,bugfix: slack:// webhook to return success when message sent (#777),['c9261d8459611bc768e9ce227a98dfa824382283'],False,"['NotifySlack.py', 'rest.py', 'test_plugin_slack.py']"
+078ee799b064111b00f01223b4295199ec213d71,fixed voipms urls in README (#818),['4f7b23a7c1b5dfe006342d641a8100c32164e32b'],False,['README.md']
+7bcb0647c00f1e3ff9eb70ca3455dd39bb7c3b16,fix insecure SSL check on mqtts:// configurations (#825),['58f9e6484399b95fff11f98b16b4d7f779f91299'],False,"['NotifyMQTT.py', 'test_plugin_mqtt.py']"
+76d44a317975a0f53899bf8bb558470045c0faec,Discord Thread ID Reference fixed (#855),['be174c374fd23aaa6b9a5673f389ce0fe91a18a5'],False,"['NotifyDiscord.py', 'test_plugin_discord.py']"
+b6e07dd35ec8e4b4566a1759f08620c8f364a774,Bugfix: Telegram attachments respect topic thread (#893),['ab55aef0d01b7fec52fcc54fe6313b08420c7d76'],False,['NotifyTelegram.py']
+a94700b0eb43dfb75cb75552cc69a7feeffa342b,Discord Rate Limiting (429 Error code) handling (#901),['78f5693382427cf7b81d86af83af4eaa31cc0aaa'],False,"['NotifyDiscord.py', 'test_plugin_discord.py']"
+c41e7e63744dbfbbfe6aad25145afa86c36b2701,Fixed ResourceWarning: unclosed file with macosx,['f82934a8158260410c74399113353dbb22d43f2b'],False,['NotifyMacOSX.py']
+f6f73b69b819f2d0d1e9c6764f2cdcd9b12b52b9,"Minimize apt installed packages in Dockerfile (#943)
+
+Use `apt-get install` with `--no-install-recommends` to void unnecessary
+packages, and manually add `dbus` package to prevent build failure with
+command `pip install --no-cache-dir dbus-python PyGObject` like below:
+
+> #0 22.28       Program dbus-run-session found: NO
+> #0 22.28
+> #0 22.28       ../test/meson.build:72:19: ERROR: Program 'dbus-run-session' not found or not executable",['f799066e0f7215eca73761ea19818b6255c2bbb0'],False,"['Dockerfile.py310', 'Dockerfile.py311', 'Dockerfile.py36']"
+e9c4de40207aad96d3fdd18aa4059cb70dd74b45,Fixed Email password handling when `user=` specified (#947),['1b2d1ca8247cc4c88e78d1080c0f12505b4ff236'],False,"['URLBase.py', 'NotifyEmail.py', 'test_plugin_email.py']"
+be73b03a9841e6919c6cfdf15d87d5671b0919d7,type-o fixed in LICENSE,['fdc85f502d52e562729aa106bd9c916427d5144a'],False,['LICENSE']
+f6b53ac5561e52c3df9ffa19bbf07e8090f8266f,Nextcloud and Nextcloud Talk url_prefix support (#975),['34e52e5d9285f2612244560aca13abf3b2fe6dc1'],False,"['NotifyNextcloud.py', 'NotifyNextcloudTalk.py', 'test_plugin_nextcloud.py', 'test_plugin_nextcloudtalk.py']"
+c8d9750873987647005e08fb1d8843ad72983bd4,Resolved ConfigMemory AttributeError Exception (#1032),['c47de7fc733a84e1e22b1d1fc7666aed363e3bb0'],False,['AppriseConfig.py']
+8bff1031765715a6cb2996d25fd588fdd8f701d1,Resolved TypeError logging exception with Custom plugin loading (#1042),['1da1d4800c17e9c6bb80c965310201f6823e3de6'],False,['manager.py']
+8f87364023b6df3b58596e4346a2a34f51fd02c8,Discord test case enhancement and code fix (dupe entry),['119b4f06e504da1afbce174fe9a1fa741d6a180b'],False,"['NotifyTelegram.py', 'test_plugin_discord.py']"
+52aa7f4ddbd27f683cbfe149952e6487262262ee,Fixed yaml config doc reference (#1069),['5ae212fbafb94a3d03c61739d2e81f7502595902'],False,"['apprise.1.html', 'apprise.md']"
+d5cbab19caf38e08714aa2fb6b312e35468a94f4,custom module deadlock import fix (#1077),['b4798e31b3f7ad39136f5adc9ab3dd15b8a5658d'],False,"['manager.py', 'test_apprise_cli.py']"
+c157ff12c09317ef696c6aea01381a9ad7ff8734,paho-mqtt operator fixed in ref (see #1078),['24dcd76f039104410962e7bc268143f76df6b01b'],False,['NotifyMQTT.py']
+0d1f3d88aff6df7c549d48a16f0f69e0ba3c44ef,fixed deprication warning for Markdown (#1108),['da5caf73b33274d5f36a7b702196527ca8f469fb'],False,['conversion.py']
+2316a4b415a9baff23f93e5f1d43dce4f99df6d9,Fix mailto://ip.addr support (#1114),['22c979d4a366812aa8cb7f3145171267c821c5c3'],False,"['NotifyEmail.py', 'test_plugin_email.py']"
+fcd70ff84cbc63268c542c584eb8fdcc11bb36d7,Bugfix: Update apprise:// token length (#1120),['b8da1334ab59ce09f58bb0866fd4c76537b43516'],False,"['apprise_api.py', 'test_plugin_apprise_api.py']"
+5fd912f5fe1044c8c06987c26c6d8c23b36b5cd6,clicksend:// authentication bugfix (#1121),['fcd70ff84cbc63268c542c584eb8fdcc11bb36d7'],False,"['clicksend.py', 'test_plugin_clicksend.py']"
+6afdd81a27eb133ec6f1955286349795ca36bf16,fixed typo with sparkpost/splunk introduced in #1125,['45e67beae3a2196da8ae9f2530ab5f5ad7c0c31a'],False,['README.md']
+da14b3a54f43454f0665c88a8cd5c9e6b1bd0834,Fixed Slack file upload deprecation (#1130),['d3c13fd6197f995d3ba02fc2fdf4eb6679125f2e'],False,"['slack.py', 'rest.py', 'test_plugin_slack.py']"
+6733953cc2b318a09a9fa69c3797a34e2a9cea00,Fixed series of PEP8 E502  errors surfacing in Python 3.11 flake8 checks (#1149),['35ed4d266e3b833e48afe950385c9e021d95c873'],False,"['cli.py', 'bulksms.py', 'lametric.py', 'test_plugin_mattermost.py', 'test_plugin_office365.py', 'test_plugin_sns.py', 'test_plugin_splunk.py', 'test_plugin_threema.py', 'test_plugin_voipms.py']"
+ddb5b52d17954e7775c1303b38c1ee97b044c72c,Fixes random matrix:// unittest failures (#1166),['d22ce8d5b7c713a725f5788efeccd49c984249fb'],False,['test_plugin_matrix.py']
+e30adb4deea3a3713fb0b0f1244c4debad5ba949,"fix: conversion html_to_text hr tags rstrip non string object (#1162)
+
+Co-authored-by: Fabio Lucattini <f.lucattini@desys.it>",['ddb5b52d17954e7775c1303b38c1ee97b044c72c'],False,"['conversion.py', 'test_conversion.py']"
+65f9caed878acc4750a7eb5124ecbb568690eaa3,"Fix typo in readme (#1176)
+
+I assume the L is missing by mistake",['6dafecdb196ea60ecd8acacc53ce54b47197c831'],False,['README.md']
+47540523e08ea4e6ceaabd15f7ea610f74058c75,"Fix Telegram Thread/Topic handling (#1177)
+
+* Fix Telegram Thread/Topic handling
+
+* fixed test coverage",['65f9caed878acc4750a7eb5124ecbb568690eaa3'],False,"['telegram.py', 'test_plugin_telegram.py']"
+1ee08d14fe79b6cf7bc762fc8e6956ba734b6656,Fixed mattermost channel handling (#1180),['47540523e08ea4e6ceaabd15f7ea610f74058c75'],False,"['mattermost.py', 'test_plugin_mattermost.py']"
+0d19db862d31b34151ff682244a4565d532860dd,cli errors leverage click output and suggest --help,['1a2eecc448b25bcd6f1e5353a6c9e05ceb859e59'],False,['cli.py']
+4cf74bea44f7c0dd55433bdb2a53c936c1a11748,Fix logging statement in test run function  (#1220),['ec368e293af7dc3b687022052dfb349eb8bd28bf'],False,['rest.py']
+f37dfbf5a135254b589de12e0c4da2b53a887f1d,"Unpin paho-mqtt version (#1238)
+
+The new update to paho-mqtt, version 2.1.0, fixed the backward incompatible callback
+signature problem by defaulting the callback type to paho-mqtt V1 style callbacks.
+This means that packages can upgrade to paho-mqtt 2.1.0 or leave it at <2.0.0 without
+any software changes.
+
+This was originally pinned with #1065.",['01c1082ad8f8bd336fc99214780b75627a772bf7'],False,"['all-plugin-requirements.txt', 'mqtt.py']"
+f89293647aa2895ccb01f4c296024c0172b16344,Resolved chanify:// naming confusion (#1266),['0a9f3382a6260f904e389839d7dd54c4d809f27e'],False,"['KEYWORDS', 'README.md', 'chanify.py', 'python-apprise.spec', 'test_plugin_chanify.py']"
+fcc493932859a7cb52550a0b68d35c1206b41798,bugfix - Office 365 include subject and body now (#1274),['a2a2216c4601bbf81e48f74dea2155da4df16680'],False,"['office365.py', 'test_plugin_office365.py']"
+2226d0692d5f7ff35490d7ead6d54e1c3da63819,"Fix flaky test in translation tests (#1298)
+
+Signed-off-by: Dennis Gaebler <dennis.gaebler@uni-ulm.de>",['5554360ad0b7d627dbfc8b1b441eaa8998bac76d'],False,['test_apprise_translations.py']
+3cc98662f3dc3e1519da7b115b7a637ecbd1f98d,apprise.urls() bulletproofing/bugfix (#1302),['bd270efdf82d002ae883767689c553fb06c4cb14'],False,"['apprise.py', 'test_apprise_config.py']"
+a196708a696251a985c2a58051584f48ec687f58,fixed downloads entry,['6295888ef004d4827a1bdd410a1a036f8d1fc8da'],False,['README.md']
+70cb7d8c11ff0cfff7ec0a0f0b58bd3817913ab6,"fix: Display SMTP host in debug mode (#1331)
+
+Signed-off-by: Emmanuel Ferdman <emmanuelferdman@gmail.com>",['ae7f8b80ac86ef419c69b4224384e82ff85e82b9'],False,['base.py']
+ce90151051f630803cba755fc9f06e16f7d8590b,Fix throttling in matrix plugin (#1352),['cf12873be2b36b051f5c8a266bbbb96a03488096'],False,['matrix.py']
+02058d4fe3b00316e71e3184ac688306b4640479,Bluesky resolves DID within custom domains (#1363),['19a201ff4413f0574937f27bb4615caa7890ac96'],False,"['bluesky.py', 'test_plugin_bluesky.py']"
+892935880325d47fc554db60f5800936a466ef72,EL9 RPM build made public; workflow fixed to accommodate (#1375),['70667a5c2879239cd84b33ec811b4d7aed41099a'],False,['pkgbuild.yml']
+f65f99cd5baa3f2c6c9ff70c376977f943b4a7de,Fix Matrix v3 attachments (#1373),['892935880325d47fc554db60f5800936a466ef72'],False,"['matrix.py', 'test_plugin_matrix.py']"
+8e1dad9f79b17f64bb87d0f2e295257c110d1416,"Minor typos and fixes (#1357)
+
+* added forgotten persistent storage setting on email
+* improved handling of default image
+* function wording fix
+* webexteams to support token= parameter arg",['f65f99cd5baa3f2c6c9ff70c376977f943b4a7de'],False,"['base.py', 'slack.py', 'spike.py', 'webexteams.py', 'README.md', 'checkdone.sh', 'test_plugin_simplepush.py', 'test_plugin_webex_teams.py']"
+8dc7ba7bdb38f2c75782e6f99cd41858d58bc59f,minor fixes lingering from #1368,['b0fff4bc5b577ee4c29691d48ef394d9265c4f08'],False,"['PULL_REQUEST_TEMPLATE.md', 'apprise.py', 'test_api.py', 'test_apprise_cli.py', 'tox.ini']"
+666f50457cde1429af93ff0a3378978153287220,Fix test case to compare url ids (#1371),['782ea79fcb8115be0b21e5b2858734d5b7ee5dc2'],False,['test_api.py']
+c00c36f8f8889edce35885efe4c2db3068f67b76,code-coverage fix (#1395),['c15243a9ccd7f88fb5fd9c580e3b57a1b5eeec45'],False,"['.codecov.yml', 'tests.yml', 'pyproject.toml', 'tox.ini']"
+1d9e1e5f19b73c011b25a72fe1819ade6f1df16a,Fix AppriseURLTester handling (#1412),['3944821a3211e2acfded6d23f645059466e1198e'],False,['rest.py']
+2d12b7e50da420f71fc01a22a621cc62be33b840,addressed RUF059 linting fixes against codebase (#1413),['1d9e1e5f19b73c011b25a72fe1819ade6f1df16a'],False,"['matrix.py', 'ntfy.py', 'pushsafer.py', 'reddit.py', 'revolt.py', 'sendpulse.py', 'ses.py', 'sparkpost.py', 'twist.py', 'twitter.py', 'test_plugin_matrix.py', 'test_plugin_signal.py', 'test_plugin_title_maxlen.py']"
+181103d7ca29020453b17d6a2ddcba6d2e91e122,"Fix test_time_zoneinfo edge case (#1411)
+
+* fix: available timezones in test_time_zoneinfo differ by system, update assertions to handle possible inclusion of obsolete IANA entries",['27091b5b3445d00ccbbaa91cb54b9ae7d4357c7c'],False,['test_apprise_utils.py']
+1ed405ae139a7d1640b6a8e0ab9c4ec669b02d6a,Updated RPM Spec file to fix rpmbuild errors on koji (#1421),['19dfd1430b68737e4f09dd6c50985a7ef35cda8d'],False,['python-apprise.spec']
+fe000d0884d0a83e7444fbf4024aba4a510b898c,fix(telegram): support <code> blocks wrapped in <pre> for syntax highlighting (#1423),['a3b4a13b5c96840e61bbd3dfe0fd43d110a8194f'],False,"['telegram.py', 'test_plugin_telegram.py', '01_test_example.html']"
+74d5ad296afd91dc83b9663be01f34a5d55fc8da,Apprise API payload bugfix (#1428),['fe000d0884d0a83e7444fbf4024aba4a510b898c'],False,"['apprise_api.py', 'test_plugin_apprise_api.py']"
+eea03d1b684edacae0e841317cf0b49d1d822144,matrix:// room/alias character support fixed (#1442),['91b6f9109471f82db0c6c724541f6cad0185ca41'],False,"['matrix.py', 'test_plugin_matrix.py']"
+96afd4d781a810e17f01c6335cf86e4fd7958633,fix parsing of USA callsigns--specifically different prefix/suffix counts like 1x2 and 1x3 calls (#1418),['1ba14a769879a970f0fc8c3ced2195d4b1a0c300'],False,"['parse.py', 'test_apprise_utils.py', 'test_plugin_aprs.py']"
+dfe933cbb4071ae517e971c5630e29690bd3a00f,fixed handling of non-standard matrix:// ports (#1450),['f3ae780a8ecfa91dce3a2689b98c33697787d1cb'],False,"['matrix.py', 'test_plugin_matrix.py']"

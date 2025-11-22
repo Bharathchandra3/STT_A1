@@ -1,0 +1,47 @@
+Original,LLM,Similarity_Score,Action_Taken,Final_Message
+Apprise and AppriseAsset unittesting + bugfixes,add missing docstrings,0.0,Rectified,add missing docstrings
+Apprise and AppriseAsset unittesting + bugfixes,add missing comments,0.0,Rectified,add missing comments
+Apprise and AppriseAsset unittesting + bugfixes,add test for apprise.apprise,0.0,Rectified,add test for apprise.apprise
+more unittesting + bugfixes,fix notification exception,0.0,Rectified,fix notification exception
+more unittesting + bugfixes,add missing comments,0.0,Rectified,add missing comments
+more unittesting + bugfixes,add more comments to the notify class,0.11,Rectified,add more comments to the notify class
+more unittesting + bugfixes,add devices to notify,0.0,Rectified,add devices to notify
+more unittesting + bugfixes,add more comments to the notifyemail class,0.11,Rectified,add more comments to the notifyemail class
+more unittesting + bugfixes,add missing image_url to notifyfaast,0.0,Rectified,add missing image_url to notifyfaast
+more unittesting + bugfixes,add missing url in notifyGrowl,0.0,Rectified,add missing url in notifyGrowl
+more unittesting + bugfixes,add missing return statement,0.0,Rectified,add missing return statement
+more unittesting + bugfixes,add missing image_url to notify join,0.0,Rectified,add missing image_url to notify join
+more unittesting + bugfixes,add missing comment,0.0,Rectified,add missing comment
+more unittesting + bugfixes,add image field to notifypushalot,0.0,Rectified,add image field to notifypushalot
+more unittesting + bugfixes,add more info about slack notifications,0.12,Rectified,add more info about slack notifications
+more unittesting + bugfixes,add missing tag,0.0,Rectified,add missing tag
+more unittesting + bugfixes,add image to notifytoasty,0.0,Rectified,add image to notifytoasty
+more unittesting + bugfixes,add kodi support to the notify class,0.0,Rectified,add kodi support to the notify class
+more unittesting + bugfixes,add a warning to the notifyxml class,0.0,Rectified,add a warning to the notifyxml class
+more unittesting + bugfixes,add missing comments,0.0,Rectified,add missing comments
+more unittesting + bugfixes,add apprise-notify-base.py,0.0,Rectified,add apprise-notify-base.py
+more unittesting + bugfixes,add test for appriseasset,0.0,Rectified,add test for appriseasset
+more unittesting + bugfixes,add more tests for the notifybase class,0.11,Rectified,add more tests for the notifybase class
+more unittesting + bugfixes,add tests for invalid urls in apprise_notifications,0.0,Rectified,add tests for invalid urls in apprise_notifications
+fixed commented typo,add missing comment,0.0,Rectified,add missing comment
+fixed commented typo,add comment,0.0,Rectified,add comment
+fixed commented typo,update notify.py,0.0,Rectified,update notify.py
+fixed commented typo,add comment,0.0,Rectified,add comment
+cli logging bugfix,add missing logging level,0.17,Rectified,add missing logging level
+Added IFTTT support; fixes #7,add missing documentation to ifttt,0.11,Rectified,add missing documentation to ifttt
+Added IFTTT support; fixes #7,add missing package imports,0.0,Rectified,add missing package imports
+Added IFTTT support; fixes #7,add examples to apprise ifttttt hook,0.0,Rectified,add examples to apprise ifttttt hook
+fixed KODI notification bug,add missing comment,0.0,Rectified,add missing comment
+fixes icon display on kodi v6 and v2 protocol; refs #13,add missing classes,0.0,Rectified,add missing classes
+EmailPlugin now better supports to= variable; fixes #11,add more info about the email support,0.0,Rectified,add more info about the email support
+EmailPlugin now better supports to= variable; fixes #11,add test urls,0.0,Rectified,add test urls
+pep8 fixes,fix lint,0.0,Rectified,fix lint
+pep8 fixes,fix test_apprise_cli,0.0,Rectified,fix test_apprise_cli
+pep8 fixes,add a test for smtplib.side_effect,0.0,Rectified,add a test for smtplib.side_effect
+pep8 fixes,add more info about the rocket.chat server,0.0,Rectified,add more info about the rocket.chat server
+gntp reference fixed (for Prowl Notifications); refs #37,add missing docstring,0.0,Rectified,add missing docstring
+"Use 'plain' instead of 'text' for mime subtype.
+
+Also remove manually set headers as they're not required.
+
+Fixes #41.",add mail subject and from attributes,0.0,Rectified,add mail subject and from attributes
